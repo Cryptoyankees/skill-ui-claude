@@ -32,7 +32,7 @@
     font-size:.72rem;font-weight:600;color:var(--madder)}
   h1,h2,h3,h4{font-family:var(--font-head);text-transform:uppercase;line-height:1.05}
   .btn{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.12em;font-size:.82rem;
-    font-weight:600;padding:15px 30px;border-radius:10px;border:none;cursor:pointer;
+    font-weight:600;padding:15px 30px;border-radius:12px;border:none;cursor:pointer;
     display:inline-flex;align-items:center;gap:10px;transition:transform .25s var(--ease),background .25s,box-shadow .25s;
     text-decoration:none;touch-action:manipulation}
   .btn-primary{background:var(--madder);color:#fff}
@@ -128,7 +128,7 @@
   .circ-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
   @media(max-width:1024px){.circ-grid{grid-template-columns:1fr 1fr}}
   @media(max-width:560px){.circ-grid{grid-template-columns:1fr}}
-  .circ-card{background:var(--card);border:1.5px solid var(--line);border-radius:16px;overflow:hidden;
+  .circ-card{background:var(--card);border:1.5px solid var(--line);border-radius:20px;overflow:hidden;
     display:flex;flex-direction:column;transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s}
   .circ-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(24,23,18,.12);border-color:var(--tan)}
   .circ-ph{position:relative;aspect-ratio:4/5;overflow:hidden}
@@ -184,10 +184,10 @@
   .options{padding:90px 0}
   .opt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
   @media(max-width:768px){.opt-grid{grid-template-columns:1fr}}
-  .opt-card{display:flex;gap:16px;align-items:center;padding:18px;border:1.5px solid var(--line);border-radius:14px;
+  .opt-card{display:flex;gap:16px;align-items:center;padding:18px;border:1.5px solid var(--line);border-radius:18px;
     background:var(--card);transition:border-color .25s,transform .25s}
   .opt-card:hover{border-color:var(--tan);transform:translateY(-3px)}
-  .opt-thumb{width:76px;height:76px;border-radius:12px;overflow:hidden;flex-shrink:0}
+  .opt-thumb{width:76px;height:76px;border-radius:14px;overflow:hidden;flex-shrink:0}
   .opt-thumb img{width:100%;height:100%;object-fit:cover}
   .opt-body h4{font-size:.98rem;font-weight:600;text-transform:none;letter-spacing:.01em;color:var(--ink);margin-bottom:4px}
   .opt-body p{font-size:.82rem;color:var(--stone)}
