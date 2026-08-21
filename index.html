@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terres Nomades — Expéditions nomades au Kirghizstan</title>
+<meta name="description" content="Terres Nomades compose des expéditions sur mesure au Kirghizstan : yourtes, cols du Tian Shan, chevaux de Song-Köl, guide francophone. Devis sous 24h, sans engagement.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23181712'/%3E%3Cpath d='M4 24 12 10l5 8 3-5 8 11z' fill='%23b8824a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#181712;--ink2:#3a372e;--paper:#f6f2e9;--card:#fffdf8;--stone:#8f897a;
+    --line:#e2daca;--tan:#b8824a;--gold:#e0b98a;--madder:#a8402c;--madder-dk:#8f3421;
+    --slate:#1e2a2c;--ok:#4a6a52;
+    --font-head:'Oswald',sans-serif;--font-body:'Inter',sans-serif;
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);color:var(--ink);font-family:var(--font-body);
+    line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .container{max-width:1200px;margin:0 auto;padding:0 24px}
+  @media(max-width:640px){.container{padding:0 20px}}
+
+  .eyebrow{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.28em;
+    font-size:.72rem;font-weight:600;color:var(--madder)}
+  h1,h2,h3,h4{font-family:var(--font-head);text-transform:uppercase;line-height:1.05}
+  .btn{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.12em;font-size:.82rem;
+    font-weight:600;padding:15px 30px;border-radius:10px;border:none;cursor:pointer;
+    display:inline-flex;align-items:center;gap:10px;transition:transform .25s var(--ease),background .25s,box-shadow .25s;
+    text-decoration:none;touch-action:manipulation}
+  .btn-primary{background:var(--madder);color:#fff}
+  .btn-primary:hover{background:var(--madder-dk);transform:translateY(-3px);box-shadow:0 14px 28px rgba(168,64,44,.28)}
+  .btn-ghost{background:rgba(255,255,255,.08);color:#fff;border:1.5px solid rgba(255,255,255,.5);backdrop-filter:blur(6px)}
+  .btn-ghost:hover{background:rgba(255,255,255,.18);transform:translateY(-3px)}
+  .btn-dark{background:var(--ink);color:#fff}
+  .btn-dark:hover{background:var(--slate);transform:translateY(-3px)}
+  .btn:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid var(--tan);outline-offset:3px}
+
+  /* skip link */
+  .skip-link{position:absolute;left:12px;top:-60px;background:var(--ink);color:#fff;padding:12px 18px;
+    border-radius:8px;z-index:200;transition:top .2s var(--ease);font-family:var(--font-head);
+    text-transform:uppercase;letter-spacing:.08em;font-size:.8rem}
+  .skip-link:focus{top:12px}
+
+  /* ===== NAV ===== */
+  .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 0;transition:background .3s var(--ease),padding .3s var(--ease),box-shadow .3s var(--ease)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between}
+  .brand{font-family:var(--font-head);font-weight:700;text-transform:uppercase;letter-spacing:.16em;
+    font-size:1.05rem;color:#fff;text-decoration:none;transition:color .3s}
+  .brand b{color:var(--tan);font-weight:400}
+  .nav.scrolled{background:rgba(246,242,233,.92);backdrop-filter:blur(10px);padding:13px 0;box-shadow:0 4px 20px rgba(24,23,18,.06)}
+  .nav.scrolled .brand{color:var(--ink)}
+  .nav.scrolled .navlinks a{color:var(--ink2)}
+  .nav.scrolled .navlinks a:hover{color:var(--madder)}
+  .navlinks{display:flex;align-items:center;gap:34px}
+  .navlinks a{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.08em;font-size:.8rem;
+    font-weight:500;color:rgba(255,255,255,.92);text-decoration:none;transition:color .2s}
+  .navlinks a:hover{color:var(--tan)}
+  .nav-cta{margin-left:8px}
+  .menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;width:44px;height:44px;
+    align-items:center;justify-content:center}
+  .menu-toggle span,.menu-toggle span:before,.menu-toggle span:after{content:"";display:block;width:22px;height:2px;
+    background:#fff;transition:transform .25s,opacity .25s,background .25s;position:relative}
+  .nav.scrolled .menu-toggle span,.nav.scrolled .menu-toggle span:before,.nav.scrolled .menu-toggle span:after{background:var(--ink)}
+  .menu-toggle span:before{position:absolute;top:-7px}
+  .menu-toggle span:after{position:absolute;top:7px}
+  .menu-toggle[aria-expanded="true"] span{background:transparent}
+  .menu-toggle[aria-expanded="true"] span:before{transform:rotate(45deg);top:0}
+  .menu-toggle[aria-expanded="true"] span:after{transform:rotate(-45deg);top:0}
+
+  .mobile-panel{position:fixed;inset:0;background:var(--ink);z-index:99;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;gap:28px;opacity:0;visibility:hidden;transition:opacity .3s var(--ease);
+    padding:0 32px;text-align:center}
+  .mobile-panel.open{opacity:1;visibility:visible}
+  .mobile-panel a{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.06em;font-size:1.3rem;
+    color:#fff;text-decoration:none;max-width:100%}
+  .mobile-panel a.mobile-cta{color:var(--tan);font-size:1.05rem}
+
+  @media(max-width:860px){
+    .navlinks{display:none}
+    .menu-toggle{display:flex}
+  }
+
+  /* ===== HERO ===== */
+  .hero{position:relative;min-height:100dvh;display:flex;align-items:flex-end;overflow:hidden}
+  .hero-bg{position:absolute;inset:-6% -6%;z-index:0}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;will-change:transform}
+  .hero:after{content:"";position:absolute;inset:0;z-index:1;
+    background:linear-gradient(to top,rgba(15,14,10,.92) 0%,rgba(15,14,10,.35) 52%,rgba(15,14,10,.28) 100%)}
+  .hero-content{position:relative;z-index:2;color:#fff;padding:0 0 100px}
+  .hero .eyebrow{color:var(--gold)}
+  .hero h1{font-size:clamp(2.6rem,7vw,5.4rem);font-weight:600;margin:16px 0 22px;max-width:14ch}
+  .hero p.lead{max-width:46ch;font-size:1.08rem;color:rgba(255,255,255,.86);margin-bottom:34px}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:16px}
+  .scroll-cue{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:2;color:rgba(255,255,255,.75);
+    display:flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none}
+  .scroll-cue span{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.2em;font-size:.62rem}
+  .scroll-cue svg{animation:bob 2.2s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+
+  /* ===== MANIFESTO ===== */
+  .manifesto{padding:120px 0 90px}
+  .manifesto-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:start}
+  @media(max-width:860px){.manifesto-grid{grid-template-columns:1fr;gap:36px}}
+  .manifesto h2{font-size:clamp(1.9rem,4vw,3rem);font-weight:500;color:var(--ink);margin:14px 0 0}
+  .manifesto .lede{font-family:var(--font-head);font-weight:400;font-size:clamp(1.3rem,2.4vw,1.7rem);
+    line-height:1.35;color:var(--ink2);text-transform:none;letter-spacing:0}
+  .manifesto p.body-text{color:var(--ink2);margin-top:20px;max-width:56ch}
+  .stat-row{display:flex;gap:36px;margin-top:38px;flex-wrap:wrap}
+  .stat b{display:block;font-family:var(--font-head);font-size:2.1rem;font-weight:600;color:var(--madder)}
+  .stat span{font-size:.78rem;color:var(--stone);text-transform:uppercase;letter-spacing:.06em}
+
+  /* ===== SECTION HEADERS ===== */
+  .section-head{max-width:640px;margin-bottom:52px}
+  .section-head h2{font-size:clamp(2rem,4.2vw,3rem);font-weight:600;color:var(--ink);margin:12px 0 14px}
+  .section-head p{color:var(--stone);font-size:1.02rem}
+  .section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+
+  /* ===== CIRCUITS ===== */
+  .circuits{padding:90px 0}
+  .circ-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  @media(max-width:1024px){.circ-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.circ-grid{grid-template-columns:1fr}}
+  .circ-card{background:var(--card);border:1.5px solid var(--line);border-radius:16px;overflow:hidden;
+    display:flex;flex-direction:column;transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s}
+  .circ-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(24,23,18,.12);border-color:var(--tan)}
+  .circ-ph{position:relative;aspect-ratio:4/5;overflow:hidden}
+  .circ-ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+  .circ-card:hover .circ-ph img{transform:scale(1.08)}
+  .circ-days{position:absolute;top:12px;left:12px;background:rgba(24,23,18,.82);color:#fff;font-family:var(--font-head);
+    font-size:.68rem;letter-spacing:.1em;padding:6px 11px;border-radius:20px;text-transform:uppercase}
+  .circ-info{padding:18px 18px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
+  .circ-info h3{font-size:1.08rem;font-weight:600;letter-spacing:.02em;color:var(--ink)}
+  .circ-info .d{font-size:.84rem;color:var(--stone);flex:1}
+  .circ-foot{display:flex;align-items:center;justify-content:space-between;margin-top:10px}
+  .circ-price{font-family:var(--font-head);color:var(--madder);font-weight:600;font-size:1.05rem}
+  .circ-price small{font-family:var(--font-body);font-weight:400;color:var(--stone);font-size:.72rem;text-transform:none}
+  .circ-link{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;
+    transition:background .2s,border-color .2s,transform .2s}
+  .circ-card:hover .circ-link{background:var(--madder);border-color:var(--madder);transform:translateX(2px)}
+  .circ-card:hover .circ-link svg{stroke:#fff}
+  .circ-link svg{stroke:var(--ink);transition:stroke .2s}
+
+  /* ===== GALLERY / CHAPTERS ===== */
+  .gallery{padding:40px 0 100px}
+  .chapter{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:0;margin-bottom:14px;
+    border-radius:20px;overflow:hidden;background:var(--card)}
+  .chapter:nth-child(even) .chapter-media{order:2}
+  @media(max-width:860px){
+    .chapter{grid-template-columns:1fr}
+    .chapter:nth-child(even) .chapter-media{order:0}
+  }
+  .chapter-media{position:relative;aspect-ratio:6/5;overflow:hidden}
+  .chapter-media img{width:100%;height:100%;object-fit:cover}
+  .chapter-text{padding:56px}
+  @media(max-width:640px){.chapter-text{padding:36px 26px}}
+  .chapter-num{font-family:var(--font-head);color:var(--tan);font-size:.78rem;letter-spacing:.24em;text-transform:uppercase}
+  .chapter-text h3{font-size:clamp(1.5rem,3vw,2.1rem);font-weight:600;color:var(--ink);margin:12px 0 14px}
+  .chapter-text p{color:var(--ink2);max-width:46ch}
+
+  /* ===== WHY US ===== */
+  .why{padding:90px 0;background:var(--slate);color:#ece6d8}
+  .why .section-head h2{color:#fff}
+  .why .section-head p{color:#a9a396}
+  .why .eyebrow{color:var(--gold)}
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+  @media(max-width:960px){.why-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.why-grid{grid-template-columns:1fr}}
+  .why-card{padding:8px 4px}
+  .why-icon{width:52px;height:52px;border-radius:14px;background:rgba(224,185,138,.12);display:grid;place-items:center;
+    margin-bottom:20px}
+  .why-icon svg{stroke:var(--gold)}
+  .why-card h3{font-size:1.02rem;font-weight:600;color:#fff;margin-bottom:8px;text-transform:none;letter-spacing:.01em}
+  .why-card p{font-size:.9rem;color:#a9a396}
+
+  /* ===== OPTIONS STRIP ===== */
+  .options{padding:90px 0}
+  .opt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media(max-width:768px){.opt-grid{grid-template-columns:1fr}}
+  .opt-card{display:flex;gap:16px;align-items:center;padding:18px;border:1.5px solid var(--line);border-radius:14px;
+    background:var(--card);transition:border-color .25s,transform .25s}
+  .opt-card:hover{border-color:var(--tan);transform:translateY(-3px)}
+  .opt-thumb{width:76px;height:76px;border-radius:12px;overflow:hidden;flex-shrink:0}
+  .opt-thumb img{width:100%;height:100%;object-fit:cover}
+  .opt-body h4{font-size:.98rem;font-weight:600;text-transform:none;letter-spacing:.01em;color:var(--ink);margin-bottom:4px}
+  .opt-body p{font-size:.82rem;color:var(--stone)}
+  .opt-body .op-price{font-family:var(--font-head);color:var(--madder);font-size:.8rem;font-weight:600;margin-top:6px;
+    text-transform:uppercase;letter-spacing:.04em}
+
+  /* ===== FINAL CTA ===== */
+  .final-cta{position:relative;min-height:60vh;display:flex;align-items:center;justify-content:center;
+    text-align:center;overflow:hidden;margin:0 0 0}
+  .final-cta img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+  .final-cta:after{content:"";position:absolute;inset:0;background:rgba(15,14,10,.68);z-index:1}
+  .final-cta-content{position:relative;z-index:2;color:#fff;padding:100px 24px}
+  .final-cta .eyebrow{color:var(--gold)}
+  .final-cta h2{font-size:clamp(2.1rem,5vw,3.6rem);font-weight:600;margin:14px 0 30px;max-width:16ch;
+    margin-left:auto;margin-right:auto}
+  .final-cta .btn{margin:0 auto}
+
+  /* ===== FOOTER ===== */
+  footer{background:var(--ink);color:#c9c3b4;padding:70px 0 30px}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;padding-bottom:50px;border-bottom:1px solid rgba(255,255,255,.1)}
+  @media(max-width:768px){.footer-grid{grid-template-columns:1fr;gap:32px}}
+  .footer-brand .brand{color:#fff;margin-bottom:14px;display:inline-block}
+  .footer-brand p{max-width:38ch;font-size:.88rem;color:#8a8577}
+  .footer-col h4{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.1em;font-size:.76rem;
+    color:var(--gold);margin-bottom:16px}
+  .footer-col a{display:block;font-size:.9rem;color:#c9c3b4;text-decoration:none;margin-bottom:10px;transition:color .2s}
+  .footer-col a:hover{color:var(--tan)}
+  .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:26px;font-size:.78rem;
+    color:#6b6759;flex-wrap:wrap;gap:10px}
+
+  /* ===== SCROLL REVEAL ===== */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal-stagger.in > *{transition-delay:calc(var(--i,0) * 70ms)}
+
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .reveal{opacity:1!important;transform:none!important;transition:none!important}
+    .scroll-cue svg{animation:none}
+    .hero-bg img{transform:none!important}
+    *{scroll-behavior:auto!important}
+  }
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+<!-- SVG ICON SPRITE -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="ic-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12" stroke-width="1.8" stroke-linecap="round"/><polyline points="13 6 19 12 13 18" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-chevron-down" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-guide" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4" fill="none" stroke-width="1.6"/><path d="M5 20c0-4 3.2-6.5 7-6.5S19 16 19 20" fill="none" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="ic-group" viewBox="0 0 24 24"><circle cx="9" cy="9" r="3" fill="none" stroke-width="1.6"/><circle cx="17" cy="10" r="2.4" fill="none" stroke-width="1.6"/><path d="M3.5 19c0-3.3 2.6-5.3 5.5-5.3s5.5 2 5.5 5.3M14.8 19c.3-2.6 1.8-4.4 3.9-4.7" fill="none" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="ic-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.4" fill="none" stroke-width="1.6"/><path d="M12 7.5V12l3 2" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.4" fill="none" stroke-width="1.6"/><path d="M15 9l-2 5-5 2 2-5z" fill="none" stroke-width="1.4" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-menu" viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7" stroke-width="1.8"/><line x1="4" y1="12" x2="20" y2="12" stroke-width="1.8"/><line x1="4" y1="17" x2="20" y2="17" stroke-width="1.8"/></symbol>
+  </defs>
+</svg>
+
+<!-- ===== NAV ===== -->
+<header class="nav" id="siteNav">
+  <div class="container nav-inner">
+    <a href="#main-content" class="brand">TERRES<b>·</b>NOMADES</a>
+    <nav class="navlinks" aria-label="Navigation principale">
+      <a href="#circuits">Circuits</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#pourquoi">Pourquoi nous</a>
+      <a href="#options">Options</a>
+      <a href="reservation.html" class="btn btn-primary nav-cta">Réserver <svg width="15" height="15"><use href="#ic-arrow"/></svg></a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobilePanel" aria-label="Ouvrir le menu">
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-panel" id="mobilePanel">
+  <a href="#circuits">Circuits</a>
+  <a href="#galerie">Galerie</a>
+  <a href="#pourquoi">Pourquoi nous</a>
+  <a href="#options">Options</a>
+  <a href="reservation.html" class="mobile-cta">Réserver mon expédition →</a>
+</div>
+
+<main id="main-content">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-bg" id="heroBg">
+      <img src="images/hero-vallee.jpg" alt="Col de montagne sur une piste sinueuse au Kirghizstan" width="1500" height="2000" fetchpriority="high">
+    </div>
+    <div class="container hero-content">
+      <p class="eyebrow">Kirghizstan · Expéditions sur mesure</p>
+      <h1>L'aventure commence là où s'arrête la route</h1>
+      <p class="lead">Terres Nomades compose des circuits sur mesure au cœur du Tian Shan : yourtes d'altitude, chevaux de Song-Köl, cols à 3 000&nbsp;m — avec un guide francophone, en petit groupe.</p>
+      <div class="hero-actions">
+        <a href="#circuits" class="btn btn-primary">Voir les circuits <svg width="15" height="15"><use href="#ic-arrow"/></svg></a>
+        <a href="reservation.html" class="btn btn-ghost">Réserver mon expédition</a>
+      </div>
+    </div>
+    <a href="#histoire" class="scroll-cue" aria-label="Défiler vers le contenu">
+      <span>Découvrir</span>
+      <svg width="20" height="20" fill="none" stroke="currentColor"><use href="#ic-chevron-down"/></svg>
+    </a>
+  </section>
+
+  <!-- ===== MANIFESTO ===== -->
+  <section class="manifesto" id="histoire">
+    <div class="container manifesto-grid">
+      <div class="reveal">
+        <p class="eyebrow">Notre philosophie</p>
+        <p class="lede">On ne visite pas le Kirghizstan. On y vit quelques jours, au rythme des éleveurs et des cols.</p>
+      </div>
+      <div class="reveal">
+        <p class="body-text">Chaque circuit est pensé comme une trame, pas un carcan : nuits en yourte chez l'habitant, transferts en 4x4 UAZ, marches sur les alpages du Tian Shan. On l'ajuste avec vous — niveau, dates, envies — avant de confirmer quoi que ce soit.</p>
+        <div class="stat-row">
+          <div class="stat"><b>4</b><span>Circuits de base</span></div>
+          <div class="stat"><b>7—10</b><span>Jours sur place</span></div>
+          <div class="stat"><b>Mai—Sept</b><span>Saison 2026</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CIRCUITS ===== -->
+  <section class="circuits" id="circuits">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Nos expéditions</p>
+        <h2>Composez votre circuit</h2>
+        <p>Quatre bases de départ, prix par personne tout compris. On les adapte ensuite avec vous.</p>
+      </div>
+      <div class="circ-grid reveal-stagger">
+        <article class="circ-card reveal" style="--i:0">
+          <div class="circ-ph">
+            <img src="images/circuit-essentiel.jpg" alt="Canyon Skazka aux formations rocheuses ocres" width="760" height="1013" loading="lazy">
+            <span class="circ-days">7 jours</span>
+          </div>
+          <div class="circ-info">
+            <h3>L'essentiel</h3>
+            <p class="d">Ala-Archa, Issyk-Kul, canyon Skazka</p>
+            <div class="circ-foot">
+              <span class="circ-price">1 300 € <small>/ pers.</small></span>
+              <a href="reservation.html" class="circ-link" aria-label="Choisir le circuit L'essentiel"><svg width="16" height="16" fill="none"><use href="#ic-arrow"/></svg></a>
+            </div>
+          </div>
+        </article>
+        <article class="circ-card reveal" style="--i:1">
+          <div class="circ-ph">
+            <img src="images/circuit-grand-tour.jpg" alt="Camp de yourtes blanches au bord du lac Song-Köl" width="760" height="1013" loading="lazy">
+            <span class="circ-days">8 jours</span>
+          </div>
+          <div class="circ-info">
+            <h3>Grand tour</h3>
+            <p class="d">+ Song-Köl, yourte d'altitude, cols du Tian Shan</p>
+            <div class="circ-foot">
+              <span class="circ-price">1 335 € <small>/ pers.</small></span>
+              <a href="reservation.html" class="circ-link" aria-label="Choisir le circuit Grand tour"><svg width="16" height="16" fill="none"><use href="#ic-arrow"/></svg></a>
+            </div>
+          </div>
+        </article>
+        <article class="circ-card reveal" style="--i:2">
+          <div class="circ-ph">
+            <img src="images/circuit-nomade.jpg" alt="Campement de montagne près de Jyrgalan" width="760" height="1013" loading="lazy">
+            <span class="circ-days">9 jours</span>
+          </div>
+          <div class="circ-info">
+            <h3>Nomade</h3>
+            <p class="d">+ Jyrgalan, villages d'éleveurs, sources chaudes</p>
+            <div class="circ-foot">
+              <span class="circ-price">1 365 € <small>/ pers.</small></span>
+              <a href="reservation.html" class="circ-link" aria-label="Choisir le circuit Nomade"><svg width="16" height="16" fill="none"><use href="#ic-arrow"/></svg></a>
+            </div>
+          </div>
+        </article>
+        <article class="circ-card reveal" style="--i:3">
+          <div class="circ-ph">
+            <img src="images/circuit-expedition.jpg" alt="Forêt de sapins et rivière de montagne" width="760" height="1013" loading="lazy">
+            <span class="circ-days">10 jours</span>
+          </div>
+          <div class="circ-info">
+            <h3>Expédition</h3>
+            <p class="d">Circuit complet, Tash Rabat, Kel-Suu</p>
+            <div class="circ-foot">
+              <span class="circ-price">1 395 € <small>/ pers.</small></span>
+              <a href="reservation.html" class="circ-link" aria-label="Choisir le circuit Expédition"><svg width="16" height="16" fill="none"><use href="#ic-arrow"/></svg></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY / CHAPTERS ===== -->
+  <section class="gallery" id="galerie">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Carnet de route</p>
+        <h2>Ce que vous allez vivre</h2>
+      </div>
+
+      <article class="chapter reveal">
+        <div class="chapter-media">
+          <img src="images/circuit-grand-tour.jpg" alt="Yourtes traditionnelles installées face aux montagnes" width="900" height="750" loading="lazy">
+        </div>
+        <div class="chapter-text">
+          <p class="chapter-num">Chapitre 01</p>
+          <h3>Dormir en yourte, chez l'habitant</h3>
+          <p>À Song-Köl, à plus de 3 000&nbsp;m, les familles d'éleveurs vous accueillent sous la yourte le temps d'une nuit — feutre, thé au lait, silence des alpages.</p>
+        </div>
+      </article>
+
+      <article class="chapter reveal">
+        <div class="chapter-media">
+          <img src="images/option-cheval.jpg" alt="Chevaux en liberté sur les alpages au coucher du soleil" width="900" height="750" loading="lazy">
+        </div>
+        <div class="chapter-text">
+          <p class="chapter-num">Chapitre 02</p>
+          <h3>Suivre les troupeaux à cheval</h3>
+          <p>Le cheval reste le moyen de transport des bergers kirghizes. On vous propose une ou plusieurs journées en selle, encadrées par un éleveur local.</p>
+        </div>
+      </article>
+
+      <article class="chapter reveal">
+        <div class="chapter-media">
+          <img src="images/option-guide-4x4.jpg" alt="4x4 UAZ garé au pied d'une forêt de sapins" width="900" height="750" loading="lazy">
+        </div>
+        <div class="chapter-text">
+          <p class="chapter-num">Chapitre 03</p>
+          <h3>Rouler en UAZ, là où le bitume s'arrête</h3>
+          <p>Les pistes de montagne se passent en 4x4 soviétique, increvable et taillé pour le terrain. Votre guide francophone conduit et traduit, du premier au dernier jour.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== WHY US ===== -->
+  <section class="why" id="pourquoi">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Pourquoi Terres Nomades</p>
+        <h2>Voyager vrai, sans y laisser le confort</h2>
+      </div>
+      <div class="why-grid reveal-stagger">
+        <div class="why-card reveal" style="--i:0">
+          <div class="why-icon"><svg width="24" height="24" fill="none" stroke="currentColor"><use href="#ic-guide"/></svg></div>
+          <h3>Guide francophone</h3>
+          <p>Un accompagnateur qui parle votre langue, du premier au dernier jour du circuit.</p>
+        </div>
+        <div class="why-card reveal" style="--i:1">
+          <div class="why-icon"><svg width="24" height="24" fill="none" stroke="currentColor"><use href="#ic-group"/></svg></div>
+          <h3>Petits groupes</h3>
+          <p>Des expéditions pensées pour de petites tailles de groupe, jamais pour du tourisme de masse.</p>
+        </div>
+        <div class="why-card reveal" style="--i:2">
+          <div class="why-icon"><svg width="24" height="24" fill="none" stroke="currentColor"><use href="#ic-clock"/></svg></div>
+          <h3>Devis sous 24h</h3>
+          <p>Une demande de réservation sans engagement — vous recevez votre devis personnalisé le lendemain.</p>
+        </div>
+        <div class="why-card reveal" style="--i:3">
+          <div class="why-icon"><svg width="24" height="24" fill="none" stroke="currentColor"><use href="#ic-compass"/></svg></div>
+          <h3>Immersion authentique</h3>
+          <p>Nuits chez l'habitant, transport local, rythme nomade — pas un circuit standardisé.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OPTIONS ===== -->
+  <section class="options" id="options">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">À ajouter, si l'envie vous prend</p>
+        <h2>Personnalisez votre séjour</h2>
+        <p>Rien n'est obligatoire — ajoutez-les lors de votre demande de réservation.</p>
+      </div>
+      <div class="opt-grid reveal-stagger">
+        <div class="opt-card reveal" style="--i:0">
+          <div class="opt-thumb"><img src="images/option-cheval.jpg" alt="" width="76" height="76" loading="lazy"></div>
+          <div class="opt-body">
+            <h4>Cheval à Song-Köl</h4>
+            <p>Une journée à cheval sur les alpages avec un éleveur</p>
+            <div class="op-price">+120 €</div>
+          </div>
+        </div>
+        <div class="opt-card reveal" style="--i:1">
+          <div class="opt-thumb"><img src="images/option-peche.jpg" alt="" width="76" height="76" loading="lazy"></div>
+          <div class="opt-body">
+            <h4>Journée pêche</h4>
+            <p>Truite en lac d'altitude, guide local, feu de camp</p>
+            <div class="op-price">+90 €</div>
+          </div>
+        </div>
+        <div class="opt-card reveal" style="--i:2">
+          <div class="opt-thumb"><img src="images/option-guide-4x4.jpg" alt="" width="76" height="76" loading="lazy"></div>
+          <div class="opt-body">
+            <h4>Guide francophone</h4>
+            <p>Un guide qui parle français tout le voyage</p>
+            <div class="op-price">Sur devis</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINAL CTA ===== -->
+  <section class="final-cta">
+    <img src="images/circuit-essentiel.jpg" alt="" width="760" height="1013" loading="lazy">
+    <div class="final-cta-content">
+      <p class="eyebrow">Prêt à partir ?</p>
+      <h2>Composez votre expédition en quelques minutes</h2>
+      <a href="reservation.html" class="btn btn-primary">Réserver mon expédition <svg width="15" height="15"><use href="#ic-arrow"/></svg></a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#main-content" class="brand">TERRES<b>·</b>NOMADES</a>
+        <p>Expéditions sur mesure au Kirghizstan. Petits groupes, guides francophones, immersion nomade.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explorer</h4>
+        <a href="#circuits">Circuits</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#pourquoi">Pourquoi nous</a>
+        <a href="#options">Options</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:bonjour@terresnomades.fr">bonjour@terresnomades.fr</a>
+        <a href="reservation.html">Demander un devis</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Terres Nomades</span>
+      <span>Kirghizstan · Saison mai—septembre</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Nav scroll state
+  const nav = document.getElementById('siteNav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  // Mobile menu
+  const menuToggle = document.getElementById('menuToggle');
+  const mobilePanel = document.getElementById('mobilePanel');
+  menuToggle.addEventListener('click', () => {
+    const open = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', String(!open));
+    menuToggle.setAttribute('aria-label', open ? 'Ouvrir le menu' : 'Fermer le menu');
+    mobilePanel.classList.toggle('open', !open);
+    document.body.style.overflow = open ? '' : 'hidden';
+  });
+  mobilePanel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute('aria-label', 'Ouvrir le menu');
+    mobilePanel.classList.remove('open');
+    document.body.style.overflow = '';
+  }));
+
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Scroll reveal
+  if('IntersectionObserver' in window && !reducedMotion){
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.15, rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+  }
+
+  // Subtle hero parallax (background layer only, transform-based)
+  if(!reducedMotion){
+    const heroBg = document.getElementById('heroBg');
+    const heroSection = document.querySelector('.hero');
+    let ticking = false;
+    const updateParallax = () => {
+      const rect = heroSection.getBoundingClientRect();
+      if(rect.bottom > 0){
+        const progress = Math.min(Math.max(-rect.top / rect.height, 0), 1);
+        heroBg.style.transform = `translateY(${progress * 9}%)`;
+      }
+      ticking = false;
+    };
+    window.addEventListener('scroll', () => {
+      if(!ticking){ requestAnimationFrame(updateParallax); ticking = true; }
+    }, {passive:true});
+  }
+</script>
+</body>
+</html>
