@@ -140,8 +140,10 @@
   .circ-info h3{font-size:1.08rem;font-weight:600;letter-spacing:.02em;color:var(--ink)}
   .circ-info .d{font-size:.84rem;color:var(--stone);flex:1}
   .circ-foot{display:flex;align-items:center;justify-content:space-between;margin-top:10px}
-  .circ-price{font-family:var(--font-head);color:var(--madder);font-weight:600;font-size:1.05rem}
-  .circ-price small{font-family:var(--font-body);font-weight:400;color:var(--stone);font-size:.72rem;text-transform:none}
+  .circ-price{display:flex;flex-direction:column;gap:1px}
+  .circ-price .from{font-family:var(--font-body);font-weight:500;color:var(--stone);font-size:.68rem;text-transform:none}
+  .circ-price .amount{font-family:var(--font-head);color:var(--madder);font-weight:600;font-size:1.05rem}
+  .circ-price .amount small{font-family:var(--font-body);font-weight:400;color:var(--stone);font-size:.72rem;text-transform:none}
   .circ-link{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;
     transition:background .2s,border-color .2s,transform .2s}
   .circ-card:hover .circ-link{background:var(--madder);border-color:var(--madder);transform:translateX(2px)}
@@ -191,8 +193,6 @@
   .opt-thumb img{width:100%;height:100%;object-fit:cover}
   .opt-body h4{font-size:.98rem;font-weight:600;text-transform:none;letter-spacing:.01em;color:var(--ink);margin-bottom:4px}
   .opt-body p{font-size:.82rem;color:var(--stone)}
-  .opt-body .op-price{font-family:var(--font-head);color:var(--madder);font-size:.8rem;font-weight:600;margin-top:6px;
-    text-transform:uppercase;letter-spacing:.04em}
 
   /* ===== FINAL CTA ===== */
   .final-cta{position:relative;min-height:60vh;display:flex;align-items:center;justify-content:center;
@@ -320,7 +320,7 @@
       <div class="section-head reveal">
         <p class="eyebrow">Nos expéditions</p>
         <h2>Composez votre circuit</h2>
-        <p>Quatre bases de départ, prix par personne tout compris. On les adapte ensuite avec vous.</p>
+        <p>Quatre bases de départ, tarifs à partir de, par personne. On les précise ensemble avant de confirmer.</p>
       </div>
       <div class="circ-grid reveal-stagger">
         <article class="circ-card reveal" style="--i:0">
@@ -332,7 +332,7 @@
             <h3>L'essentiel</h3>
             <p class="d">Ala-Archa, Issyk-Kul, canyon Skazka</p>
             <div class="circ-foot">
-              <span class="circ-price">1 300 € <small>/ pers.</small></span>
+              <span class="circ-price"><span class="from">À partir de</span><span class="amount">1 300 € <small>/ personne</small></span></span>
               <a href="reservation.html" class="circ-link" aria-label="Choisir le circuit L'essentiel"><svg width="16" height="16" fill="none"><use href="#ic-arrow"/></svg></a>
             </div>
           </div>
@@ -346,7 +346,7 @@
             <h3>Grand tour</h3>
             <p class="d">+ Song-Köl, yourte d'altitude, cols du Tian Shan</p>
             <div class="circ-foot">
-              <span class="circ-price">1 335 € <small>/ pers.</small></span>
+              <span class="circ-price"><span class="from">À partir de</span><span class="amount">1 335 € <small>/ personne</small></span></span>
               <a href="reservation.html" class="circ-link" aria-label="Choisir le circuit Grand tour"><svg width="16" height="16" fill="none"><use href="#ic-arrow"/></svg></a>
             </div>
           </div>
@@ -360,7 +360,7 @@
             <h3>Nomade</h3>
             <p class="d">+ Jyrgalan, villages d'éleveurs, sources chaudes</p>
             <div class="circ-foot">
-              <span class="circ-price">1 365 € <small>/ pers.</small></span>
+              <span class="circ-price"><span class="from">À partir de</span><span class="amount">1 365 € <small>/ personne</small></span></span>
               <a href="reservation.html" class="circ-link" aria-label="Choisir le circuit Nomade"><svg width="16" height="16" fill="none"><use href="#ic-arrow"/></svg></a>
             </div>
           </div>
@@ -374,7 +374,7 @@
             <h3>Expédition</h3>
             <p class="d">Circuit complet, Tash Rabat, Kel-Suu</p>
             <div class="circ-foot">
-              <span class="circ-price">1 395 € <small>/ pers.</small></span>
+              <span class="circ-price"><span class="from">À partir de</span><span class="amount">1 395 € <small>/ personne</small></span></span>
               <a href="reservation.html" class="circ-link" aria-label="Choisir le circuit Expédition"><svg width="16" height="16" fill="none"><use href="#ic-arrow"/></svg></a>
             </div>
           </div>
@@ -472,7 +472,6 @@
           <div class="opt-body">
             <h4>Cheval à Song-Köl</h4>
             <p>Une journée à cheval sur les alpages avec un éleveur</p>
-            <div class="op-price">+120 €</div>
           </div>
         </div>
         <div class="opt-card reveal" style="--i:1">
@@ -480,7 +479,6 @@
           <div class="opt-body">
             <h4>Journée pêche</h4>
             <p>Truite en lac d'altitude, guide local, feu de camp</p>
-            <div class="op-price">+90 €</div>
           </div>
         </div>
         <div class="opt-card reveal" style="--i:2">
@@ -488,7 +486,6 @@
           <div class="opt-body">
             <h4>Guide francophone</h4>
             <p>Un guide qui parle français tout le voyage</p>
-            <div class="op-price">Sur devis</div>
           </div>
         </div>
       </div>

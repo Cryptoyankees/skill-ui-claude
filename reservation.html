@@ -98,6 +98,8 @@
   .circ h3{font-family:var(--font-head);text-transform:uppercase;font-weight:600;font-size:1.05rem;letter-spacing:.02em}
   .circ .d{font-size:.79rem;color:var(--stone);margin:3px 0 9px;min-height:32px}
   .circ .price{font-family:var(--font-head);color:var(--madder);font-weight:600;font-size:1.05rem}
+  .circ .price .from{display:block;font-family:var(--font-body);font-weight:500;color:var(--stone);font-size:.68rem;text-transform:none}
+  .circ .price small{font-family:var(--font-body);font-weight:400;color:var(--stone);font-size:.72rem;text-transform:none}
 
   /* ===== PAX SLIDER ===== */
   .pax-wrap{margin-top:26px;background:var(--card);border:1.5px solid var(--line);border-radius:var(--r-lg);padding:22px 24px}
@@ -128,7 +130,6 @@
   .opt .otxt{flex:1}
   .opt .ot{font-family:var(--font-head);text-transform:uppercase;font-weight:500;letter-spacing:.03em;font-size:.98rem}
   .opt .od{font-size:.78rem;color:var(--stone)}
-  .opt .op{font-family:var(--font-head);color:var(--madder);font-weight:500;font-size:.9rem;white-space:nowrap}
   .opt .ochk{width:22px;height:22px;border-radius:50%;border:1.5px solid var(--line);flex-shrink:0;display:grid;place-items:center}
   .opt.sel .ochk{background:var(--madder);border-color:var(--madder)}
   .opt.sel .ochk:after{content:"";width:5px;height:9px;border:2px solid #fff;border-top:0;border-left:0;transform:rotate(45deg) translateY(-1px)}
@@ -181,7 +182,6 @@
   .sline .v{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.03em;text-align:right}
   .sline.empty .v{color:#5f5a4e;font-style:italic;text-transform:none;font-family:var(--font-body)}
   .stotal{margin-top:16px;font-size:.78rem;color:#a9a396;line-height:1.5}
-  .stotal b{color:#fff;font-size:1.05rem}
   .snote{margin-top:14px;font-size:.72rem;color:#8a8577;border-top:1px solid rgba(236,230,216,.1);padding-top:12px}
 
   .confirm-panel{text-align:center;padding:24px 10px}
@@ -236,23 +236,23 @@
         <!-- STEP 1 -->
         <div class="page on" id="p1">
           <h2>Votre circuit</h2>
-          <p class="hint">Choisissez une base — on l'adapte ensuite avec vous. Prix par personne, tout compris.</p>
+          <p class="hint">Choisissez une base — on l'adapte ensuite avec vous. Tarifs à partir de, par personne.</p>
           <div class="circ-grid" id="circuits">
-            <div class="circ" data-circ="L'essentiel — 7 jours" data-price="1300">
+            <div class="circ" data-circ="L'essentiel — 7 jours">
               <div class="ph"><img src="images/circuit-essentiel.jpg" alt="Canyon Skazka aux couleurs ocres" width="760" height="1013" loading="lazy"><span class="days">7 jours</span><span class="chk"></span></div>
-              <div class="info"><h3>L'essentiel</h3><div class="d">Ala-Archa, Issyk-Kul, canyon Skazka</div><div class="price">1 300 €</div></div>
+              <div class="info"><h3>L'essentiel</h3><div class="d">Ala-Archa, Issyk-Kul, canyon Skazka</div><div class="price"><span class="from">À partir de</span> 1 300 € <small>/ personne</small></div></div>
             </div>
-            <div class="circ" data-circ="Grand tour — 8 jours" data-price="1335">
+            <div class="circ" data-circ="Grand tour — 8 jours">
               <div class="ph"><img src="images/circuit-grand-tour.jpg" alt="Camp de yourtes à Song-Köl" width="760" height="1013" loading="lazy"><span class="days">8 jours</span><span class="chk"></span></div>
-              <div class="info"><h3>Grand tour</h3><div class="d">+ Song-Köl, yourte d'altitude, cols du Tian Shan</div><div class="price">1 335 €</div></div>
+              <div class="info"><h3>Grand tour</h3><div class="d">+ Song-Köl, yourte d'altitude, cols du Tian Shan</div><div class="price"><span class="from">À partir de</span> 1 335 € <small>/ personne</small></div></div>
             </div>
-            <div class="circ" data-circ="Nomade — 9 jours" data-price="1365">
+            <div class="circ" data-circ="Nomade — 9 jours">
               <div class="ph"><img src="images/circuit-nomade.jpg" alt="Campement de montagne près de Jyrgalan" width="760" height="1013" loading="lazy"><span class="days">9 jours</span><span class="chk"></span></div>
-              <div class="info"><h3>Nomade</h3><div class="d">+ Jyrgalan, villages d'éleveurs, sources chaudes</div><div class="price">1 365 €</div></div>
+              <div class="info"><h3>Nomade</h3><div class="d">+ Jyrgalan, villages d'éleveurs, sources chaudes</div><div class="price"><span class="from">À partir de</span> 1 365 € <small>/ personne</small></div></div>
             </div>
-            <div class="circ" data-circ="Expédition — 10 jours" data-price="1395">
+            <div class="circ" data-circ="Expédition — 10 jours">
               <div class="ph"><img src="images/circuit-expedition.jpg" alt="Forêt et rivière de montagne au Kirghizstan" width="760" height="1013" loading="lazy"><span class="days">10 jours</span><span class="chk"></span></div>
-              <div class="info"><h3>Expédition</h3><div class="d">Circuit complet, Tash Rabat, Kel-Suu</div><div class="price">1 395 €</div></div>
+              <div class="info"><h3>Expédition</h3><div class="d">Circuit complet, Tash Rabat, Kel-Suu</div><div class="price"><span class="from">À partir de</span> 1 395 € <small>/ personne</small></div></div>
             </div>
           </div>
 
@@ -272,17 +272,17 @@
         <div class="page" id="p2">
           <h2>Vos options</h2>
           <p class="hint">Ajoutez des expériences. Rien d'obligatoire.</p>
-          <div class="opt" data-opt="Cheval à Song-Köl" data-price="120">
+          <div class="opt" data-opt="Cheval à Song-Köl">
             <img class="othumb" src="images/option-cheval.jpg" alt="Chevaux en liberté sur les alpages" width="64" height="64" loading="lazy"><div class="otxt"><div class="ot">Cheval à Song-Köl</div><div class="od">Une journée à cheval sur les alpages avec un éleveur</div></div>
-            <span class="op">+120 €</span><span class="ochk"></span>
+            <span class="ochk"></span>
           </div>
-          <div class="opt" data-opt="Journée pêche" data-price="90">
+          <div class="opt" data-opt="Journée pêche">
             <img class="othumb" src="images/option-peche.jpg" alt="Vallée verdoyante près d'un torrent" width="64" height="64" loading="lazy"><div class="otxt"><div class="ot">Journée pêche</div><div class="od">Truite en lac d'altitude, guide local, feu de camp</div></div>
-            <span class="op">+90 €</span><span class="ochk"></span>
+            <span class="ochk"></span>
           </div>
-          <div class="opt" data-opt="Guide francophone" data-price="0">
+          <div class="opt" data-opt="Guide francophone">
             <img class="othumb" src="images/option-guide-4x4.jpg" alt="4x4 UAZ au pied de la forêt" width="64" height="64" loading="lazy"><div class="otxt"><div class="ot">Guide francophone</div><div class="od">Un guide qui parle français tout le voyage</div></div>
-            <span class="op">sur devis</span><span class="ochk"></span>
+            <span class="ochk"></span>
           </div>
         </div>
 
@@ -342,7 +342,7 @@
         <div class="sline" id="s-pax"><span class="k">Voyageurs</span><span class="v">2</span></div>
         <div class="sline empty" id="s-opt"><span class="k">Options</span><span class="v">Aucune</span></div>
         <div class="sline empty" id="s-date"><span class="k">Départ</span><span class="v">À définir</span></div>
-        <div class="stotal">Estimation : <b id="s-est">—</b><br><span style="font-size:.72rem">Prix/pers, hors options sur devis. Devis exact sous 24 h.</span></div>
+        <div class="stotal">Devis personnalisé et tarif exact communiqués sous 24 h.</div>
         <div class="snote">Vous réservez une <b style="color:var(--gold)">demande</b>, pas un paiement.</div>
       </aside>
     </div>
@@ -350,7 +350,7 @@
 </div>
 
 <script>
-  const state={step:1,circ:null,circPrice:0,pax:2,opts:[],date:null,flex:false};
+  const state={step:1,circ:null,pax:2,opts:[],date:null,flex:false};
   const pages=['p1','p2','p3','p4'];
   const MONTHS=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
 
@@ -358,7 +358,7 @@
     el.onclick=()=>{
       document.querySelectorAll('#circuits .circ').forEach(p=>p.classList.remove('sel'));
       el.classList.add('sel');
-      state.circ=el.dataset.circ;state.circPrice=+el.dataset.price;
+      state.circ=el.dataset.circ;
       updateSummary();validate();
     };
   });
@@ -395,8 +395,6 @@
     const so=document.getElementById('s-opt');
     if(state.opts.length){so.classList.remove('empty');so.querySelector('.v').textContent=state.opts.length+' choisie'+(state.opts.length>1?'s':'');}
     else{so.classList.add('empty');so.querySelector('.v').textContent='Aucune';}
-    const est=document.getElementById('s-est');
-    est.textContent=state.circPrice>0?('dès '+(state.circPrice*state.pax).toLocaleString('fr-FR')+' €'):'sur devis';
   }
 
   // CALENDAR
