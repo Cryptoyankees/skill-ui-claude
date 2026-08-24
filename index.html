@@ -4,15 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Terres Nomades — Expéditions nomades au Kirghizstan</title>
-<meta name="description" content="Terres Nomades compose des expéditions sur mesure au Kirghizstan : yourtes, cols du Tian Shan, chevaux de Song-Köl, guide francophone. Devis sous 24h, sans engagement.">
+<meta name="description" content="Terres Nomades vous connecte à un opérateur local kirghize pour des expéditions en 4x4 au Kirghizstan : yourtes, cols du Tian Shan, chevaux de Song-Köl. Organisé en français, devis sous 24h, sans engagement.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23181712'/%3E%3Cpath d='M4 24 12 10l5 8 3-5 8 11z' fill='%23b8824a'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Terres Nomades — Le pays des nomades">
+<meta property="og:description" content="Expéditions en 4x4 au Kirghizstan, organisées en français. Yourtes d'altitude, cols du Tian Shan, chevaux de Song-Köl.">
+<meta property="og:image" content="images/hero-vallee.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#181712;--ink2:#3a372e;--paper:#f6f2e9;--card:#fffdf8;--stone:#8f897a;
-    --line:#e2daca;--tan:#b8824a;--gold:#e0b98a;--madder:#a8402c;--madder-dk:#8f3421;
+    --ink:#14140f;--ink2:#3a372e;--paper:#f6f2e9;--card:#fffdf8;--stone:#8a8577;
+    --line:#e2daca;--tan:#b8824a;--sand:#e8e0d0;--lake:#6f9b93;--madder:#a8402c;--madder-dk:#8f3421;
     --slate:#1e2a2c;--ok:#4a6a52;
     --font-head:'Oswald',sans-serif;--font-body:'Inter',sans-serif;
     --ease:cubic-bezier(.22,.61,.36,1);
@@ -95,7 +99,7 @@
   .hero:after{content:"";position:absolute;inset:0;z-index:1;
     background:linear-gradient(to top,rgba(15,14,10,.92) 0%,rgba(15,14,10,.35) 52%,rgba(15,14,10,.28) 100%)}
   .hero-content{position:relative;z-index:2;color:#fff;padding:0 0 100px}
-  .hero .eyebrow{color:var(--gold)}
+  .hero .eyebrow{color:var(--sand)}
   .hero h1{font-size:clamp(2.6rem,7vw,5.4rem);font-weight:600;margin:16px 0 22px;max-width:14ch}
   .hero p.lead{max-width:46ch;font-size:1.08rem;color:rgba(255,255,255,.86);margin-bottom:34px}
   .hero-actions{display:flex;flex-wrap:wrap;gap:16px}
@@ -107,21 +111,37 @@
 
   /* ===== MANIFESTO ===== */
   .manifesto{padding:120px 0 90px}
-  .manifesto-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:start}
+  .manifesto-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:start}
   @media(max-width:860px){.manifesto-grid{grid-template-columns:1fr;gap:36px}}
   .manifesto h2{font-size:clamp(1.9rem,4vw,3rem);font-weight:500;color:var(--ink);margin:14px 0 0}
-  .manifesto .lede{font-family:var(--font-head);font-weight:400;font-size:clamp(1.3rem,2.4vw,1.7rem);
-    line-height:1.35;color:var(--ink2);text-transform:none;letter-spacing:0}
   .manifesto p.body-text{color:var(--ink2);margin-top:20px;max-width:56ch}
   .stat-row{display:flex;gap:36px;margin-top:38px;flex-wrap:wrap}
   .stat b{display:block;font-family:var(--font-head);font-size:2.1rem;font-weight:600;color:var(--madder)}
   .stat span{font-size:.78rem;color:var(--stone);text-transform:uppercase;letter-spacing:.06em}
+
+  /* ===== TOPOGRAPHIC MOTIF ===== */
+  .topo-bg{position:relative}
+  .topo-bg:before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600' viewBox='0 0 600 600'%3E%3Cg fill='none' stroke='%238a8577' stroke-width='1'%3E%3Cpath d='M-20 80 C 120 40, 180 140, 300 90 S 480 20, 620 70'/%3E%3Cpath d='M-20 160 C 130 120, 190 220, 300 170 S 470 100, 620 150'/%3E%3Cpath d='M-20 240 C 110 200, 210 300, 300 250 S 490 180, 620 230'/%3E%3Cpath d='M-20 320 C 140 280, 170 380, 300 330 S 460 260, 620 310'/%3E%3Cpath d='M-20 400 C 120 360, 200 460, 300 410 S 480 340, 620 390'/%3E%3Cpath d='M-20 480 C 130 440, 190 540, 300 490 S 470 420, 620 470'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat:repeat;background-size:600px 600px;opacity:.05}
+  .coords{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.18em;font-size:.68rem;
+    color:var(--stone)}
+  .coords b{color:var(--tan);font-weight:500}
 
   /* ===== SECTION HEADERS ===== */
   .section-head{max-width:640px;margin-bottom:52px}
   .section-head h2{font-size:clamp(2rem,4.2vw,3rem);font-weight:600;color:var(--ink);margin:12px 0 14px}
   .section-head p{color:var(--stone);font-size:1.02rem}
   .section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+
+  /* ===== PROOF BAND ===== */
+  .proof-band{background:var(--madder);padding:22px 0}
+  .proof-list{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;list-style:none}
+  .proof-list li{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.08em;font-size:.78rem;
+    font-weight:500;color:#fff;display:flex;align-items:center;gap:10px}
+  .proof-list li:before{content:"";width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.6)}
+  .proof-list li:first-child:before{display:none}
+  @media(max-width:640px){.proof-list{gap:8px 18px;font-size:.7rem}}
 
   /* ===== CIRCUITS ===== */
   .circuits{padding:90px 0}
@@ -136,14 +156,18 @@
   .circ-card:hover .circ-ph img{transform:scale(1.08)}
   .circ-days{position:absolute;top:12px;left:12px;background:rgba(24,23,18,.82);color:#fff;font-family:var(--font-head);
     font-size:.68rem;letter-spacing:.1em;padding:6px 11px;border-radius:20px;text-transform:uppercase}
-  .circ-info{padding:18px 18px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
+  .circ-info{padding:18px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
   .circ-info h3{font-size:1.08rem;font-weight:600;letter-spacing:.02em;color:var(--ink)}
-  .circ-info .d{font-size:.84rem;color:var(--stone);flex:1}
-  .circ-foot{display:flex;align-items:center;justify-content:space-between;margin-top:10px}
-  .circ-price{display:flex;flex-direction:column;gap:1px}
-  .circ-price .from{font-family:var(--font-body);font-weight:500;color:var(--stone);font-size:.68rem;text-transform:none}
-  .circ-price .amount{font-family:var(--font-head);color:var(--madder);font-weight:600;font-size:1.05rem}
-  .circ-price .amount small{font-family:var(--font-body);font-weight:400;color:var(--stone);font-size:.72rem;text-transform:none}
+  .circ-info .d{font-size:.84rem;color:var(--stone)}
+  .circ-badges{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+  .circ-badge{font-size:.66rem;font-weight:600;letter-spacing:.03em;color:var(--ink2);background:var(--paper);
+    border:1px solid var(--line);border-radius:999px;padding:4px 9px}
+  .circ-diff{display:flex;align-items:center;gap:8px;margin-top:auto;padding-top:6px}
+  .circ-diff .lbl{font-size:.68rem;color:var(--stone);text-transform:uppercase;letter-spacing:.06em;font-family:var(--font-head)}
+  .circ-diff .dots{display:flex;gap:3px}
+  .circ-diff .dots span{width:7px;height:7px;border-radius:50%;background:var(--line)}
+  .circ-diff .dots span.on{background:var(--tan)}
+  .circ-foot{display:flex;align-items:center;justify-content:flex-end;margin-top:10px}
   .circ-link{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;
     transition:background .2s,border-color .2s,transform .2s}
   .circ-card:hover .circ-link{background:var(--madder);border-color:var(--madder);transform:translateX(2px)}
@@ -171,14 +195,14 @@
   .why{padding:90px 0;background:var(--slate);color:#ece6d8}
   .why .section-head h2{color:#fff}
   .why .section-head p{color:#a9a396}
-  .why .eyebrow{color:var(--gold)}
+  .why .eyebrow{color:var(--sand)}
   .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
   @media(max-width:960px){.why-grid{grid-template-columns:1fr 1fr}}
   @media(max-width:560px){.why-grid{grid-template-columns:1fr}}
   .why-card{padding:8px 4px}
   .why-icon{width:52px;height:52px;border-radius:14px;background:rgba(224,185,138,.12);display:grid;place-items:center;
     margin-bottom:20px}
-  .why-icon svg{stroke:var(--gold)}
+  .why-icon svg{stroke:var(--sand)}
   .why-card h3{font-size:1.02rem;font-weight:600;color:#fff;margin-bottom:8px;text-transform:none;letter-spacing:.01em}
   .why-card p{font-size:.9rem;color:#a9a396}
 
@@ -194,13 +218,38 @@
   .opt-body h4{font-size:.98rem;font-weight:600;text-transform:none;letter-spacing:.01em;color:var(--ink);margin-bottom:4px}
   .opt-body p{font-size:.82rem;color:var(--stone)}
 
+  /* ===== CARNET TEASER ===== */
+  .carnet{padding:90px 0}
+  .carnet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media(max-width:860px){.carnet-grid{grid-template-columns:1fr}}
+  .carnet-card{background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:26px;
+    display:flex;flex-direction:column;gap:10px;transition:transform .25s var(--ease),border-color .25s}
+  .carnet-card:hover{transform:translateY(-4px);border-color:var(--tan)}
+  .carnet-tag{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.1em;font-size:.64rem;
+    color:var(--tan);font-weight:600}
+  .carnet-card h3{font-size:1rem;font-weight:600;text-transform:none;letter-spacing:.01em;color:var(--ink)}
+  .carnet-card p{font-size:.86rem;color:var(--stone)}
+
+  /* ===== MATERIEL TEASER ===== */
+  .materiel{padding:0 0 90px}
+  .materiel-box{background:var(--slate);border-radius:22px;padding:48px;display:grid;
+    grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;color:#ece6d8}
+  @media(max-width:860px){.materiel-box{grid-template-columns:1fr;padding:32px}}
+  .materiel-box .eyebrow{color:var(--sand)}
+  .materiel-box h2{color:#fff;font-size:clamp(1.6rem,3vw,2.2rem);margin:12px 0 14px}
+  .materiel-box p{color:#a9a396;max-width:50ch}
+  .materiel-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+  .materiel-tags span{font-size:.74rem;color:#ece6d8;background:rgba(236,230,216,.08);
+    border:1px solid rgba(236,230,216,.16);border-radius:999px;padding:5px 12px}
+  .materiel-note{font-size:.72rem;color:#8a8577;margin-top:18px}
+
   /* ===== FINAL CTA ===== */
   .final-cta{position:relative;min-height:60vh;display:flex;align-items:center;justify-content:center;
     text-align:center;overflow:hidden;margin:0 0 0}
   .final-cta img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
   .final-cta:after{content:"";position:absolute;inset:0;background:rgba(15,14,10,.68);z-index:1}
   .final-cta-content{position:relative;z-index:2;color:#fff;padding:100px 24px}
-  .final-cta .eyebrow{color:var(--gold)}
+  .final-cta .eyebrow{color:var(--sand)}
   .final-cta h2{font-size:clamp(2.1rem,5vw,3.6rem);font-weight:600;margin:14px 0 30px;max-width:16ch;
     margin-left:auto;margin-right:auto}
   .final-cta .btn{margin:0 auto}
@@ -212,7 +261,7 @@
   .footer-brand .brand{color:#fff;margin-bottom:14px;display:inline-block}
   .footer-brand p{max-width:38ch;font-size:.88rem;color:#8a8577}
   .footer-col h4{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.1em;font-size:.76rem;
-    color:var(--gold);margin-bottom:16px}
+    color:var(--sand);margin-bottom:16px}
   .footer-col a{display:block;font-size:.9rem;color:#c9c3b4;text-decoration:none;margin-bottom:10px;transition:color .2s}
   .footer-col a:hover{color:var(--tan)}
   .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:26px;font-size:.78rem;
@@ -246,6 +295,8 @@
     <symbol id="ic-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.4" fill="none" stroke-width="1.6"/><path d="M12 7.5V12l3 2" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="ic-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.4" fill="none" stroke-width="1.6"/><path d="M15 9l-2 5-5 2 2-5z" fill="none" stroke-width="1.4" stroke-linejoin="round"/></symbol>
     <symbol id="ic-menu" viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7" stroke-width="1.8"/><line x1="4" y1="12" x2="20" y2="12" stroke-width="1.8"/><line x1="4" y1="17" x2="20" y2="17" stroke-width="1.8"/></symbol>
+    <symbol id="ic-tag" viewBox="0 0 24 24"><path d="M12.5 4.5h5a2 2 0 0 1 2 2v5a2 2 0 0 1-.6 1.4l-8 8a2 2 0 0 1-2.8 0l-5.5-5.5a2 2 0 0 1 0-2.8l8-8a2 2 0 0 1 1.4-.6z" fill="none" stroke-width="1.6" stroke-linejoin="round"/><circle cx="16.5" cy="8" r="1.3" fill="none" stroke-width="1.4"/></symbol>
+    <symbol id="ic-chat" viewBox="0 0 24 24"><path d="M4 5.5h16v11H9l-4 3.5v-3.5H4z" fill="none" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></symbol>
   </defs>
 </svg>
 
@@ -255,9 +306,9 @@
     <a href="#main-content" class="brand">TERRES<b>·</b>NOMADES</a>
     <nav class="navlinks" aria-label="Navigation principale">
       <a href="#circuits">Circuits</a>
-      <a href="#galerie">Galerie</a>
-      <a href="#pourquoi">Pourquoi nous</a>
       <a href="#options">Options</a>
+      <a href="#carnet">Carnet</a>
+      <a href="#materiel">Matériel</a>
       <a href="reservation.html" class="btn btn-primary nav-cta">Réserver <svg width="15" height="15"><use href="#ic-arrow"/></svg></a>
     </nav>
     <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobilePanel" aria-label="Ouvrir le menu">
@@ -268,9 +319,9 @@
 
 <div class="mobile-panel" id="mobilePanel">
   <a href="#circuits">Circuits</a>
-  <a href="#galerie">Galerie</a>
-  <a href="#pourquoi">Pourquoi nous</a>
   <a href="#options">Options</a>
+  <a href="#carnet">Carnet</a>
+  <a href="#materiel">Matériel</a>
   <a href="reservation.html" class="mobile-cta">Réserver mon expédition →</a>
 </div>
 
@@ -282,13 +333,14 @@
       <img src="images/hero-vallee.jpg" alt="Col de montagne sur une piste sinueuse au Kirghizstan" width="1500" height="2000" fetchpriority="high">
     </div>
     <div class="container hero-content">
-      <p class="eyebrow">Kirghizstan · Expéditions sur mesure</p>
-      <h1>L'aventure commence là où s'arrête la route</h1>
-      <p class="lead">Terres Nomades compose des circuits sur mesure au cœur du Tian Shan : yourtes d'altitude, chevaux de Song-Köl, cols à 3 000&nbsp;m — avec un guide francophone, en petit groupe.</p>
+      <p class="eyebrow">Kirghizstan · Expéditions en 4x4</p>
+      <h1>Le pays des nomades</h1>
+      <p class="lead">Terres Nomades vous connecte à notre opérateur local kirghize pour explorer le Tian Shan en 4x4 : yourtes d'altitude, chevaux de Song-Köl, cols à 3 000&nbsp;m — organisé de bout en bout en français.</p>
       <div class="hero-actions">
         <a href="#circuits" class="btn btn-primary">Voir les circuits <svg width="15" height="15"><use href="#ic-arrow"/></svg></a>
-        <a href="reservation.html" class="btn btn-ghost">Réserver mon expédition</a>
+        <a href="reservation.html" class="btn btn-ghost">Préparer mon voyage</a>
       </div>
+      <p class="coords" style="margin-top:34px;color:rgba(255,255,255,.65)">N 42°33′ · ALT. 3 016 M — SONG-KÖL, TIAN SHAN</p>
     </div>
     <a href="#histoire" class="scroll-cue" aria-label="Défiler vers le contenu">
       <span>Découvrir</span>
@@ -297,14 +349,14 @@
   </section>
 
   <!-- ===== MANIFESTO ===== -->
-  <section class="manifesto" id="histoire">
+  <section class="manifesto topo-bg" id="histoire">
     <div class="container manifesto-grid">
       <div class="reveal">
         <p class="eyebrow">Notre philosophie</p>
-        <p class="lede">On ne visite pas le Kirghizstan. On y vit quelques jours, au rythme des éleveurs et des cols.</p>
+        <h2 style="text-transform:none">Un autre monde</h2>
       </div>
       <div class="reveal">
-        <p class="body-text">Chaque circuit est pensé comme une trame, pas un carcan : nuits en yourte chez l'habitant, transferts en 4x4 UAZ, marches sur les alpages du Tian Shan. On l'ajuste avec vous — niveau, dates, envies — avant de confirmer quoi que ce soit.</p>
+        <p class="body-text" style="max-width:60ch">Nichée au cœur de l'Asie centrale, le Kirghizstan reste l'un des derniers grands terrains d'aventure encore méconnus. Ici, les sommets du Tian Shan veillent sur des pâturages d'altitude à perte de vue et des lacs d'un bleu irréel. Le pays vit toujours au rythme de ses éleveurs nomades&nbsp;: on dort en yourte, on partage le thé et le quotidien des familles, on croise les troupeaux de chevaux en liberté sur les alpages. Loin des circuits balisés, cette destination confidentielle se découvre en 4x4, au plus près des grands espaces et des rencontres — une aventure brute et authentique.</p>
         <div class="stat-row">
           <div class="stat"><b>4</b><span>Circuits de base</span></div>
           <div class="stat"><b>7—10</b><span>Jours sur place</span></div>
@@ -313,6 +365,16 @@
       </div>
     </div>
   </section>
+
+  <!-- ===== PROOF BAND ===== -->
+  <div class="proof-band">
+    <ul class="proof-list container">
+      <li>10 jours de piste</li>
+      <li>4x4 chauffeur privé</li>
+      <li>100&nbsp;% réservé en français</li>
+      <li>Nuit en yourte</li>
+    </ul>
+  </div>
 
   <!-- ===== CIRCUITS ===== -->
   <section class="circuits" id="circuits">
@@ -331,8 +393,9 @@
           <div class="circ-info">
             <h3>L'essentiel</h3>
             <p class="d">Ala-Archa, Issyk-Kul, canyon Skazka</p>
+            <div class="circ-badges"><span class="circ-badge">4x4 privé</span></div>
+            <div class="circ-diff"><span class="lbl">Difficulté</span><span class="dots" role="img" aria-label="Difficulté 1 sur 5"><span class="on"></span><span class="on"></span><span></span><span></span><span></span></span></div>
             <div class="circ-foot">
-              <span class="circ-price"><span class="from">À partir de</span><span class="amount">1 300 € <small>/ personne</small></span></span>
               <a href="reservation.html" class="circ-link" aria-label="Choisir le circuit L'essentiel"><svg width="16" height="16" fill="none"><use href="#ic-arrow"/></svg></a>
             </div>
           </div>
@@ -345,8 +408,9 @@
           <div class="circ-info">
             <h3>Grand tour</h3>
             <p class="d">+ Song-Köl, yourte d'altitude, cols du Tian Shan</p>
+            <div class="circ-badges"><span class="circ-badge">4x4 privé</span><span class="circ-badge">Yourte incluse</span></div>
+            <div class="circ-diff"><span class="lbl">Difficulté</span><span class="dots" role="img" aria-label="Difficulté 1 sur 5"><span class="on"></span><span class="on"></span><span class="on"></span><span></span><span></span></span></div>
             <div class="circ-foot">
-              <span class="circ-price"><span class="from">À partir de</span><span class="amount">1 335 € <small>/ personne</small></span></span>
               <a href="reservation.html" class="circ-link" aria-label="Choisir le circuit Grand tour"><svg width="16" height="16" fill="none"><use href="#ic-arrow"/></svg></a>
             </div>
           </div>
@@ -359,8 +423,9 @@
           <div class="circ-info">
             <h3>Nomade</h3>
             <p class="d">+ Jyrgalan, villages d'éleveurs, sources chaudes</p>
+            <div class="circ-badges"><span class="circ-badge">4x4 privé</span><span class="circ-badge">Yourte incluse</span><span class="circ-badge">Nuit chez l'habitant</span></div>
+            <div class="circ-diff"><span class="lbl">Difficulté</span><span class="dots" role="img" aria-label="Difficulté 1 sur 5"><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span></span></span></div>
             <div class="circ-foot">
-              <span class="circ-price"><span class="from">À partir de</span><span class="amount">1 365 € <small>/ personne</small></span></span>
               <a href="reservation.html" class="circ-link" aria-label="Choisir le circuit Nomade"><svg width="16" height="16" fill="none"><use href="#ic-arrow"/></svg></a>
             </div>
           </div>
@@ -373,8 +438,9 @@
           <div class="circ-info">
             <h3>Expédition</h3>
             <p class="d">Circuit complet, Tash Rabat, Kel-Suu</p>
+            <div class="circ-badges"><span class="circ-badge">4x4 privé</span><span class="circ-badge">Yourte incluse</span><span class="circ-badge">Nuit chez l'habitant</span></div>
+            <div class="circ-diff"><span class="lbl">Difficulté</span><span class="dots" role="img" aria-label="Difficulté 1 sur 5"><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span></span></div>
             <div class="circ-foot">
-              <span class="circ-price"><span class="from">À partir de</span><span class="amount">1 395 € <small>/ personne</small></span></span>
               <a href="reservation.html" class="circ-link" aria-label="Choisir le circuit Expédition"><svg width="16" height="16" fill="none"><use href="#ic-arrow"/></svg></a>
             </div>
           </div>
@@ -420,7 +486,7 @@
         <div class="chapter-text">
           <p class="chapter-num">Chapitre 03</p>
           <h3>Rouler en UAZ, là où le bitume s'arrête</h3>
-          <p>Les pistes de montagne se passent en 4x4 soviétique, increvable et taillé pour le terrain. Votre guide francophone conduit et traduit, du premier au dernier jour.</p>
+          <p>Les pistes de montagne se passent en 4x4 soviétique, increvable et taillé pour le terrain. Le chauffeur, anglophone, connaît chaque gué et chaque famille d'éleveurs — et on reste joignables en français avant et pendant le voyage.</p>
         </div>
       </article>
     </div>
@@ -435,24 +501,24 @@
       </div>
       <div class="why-grid reveal-stagger">
         <div class="why-card reveal" style="--i:0">
-          <div class="why-icon"><svg width="24" height="24" fill="none" stroke="currentColor"><use href="#ic-guide"/></svg></div>
-          <h3>Guide francophone</h3>
-          <p>Un accompagnateur qui parle votre langue, du premier au dernier jour du circuit.</p>
+          <div class="why-icon"><svg width="24" height="24" fill="none" stroke="currentColor"><use href="#ic-compass"/></svg></div>
+          <h3>Un voyage vécu</h3>
+          <p>Le fondateur a parcouru cette route avant vous. Chaque circuit vient d'une expérience réelle, pas d'un catalogue.</p>
         </div>
         <div class="why-card reveal" style="--i:1">
+          <div class="why-icon"><svg width="24" height="24" fill="none" stroke="currentColor"><use href="#ic-chat"/></svg></div>
+          <h3>Transparence, jusqu'à la langue</h3>
+          <p>Sur place, le chauffeur est anglophone. L'organisation et l'assistance avant/pendant le voyage se font en français.</p>
+        </div>
+        <div class="why-card reveal" style="--i:2">
+          <div class="why-icon"><svg width="24" height="24" fill="none" stroke="currentColor"><use href="#ic-tag"/></svg></div>
+          <h3>Prix justes</h3>
+          <p>Notre marge est fondue dans un prix public clair — pas de frais cachés, pas de surfacturation.</p>
+        </div>
+        <div class="why-card reveal" style="--i:3">
           <div class="why-icon"><svg width="24" height="24" fill="none" stroke="currentColor"><use href="#ic-group"/></svg></div>
           <h3>Petits groupes</h3>
           <p>Des expéditions pensées pour de petites tailles de groupe, jamais pour du tourisme de masse.</p>
-        </div>
-        <div class="why-card reveal" style="--i:2">
-          <div class="why-icon"><svg width="24" height="24" fill="none" stroke="currentColor"><use href="#ic-clock"/></svg></div>
-          <h3>Devis sous 24h</h3>
-          <p>Une demande de réservation sans engagement — vous recevez votre devis personnalisé le lendemain.</p>
-        </div>
-        <div class="why-card reveal" style="--i:3">
-          <div class="why-icon"><svg width="24" height="24" fill="none" stroke="currentColor"><use href="#ic-compass"/></svg></div>
-          <h3>Immersion authentique</h3>
-          <p>Nuits chez l'habitant, transport local, rythme nomade — pas un circuit standardisé.</p>
         </div>
       </div>
     </div>
@@ -492,6 +558,52 @@
     </div>
   </section>
 
+  <!-- ===== CARNET TEASER ===== -->
+  <section class="carnet" id="carnet">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Le carnet</p>
+        <h2>Préparer son départ</h2>
+        <p>Budget, saison, matériel, itinéraires — nos guides pratiques arrivent progressivement.</p>
+      </div>
+      <div class="carnet-grid reveal-stagger">
+        <article class="carnet-card reveal" style="--i:0">
+          <span class="carnet-tag">Bientôt · Budget</span>
+          <h3>Voyage au Kirghizstan : le budget complet</h3>
+          <p>Transport, hébergement, options — poste par poste, sans surprise.</p>
+        </article>
+        <article class="carnet-card reveal" style="--i:1">
+          <span class="carnet-tag">Bientôt · Saison</span>
+          <h3>Quand partir au Kirghizstan ? Mois par mois</h3>
+          <p>Météo, cols ouverts, affluence : le bon créneau pour votre profil.</p>
+        </article>
+        <article class="carnet-card reveal" style="--i:2">
+          <span class="carnet-tag">Bientôt · Matériel</span>
+          <h3>La checklist matériel Kirghizstan</h3>
+          <p>Ce qu'on emporte vraiment, testé sur nos propres circuits.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MATERIEL TEASER ===== -->
+  <section class="materiel" id="materiel">
+    <div class="container">
+      <div class="materiel-box reveal">
+        <div>
+          <p class="eyebrow">Matériel & assurance</p>
+          <h2>Bien équipé avant de partir</h2>
+          <p>Chaussures, sac, doudoune, gourde filtrante — et une assurance voyage adaptée à l'altitude et au 4x4. Une sélection resserrée, testée sur nos propres circuits.</p>
+          <p class="materiel-note">Certains liens seront affiliés, sans surcoût pour vous — la transparence complète sera indiquée sur chaque page.</p>
+        </div>
+        <div class="materiel-tags">
+          <span>Chaussures</span><span>Sac de trek</span><span>Doudoune</span>
+          <span>Powerbank</span><span>Gourde filtrante</span><span>Assurance voyage</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== FINAL CTA ===== -->
   <section class="final-cta">
     <img src="images/circuit-essentiel.jpg" alt="" width="760" height="1013" loading="lazy">
@@ -510,23 +622,27 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="#main-content" class="brand">TERRES<b>·</b>NOMADES</a>
-        <p>Expéditions sur mesure au Kirghizstan. Petits groupes, guides francophones, immersion nomade.</p>
+        <p>Expéditions en 4x4 au Kirghizstan. Petits groupes, organisation 100&nbsp;% francophone, immersion nomade.</p>
       </div>
       <div class="footer-col">
-        <h4>Explorer</h4>
+        <h4>Voyager</h4>
         <a href="#circuits">Circuits</a>
         <a href="#galerie">Galerie</a>
         <a href="#pourquoi">Pourquoi nous</a>
         <a href="#options">Options</a>
+        <a href="#carnet">Le carnet</a>
+        <a href="#materiel">Matériel</a>
       </div>
       <div class="footer-col">
-        <h4>Contact</h4>
+        <h4>Contact & légal</h4>
         <a href="mailto:bonjour@terresnomades.fr">bonjour@terresnomades.fr</a>
         <a href="reservation.html">Demander un devis</a>
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="cgv.html">CGV</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Terres Nomades</span>
+      <span>© 2026 Terres Nomades — Apporteur d'affaires. Ne vend pas de séjour ; met en relation avec l'opérateur local.</span>
       <span>Kirghizstan · Saison mai—septembre</span>
     </div>
   </div>

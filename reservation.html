@@ -9,8 +9,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#181712;--ink2:#3a372e;--paper:#f6f2e9;--card:#fffdf8;--stone:#8f897a;
-    --line:#e2daca;--tan:#b8824a;--gold:#e0b98a;--madder:#a8402c;--madder-dk:#8f3421;
+    --ink:#14140f;--ink2:#3a372e;--paper:#f6f2e9;--card:#fffdf8;--stone:#8a8577;
+    --line:#e2daca;--tan:#b8824a;--sand:#e8e0d0;--lake:#6f9b93;--madder:#a8402c;--madder-dk:#8f3421;
     --slate:#1e2a2c;--ok:#4a6a52;
     --font-head:'Oswald',sans-serif;--font-body:'Inter',sans-serif;
     --ease:cubic-bezier(.22,.61,.36,1);
@@ -29,7 +29,7 @@
   .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(15,14,10,.92) 0%,rgba(15,14,10,.25) 55%,rgba(15,14,10,.3) 100%)}
   .hero .htext{position:relative;z-index:2;padding:0 30px 28px;color:#fff}
-  .hero .ey{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.3em;font-size:.68rem;color:var(--gold);font-weight:600}
+  .hero .ey{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.3em;font-size:.68rem;color:var(--sand);font-weight:600}
   .hero h1{font-family:var(--font-head);text-transform:uppercase;font-weight:600;font-size:clamp(1.9rem,5vw,2.9rem);line-height:1.02;margin-top:10px}
   .topbar{position:absolute;top:0;left:0;right:0;z-index:3;display:flex;justify-content:space-between;
     align-items:center;padding:20px 30px}
@@ -48,11 +48,11 @@
     color:#ece6d8;border-radius:var(--r-lg);padding:22px 26px;margin-bottom:32px;box-shadow:var(--shadow-md);
     border:1px solid rgba(224,185,138,.18)}
   .ep-icon{width:46px;height:46px;border-radius:50%;background:rgba(224,185,138,.14);display:grid;place-items:center;flex-shrink:0}
-  .ep-icon svg{stroke:var(--gold)}
-  .ep-eyebrow{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.2em;font-size:.66rem;color:var(--gold);font-weight:600}
+  .ep-icon svg{stroke:var(--sand)}
+  .ep-eyebrow{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.2em;font-size:.66rem;color:var(--sand);font-weight:600}
   .ep-title{font-family:var(--font-head);text-transform:none;font-weight:500;font-size:clamp(1.05rem,2.4vw,1.35rem);
     margin-top:4px;letter-spacing:.01em;line-height:1.25}
-  .ep-title span{color:var(--gold);font-weight:600;transition:opacity .2s}
+  .ep-title span{color:var(--sand);font-weight:600;transition:opacity .2s}
   @media(max-width:560px){.encart-perso{padding:18px}}
 
   /* ===== STEPPER ===== */
@@ -94,12 +94,22 @@
     background:rgba(255,255,255,.92);border:1.5px solid #fff;display:grid;place-items:center;transition:all .18s}
   .circ.sel .chk{background:var(--madder);border-color:var(--madder)}
   .circ.sel .chk:after{content:"";width:6px;height:11px;border:2px solid #fff;border-top:0;border-left:0;transform:rotate(45deg) translateY(-1px)}
-  .circ .info{padding:15px 17px 17px}
+  .circ .info{padding:15px 17px 17px;display:flex;flex-direction:column;gap:7px}
   .circ h3{font-family:var(--font-head);text-transform:uppercase;font-weight:600;font-size:1.05rem;letter-spacing:.02em}
-  .circ .d{font-size:.79rem;color:var(--stone);margin:3px 0 9px;min-height:32px}
-  .circ .price{font-family:var(--font-head);color:var(--madder);font-weight:600;font-size:1.05rem}
-  .circ .price .from{display:block;font-family:var(--font-body);font-weight:500;color:var(--stone);font-size:.68rem;text-transform:none}
-  .circ .price small{font-family:var(--font-body);font-weight:400;color:var(--stone);font-size:.72rem;text-transform:none}
+  .circ .d{font-size:.79rem;color:var(--stone)}
+  .circ-badges{display:flex;flex-wrap:wrap;gap:6px}
+  .circ-badge{font-size:.64rem;font-weight:600;letter-spacing:.03em;color:var(--ink2);background:var(--paper);
+    border:1px solid var(--line);border-radius:999px;padding:4px 9px}
+  .circ-diff{display:flex;align-items:center;gap:8px}
+  .circ-diff .lbl{font-size:.66rem;color:var(--stone);text-transform:uppercase;letter-spacing:.06em;font-family:var(--font-head)}
+  .circ-diff .dots{display:flex;gap:3px}
+  .circ-diff .dots span{width:7px;height:7px;border-radius:50%;background:var(--line)}
+  .circ-diff .dots span.on{background:var(--tan)}
+  .circ-sur-mesure{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+    padding:30px 18px;gap:8px;min-height:140px}
+  .circ-sur-mesure .sm-icon{width:44px;height:44px;border-radius:50%;background:var(--paper);display:grid;place-items:center}
+  .circ-sur-mesure h3{font-family:var(--font-head);text-transform:uppercase;font-weight:600;font-size:1.05rem}
+  .circ-sur-mesure p{font-size:.78rem;color:var(--stone)}
 
   /* ===== PAX SLIDER ===== */
   .pax-wrap{margin-top:26px;background:var(--card);border:1.5px solid var(--line);border-radius:var(--r-lg);padding:22px 24px}
@@ -130,6 +140,7 @@
   .opt .otxt{flex:1}
   .opt .ot{font-family:var(--font-head);text-transform:uppercase;font-weight:500;letter-spacing:.03em;font-size:.98rem}
   .opt .od{font-size:.78rem;color:var(--stone)}
+  .opt .op{font-family:var(--font-head);color:var(--madder);font-weight:500;font-size:.88rem;white-space:nowrap}
   .opt .ochk{width:22px;height:22px;border-radius:50%;border:1.5px solid var(--line);flex-shrink:0;display:grid;place-items:center}
   .opt.sel .ochk{background:var(--madder);border-color:var(--madder)}
   .opt.sel .ochk:after{content:"";width:5px;height:9px;border:2px solid #fff;border-top:0;border-left:0;transform:rotate(45deg) translateY(-1px)}
@@ -176,12 +187,13 @@
 
   .summary{position:sticky;top:20px;background:linear-gradient(150deg,var(--slate) 0%,#233330 100%);color:#ece6d8;
     border-radius:var(--r-lg);padding:26px;border:1px solid #2c3c37;box-shadow:var(--shadow-md)}
-  .summary h3{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.14em;font-size:.74rem;color:var(--gold);font-weight:600;margin-bottom:16px}
+  .summary h3{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.14em;font-size:.74rem;color:var(--sand);font-weight:600;margin-bottom:16px}
   .sline{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid rgba(236,230,216,.1);font-size:.88rem}
   .sline .k{color:#a9a396}
   .sline .v{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.03em;text-align:right}
   .sline.empty .v{color:#5f5a4e;font-style:italic;text-transform:none;font-family:var(--font-body)}
   .stotal{margin-top:16px;font-size:.78rem;color:#a9a396;line-height:1.5}
+  .stotal b{color:#fff;font-size:1rem}
   .snote{margin-top:14px;font-size:.72rem;color:#8a8577;border-top:1px solid rgba(236,230,216,.1);padding-top:12px}
 
   .confirm-panel{text-align:center;padding:24px 10px}
@@ -238,21 +250,46 @@
           <h2>Votre circuit</h2>
           <p class="hint">Choisissez une base — on l'adapte ensuite avec vous. Tarifs à partir de, par personne.</p>
           <div class="circ-grid" id="circuits">
-            <div class="circ" data-circ="L'essentiel — 7 jours">
+            <div class="circ" data-circ="L'essentiel — 7 jours" data-key="essentiel">
               <div class="ph"><img src="images/circuit-essentiel.jpg" alt="Canyon Skazka aux couleurs ocres" width="760" height="1013" loading="lazy"><span class="days">7 jours</span><span class="chk"></span></div>
-              <div class="info"><h3>L'essentiel</h3><div class="d">Ala-Archa, Issyk-Kul, canyon Skazka</div><div class="price"><span class="from">À partir de</span> 1 300 € <small>/ personne</small></div></div>
+              <div class="info">
+                <h3>L'essentiel</h3>
+                <div class="d">Ala-Archa, Issyk-Kul, canyon Skazka</div>
+                <div class="circ-badges"><span class="circ-badge">4x4 privé</span></div>
+                <div class="circ-diff"><span class="lbl">Difficulté</span><span class="dots" role="img" aria-label="Difficulté 2 sur 5"><span class="on"></span><span class="on"></span><span></span><span></span><span></span></span></div>
+              </div>
             </div>
-            <div class="circ" data-circ="Grand tour — 8 jours">
+            <div class="circ" data-circ="Grand tour — 8 jours" data-key="grand">
               <div class="ph"><img src="images/circuit-grand-tour.jpg" alt="Camp de yourtes à Song-Köl" width="760" height="1013" loading="lazy"><span class="days">8 jours</span><span class="chk"></span></div>
-              <div class="info"><h3>Grand tour</h3><div class="d">+ Song-Köl, yourte d'altitude, cols du Tian Shan</div><div class="price"><span class="from">À partir de</span> 1 335 € <small>/ personne</small></div></div>
+              <div class="info">
+                <h3>Grand tour</h3>
+                <div class="d">+ Song-Köl, yourte d'altitude, cols du Tian Shan</div>
+                <div class="circ-badges"><span class="circ-badge">4x4 privé</span><span class="circ-badge">Yourte incluse</span></div>
+                <div class="circ-diff"><span class="lbl">Difficulté</span><span class="dots" role="img" aria-label="Difficulté 3 sur 5"><span class="on"></span><span class="on"></span><span class="on"></span><span></span><span></span></span></div>
+              </div>
             </div>
-            <div class="circ" data-circ="Nomade — 9 jours">
+            <div class="circ" data-circ="Nomade — 9 jours" data-key="nomade">
               <div class="ph"><img src="images/circuit-nomade.jpg" alt="Campement de montagne près de Jyrgalan" width="760" height="1013" loading="lazy"><span class="days">9 jours</span><span class="chk"></span></div>
-              <div class="info"><h3>Nomade</h3><div class="d">+ Jyrgalan, villages d'éleveurs, sources chaudes</div><div class="price"><span class="from">À partir de</span> 1 365 € <small>/ personne</small></div></div>
+              <div class="info">
+                <h3>Nomade</h3>
+                <div class="d">+ Jyrgalan, villages d'éleveurs, sources chaudes</div>
+                <div class="circ-badges"><span class="circ-badge">4x4 privé</span><span class="circ-badge">Yourte incluse</span><span class="circ-badge">Nuit chez l'habitant</span></div>
+                <div class="circ-diff"><span class="lbl">Difficulté</span><span class="dots" role="img" aria-label="Difficulté 4 sur 5"><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span></span></span></div>
+              </div>
             </div>
-            <div class="circ" data-circ="Expédition — 10 jours">
+            <div class="circ" data-circ="Expédition — 10 jours" data-key="expedition">
               <div class="ph"><img src="images/circuit-expedition.jpg" alt="Forêt et rivière de montagne au Kirghizstan" width="760" height="1013" loading="lazy"><span class="days">10 jours</span><span class="chk"></span></div>
-              <div class="info"><h3>Expédition</h3><div class="d">Circuit complet, Tash Rabat, Kel-Suu</div><div class="price"><span class="from">À partir de</span> 1 395 € <small>/ personne</small></div></div>
+              <div class="info">
+                <h3>Expédition</h3>
+                <div class="d">Circuit complet, Tash Rabat, Kel-Suu</div>
+                <div class="circ-badges"><span class="circ-badge">4x4 privé</span><span class="circ-badge">Yourte incluse</span><span class="circ-badge">Nuit chez l'habitant</span></div>
+                <div class="circ-diff"><span class="lbl">Difficulté</span><span class="dots" role="img" aria-label="Difficulté 5 sur 5"><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span></span></div>
+              </div>
+            </div>
+            <div class="circ circ-sur-mesure" data-circ="Sur mesure" data-key="sur-mesure">
+              <div class="sm-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.4"/><path d="M15 9l-2 5-5 2 2-5z" stroke-linejoin="round"/></svg></div>
+              <h3>Sur mesure</h3>
+              <p>Aucun de ces circuits ne vous convient tel quel ? On compose ensemble.</p>
             </div>
           </div>
 
@@ -274,15 +311,15 @@
           <p class="hint">Ajoutez des expériences. Rien d'obligatoire.</p>
           <div class="opt" data-opt="Cheval à Song-Köl">
             <img class="othumb" src="images/option-cheval.jpg" alt="Chevaux en liberté sur les alpages" width="64" height="64" loading="lazy"><div class="otxt"><div class="ot">Cheval à Song-Köl</div><div class="od">Une journée à cheval sur les alpages avec un éleveur</div></div>
-            <span class="ochk"></span>
+            <span class="op">+120 €/pers.</span><span class="ochk"></span>
           </div>
           <div class="opt" data-opt="Journée pêche">
             <img class="othumb" src="images/option-peche.jpg" alt="Vallée verdoyante près d'un torrent" width="64" height="64" loading="lazy"><div class="otxt"><div class="ot">Journée pêche</div><div class="od">Truite en lac d'altitude, guide local, feu de camp</div></div>
-            <span class="ochk"></span>
+            <span class="op">+90 €/pers.</span><span class="ochk"></span>
           </div>
           <div class="opt" data-opt="Guide francophone">
-            <img class="othumb" src="images/option-guide-4x4.jpg" alt="4x4 UAZ au pied de la forêt" width="64" height="64" loading="lazy"><div class="otxt"><div class="ot">Guide francophone</div><div class="od">Un guide qui parle français tout le voyage</div></div>
-            <span class="ochk"></span>
+            <img class="othumb" src="images/option-guide-4x4.jpg" alt="4x4 UAZ au pied de la forêt" width="64" height="64" loading="lazy"><div class="otxt"><div class="ot">Guide francophone</div><div class="od">Un guide qui parle français tout le voyage (le chauffeur, lui, est anglophone)</div></div>
+            <span class="op">Sur devis</span><span class="ochk"></span>
           </div>
         </div>
 
@@ -342,15 +379,18 @@
         <div class="sline" id="s-pax"><span class="k">Voyageurs</span><span class="v">2</span></div>
         <div class="sline empty" id="s-opt"><span class="k">Options</span><span class="v">Aucune</span></div>
         <div class="sline empty" id="s-date"><span class="k">Départ</span><span class="v">À définir</span></div>
-        <div class="stotal">Devis personnalisé et tarif exact communiqués sous 24 h.</div>
-        <div class="snote">Vous réservez une <b style="color:var(--gold)">demande</b>, pas un paiement.</div>
+        <div class="stotal">Estimation : <b id="s-est">—</b><br><span style="font-size:.72rem">Prix/pers. · à partir de · options non comprises. Devis exact sous 24 h.</span></div>
+        <div class="snote">Vous réservez une <b style="color:var(--sand)">demande</b>, pas un paiement.</div>
       </aside>
     </div>
   </div>
 </div>
 
 <script>
-  const state={step:1,circ:null,pax:2,opts:[],date:null,flex:false};
+  // Pricing data — centralized, per person, "à partir de". Edit here only.
+  const PRICING={essentiel:1300,grand:1335,nomade:1365,expedition:1395,'sur-mesure':null};
+
+  const state={step:1,circ:null,circKey:null,pax:2,opts:[],date:null,flex:false};
   const pages=['p1','p2','p3','p4'];
   const MONTHS=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
 
@@ -358,7 +398,7 @@
     el.onclick=()=>{
       document.querySelectorAll('#circuits .circ').forEach(p=>p.classList.remove('sel'));
       el.classList.add('sel');
-      state.circ=el.dataset.circ;
+      state.circ=el.dataset.circ;state.circKey=el.dataset.key;
       updateSummary();validate();
     };
   });
@@ -395,6 +435,9 @@
     const so=document.getElementById('s-opt');
     if(state.opts.length){so.classList.remove('empty');so.querySelector('.v').textContent=state.opts.length+' choisie'+(state.opts.length>1?'s':'');}
     else{so.classList.add('empty');so.querySelector('.v').textContent='Aucune';}
+    const est=document.getElementById('s-est');
+    const price=state.circKey?PRICING[state.circKey]:null;
+    est.textContent=price?('à partir de '+price.toLocaleString('fr-FR')+' €/pers.'):'sur devis';
   }
 
   // CALENDAR
