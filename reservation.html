@@ -250,7 +250,7 @@
           <h2>Votre circuit</h2>
           <p class="hint">Choisissez une base — on l'adapte ensuite avec vous. Tarifs à partir de, par personne.</p>
           <div class="circ-grid" id="circuits">
-            <div class="circ" data-circ="L'essentiel — 7 jours" data-key="essentiel">
+            <div class="circ" data-circ="L'essentiel — 7 jours" data-key="essentiel" data-duration="7">
               <div class="ph"><img src="images/circuit-essentiel.jpg" alt="Canyon Skazka aux couleurs ocres" width="760" height="1013" loading="lazy"><span class="days">7 jours</span><span class="chk"></span></div>
               <div class="info">
                 <h3>L'essentiel</h3>
@@ -259,7 +259,7 @@
                 <div class="circ-diff"><span class="lbl">Difficulté</span><span class="dots" role="img" aria-label="Difficulté 2 sur 5"><span class="on"></span><span class="on"></span><span></span><span></span><span></span></span></div>
               </div>
             </div>
-            <div class="circ" data-circ="Grand tour — 8 jours" data-key="grand">
+            <div class="circ" data-circ="Grand tour — 8 jours" data-key="grand" data-duration="8">
               <div class="ph"><img src="images/circuit-grand-tour.jpg" alt="Camp de yourtes à Song-Köl" width="760" height="1013" loading="lazy"><span class="days">8 jours</span><span class="chk"></span></div>
               <div class="info">
                 <h3>Grand tour</h3>
@@ -268,7 +268,7 @@
                 <div class="circ-diff"><span class="lbl">Difficulté</span><span class="dots" role="img" aria-label="Difficulté 3 sur 5"><span class="on"></span><span class="on"></span><span class="on"></span><span></span><span></span></span></div>
               </div>
             </div>
-            <div class="circ" data-circ="Nomade — 9 jours" data-key="nomade">
+            <div class="circ" data-circ="Nomade — 9 jours" data-key="nomade" data-duration="9">
               <div class="ph"><img src="images/circuit-nomade.jpg" alt="Campement de montagne près de Jyrgalan" width="760" height="1013" loading="lazy"><span class="days">9 jours</span><span class="chk"></span></div>
               <div class="info">
                 <h3>Nomade</h3>
@@ -277,7 +277,7 @@
                 <div class="circ-diff"><span class="lbl">Difficulté</span><span class="dots" role="img" aria-label="Difficulté 4 sur 5"><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span></span></span></div>
               </div>
             </div>
-            <div class="circ" data-circ="Expédition — 10 jours" data-key="expedition">
+            <div class="circ" data-circ="Expédition — 10 jours" data-key="expedition" data-duration="10">
               <div class="ph"><img src="images/circuit-expedition.jpg" alt="Forêt et rivière de montagne au Kirghizstan" width="760" height="1013" loading="lazy"><span class="days">10 jours</span><span class="chk"></span></div>
               <div class="info">
                 <h3>Expédition</h3>
@@ -379,18 +379,23 @@
         <div class="sline" id="s-pax"><span class="k">Voyageurs</span><span class="v">2</span></div>
         <div class="sline empty" id="s-opt"><span class="k">Options</span><span class="v">Aucune</span></div>
         <div class="sline empty" id="s-date"><span class="k">Départ</span><span class="v">À définir</span></div>
-        <div class="stotal">Estimation : <b id="s-est">—</b><br><span style="font-size:.72rem">Prix/pers. · à partir de · options non comprises. Devis exact sous 24 h.</span></div>
+        <div class="stotal">
+          Séjour : <b id="s-est">—</b><br>
+          <span style="font-size:.72rem">Prix opérateur, réglé sur place en espèces. Tarif exact selon la taille du groupe.</span>
+        </div>
+        <div class="stotal" style="margin-top:12px;padding-top:12px;border-top:1px solid rgba(236,230,216,.1)">
+          Frais de réservation : <b id="s-fee">—</b><br>
+          <span style="font-size:.72rem">Frais de réservation et d'assistance francophone — le prix du séjour se règle sur place, en espèces, auprès de votre chauffeur.</span>
+        </div>
         <div class="snote">Vous réservez une <b style="color:var(--sand)">demande</b>, pas un paiement.</div>
       </aside>
     </div>
   </div>
 </div>
 
+<script src="data/pricing.js"></script>
 <script>
-  // Pricing data — centralized, per person, "à partir de". Edit here only.
-  const PRICING={essentiel:1300,grand:1335,nomade:1365,expedition:1395,'sur-mesure':null};
-
-  const state={step:1,circ:null,circKey:null,pax:2,opts:[],date:null,flex:false};
+  const state={step:1,circ:null,circKey:null,duration:null,pax:2,opts:[],date:null,flex:false};
   const pages=['p1','p2','p3','p4'];
   const MONTHS=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
 
@@ -399,6 +404,7 @@
       document.querySelectorAll('#circuits .circ').forEach(p=>p.classList.remove('sel'));
       el.classList.add('sel');
       state.circ=el.dataset.circ;state.circKey=el.dataset.key;
+      state.duration=el.dataset.duration?+el.dataset.duration:null;
       updateSummary();validate();
     };
   });
@@ -436,8 +442,10 @@
     if(state.opts.length){so.classList.remove('empty');so.querySelector('.v').textContent=state.opts.length+' choisie'+(state.opts.length>1?'s':'');}
     else{so.classList.add('empty');so.querySelector('.v').textContent='Aucune';}
     const est=document.getElementById('s-est');
-    const price=state.circKey?PRICING[state.circKey]:null;
-    est.textContent=price?('à partir de '+price.toLocaleString('fr-FR')+' €/pers.'):'sur devis';
+    const price=(state.duration&&SEJOUR_PRICING[state.duration])?SEJOUR_PRICING[state.duration][4]:null;
+    est.textContent=price?('à partir de '+price.toLocaleString('fr-FR')+' €/pers. (base 4 pers.)'):'sur devis';
+    const fee=document.getElementById('s-fee');
+    fee.textContent=(state.pax*BOOKING_FEE_PER_PERSON).toLocaleString('fr-FR')+' € ('+state.pax+' × 150 €)';
   }
 
   // CALENDAR
@@ -494,7 +502,8 @@
       '<div class="sline"><span class="k">Circuit</span><span class="v">'+(state.circ||'Sur mesure')+'</span></div>'+
       '<div class="sline"><span class="k">Voyageurs</span><span class="v">'+state.pax+'</span></div>'+
       '<div class="sline"><span class="k">Options</span><span class="v">'+opts+'</span></div>'+
-      '<div class="sline"><span class="k">Départ</span><span class="v">'+dstr+'</span></div>';
+      '<div class="sline"><span class="k">Départ</span><span class="v">'+dstr+'</span></div>'+
+      '<div class="sline"><span class="k">Frais de réservation</span><span class="v">'+(state.pax*BOOKING_FEE_PER_PERSON).toLocaleString('fr-FR')+' €</span></div>';
     pages.forEach(p=>document.getElementById(p).classList.remove('on'));
     document.getElementById('pdone').classList.add('on');
     document.getElementById('navbtns').style.display='none';
@@ -503,6 +512,7 @@
     document.getElementById('summary').style.opacity='.5';
     window.scrollTo({top:0,behavior:'smooth'});
   }
+  updateSummary();
   validate();
 </script>
 </body>

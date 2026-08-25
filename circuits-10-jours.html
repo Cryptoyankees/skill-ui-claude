@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Circuit Expédition — 10 jours au Kirghizstan | Terres Nomades</title>
+<meta name="description" content="Circuit complet, Tash Rabat, Kel-Suu. Circuit 10 jours en 4x4 privé au Kirghizstan, organisé en français. À partir de 1 050 €/pers. (base 4 personnes), payable sur place.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2314140f'/%3E%3Cpath d='M4 24 12 10l5 8 3-5 8 11z' fill='%23b8824a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14140f;--ink2:#3a372e;--paper:#f6f2e9;--card:#fffdf8;--stone:#8a8577;
+    --line:#e2daca;--tan:#b8824a;--sand:#e8e0d0;--lake:#6f9b93;--madder:#a8402c;--madder-dk:#8f3421;
+    --slate:#1e2a2c;--ok:#4a6a52;
+    --font-head:'Oswald',sans-serif;--font-body:'Inter',sans-serif;
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:var(--font-body);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .container{max-width:1200px;margin:0 auto;padding:0 24px}
+  @media(max-width:640px){.container{padding:0 20px}}
+  .eyebrow{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.28em;font-size:.72rem;font-weight:600;color:var(--madder)}
+  h1,h2,h3,h4{font-family:var(--font-head);text-transform:uppercase;line-height:1.05}
+  .btn{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.12em;font-size:.82rem;font-weight:600;padding:15px 30px;border-radius:12px;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:10px;transition:transform .25s var(--ease),background .25s,box-shadow .25s;text-decoration:none;touch-action:manipulation}
+  .btn-primary{background:var(--madder);color:#fff}
+  .btn-primary:hover{background:var(--madder-dk);transform:translateY(-3px);box-shadow:0 14px 28px rgba(168,64,44,.28)}
+  .btn:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid var(--tan);outline-offset:3px}
+  .skip-link{position:absolute;left:12px;top:-60px;background:var(--ink);color:#fff;padding:12px 18px;border-radius:8px;z-index:200;transition:top .2s var(--ease);font-family:var(--font-head);text-transform:uppercase;letter-spacing:.08em;font-size:.8rem}
+  .skip-link:focus{top:12px}
+
+  /* NAV (identique au site) */
+  .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 0;transition:background .3s var(--ease),padding .3s var(--ease),box-shadow .3s var(--ease);background:rgba(246,242,233,.92);backdrop-filter:blur(10px);box-shadow:0 4px 20px rgba(24,23,18,.06)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between}
+  .brand{font-family:var(--font-head);font-weight:700;text-transform:uppercase;letter-spacing:.16em;font-size:1.05rem;color:var(--ink);text-decoration:none;transition:color .3s}
+  .brand b{color:var(--tan);font-weight:400}
+  .navlinks{display:flex;align-items:center;gap:34px}
+  .navlinks a{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.08em;font-size:.8rem;font-weight:500;color:var(--ink2);text-decoration:none;transition:color .2s}
+  .navlinks a:hover{color:var(--madder)}
+  .nav-cta{margin-left:8px}
+  .menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;width:44px;height:44px;align-items:center;justify-content:center}
+  .menu-toggle span,.menu-toggle span:before,.menu-toggle span:after{content:"";display:block;width:22px;height:2px;background:var(--ink);transition:transform .25s,opacity .25s,background .25s;position:relative}
+  .menu-toggle span:before{position:absolute;top:-7px}
+  .menu-toggle span:after{position:absolute;top:7px}
+  .menu-toggle[aria-expanded="true"] span{background:transparent}
+  .menu-toggle[aria-expanded="true"] span:before{transform:rotate(45deg);top:0}
+  .menu-toggle[aria-expanded="true"] span:after{transform:rotate(-45deg);top:0}
+  .mobile-panel{position:fixed;inset:0;background:var(--ink);z-index:99;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;opacity:0;visibility:hidden;transition:opacity .3s var(--ease);padding:0 32px;text-align:center}
+  .mobile-panel.open{opacity:1;visibility:visible}
+  .mobile-panel a{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.06em;font-size:1.3rem;color:#fff;text-decoration:none;max-width:100%}
+  .mobile-panel a.mobile-cta{color:var(--tan);font-size:1.05rem}
+  @media(max-width:860px){.navlinks{display:none}.menu-toggle{display:flex}}
+
+  /* HERO court */
+  .hero{position:relative;height:60vh;min-height:380px;overflow:hidden;display:flex;align-items:flex-end}
+  .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(15,14,10,.9) 0%,rgba(15,14,10,.25) 55%,rgba(15,14,10,.3) 100%)}
+  .hero-content{position:relative;z-index:2;color:#fff;padding:0 0 60px}
+  .hero .eyebrow{color:var(--sand)}
+  .hero h1{font-size:clamp(2.2rem,5.5vw,4rem);font-weight:600;margin:14px 0 10px}
+  .hero .days{font-family:var(--font-head);color:var(--sand);text-transform:uppercase;letter-spacing:.1em;font-size:.9rem}
+
+  .body{padding:56px 0 0}
+  .intro{color:var(--ink2);max-width:64ch;font-size:1.04rem;margin-bottom:20px}
+  .badges-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:44px}
+  .badge{font-size:.72rem;font-weight:600;letter-spacing:.03em;color:var(--ink2);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 13px}
+
+  h2.section-title{font-size:clamp(1.6rem,3.4vw,2.2rem);font-weight:600;margin-bottom:36px}
+
+  /* TIMELINE */
+  .timeline{padding:20px 0 70px}
+  .tl-item{display:grid;grid-template-columns:52px 1fr;gap:22px}
+  .tl-node-col{display:flex;flex-direction:column;align-items:center}
+  .tl-node{width:44px;height:44px;border-radius:50%;background:var(--card);border:2px solid var(--tan);display:grid;place-items:center;flex-shrink:0;z-index:2}
+  .tl-node svg{stroke:var(--madder)}
+  .tl-line{width:2px;flex:1;background:var(--line);margin-top:2px;min-height:24px}
+  .tl-item:last-child .tl-line{display:none}
+  .tl-content{padding-bottom:44px}
+  .tl-day{font-family:var(--font-head);color:var(--tan);letter-spacing:.2em;font-size:.68rem;text-transform:uppercase;font-weight:600}
+  .tl-title{font-family:var(--font-head);font-weight:600;font-size:1.2rem;margin:5px 0 9px;letter-spacing:.01em}
+  .tl-text{color:var(--ink2);max-width:58ch;font-size:.94rem}
+  .tl-photo{margin-top:18px;aspect-ratio:16/9;max-width:460px;border-radius:14px;border:1.5px dashed var(--line);background:var(--card);display:flex;align-items:center;justify-content:center;color:var(--stone);gap:8px}
+  .tl-photo span{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.1em;font-size:.7rem}
+  @media(max-width:560px){.tl-item{grid-template-columns:40px 1fr;gap:14px}.tl-node{width:36px;height:36px}}
+
+  /* INCLUS / NON INCLUS */
+  .incl-wrap{padding:10px 0 70px}
+  .incl-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  @media(max-width:700px){.incl-grid{grid-template-columns:1fr}}
+  .incl-card{background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:26px}
+  .incl-card h3{font-size:.95rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+  .incl-card.yes h3{color:var(--ok)}
+  .incl-card.no h3{color:var(--stone)}
+  .incl-list{list-style:none;display:flex;flex-direction:column;gap:11px}
+  .incl-list li{display:flex;align-items:flex-start;gap:10px;font-size:.9rem;color:var(--ink2)}
+  .incl-list svg{flex-shrink:0;margin-top:2px}
+  .incl-card.yes svg{stroke:var(--ok)}
+  .incl-card.no svg{stroke:var(--stone)}
+  .incl-card.no li{color:var(--stone)}
+
+  /* PRICE + OPTIONS */
+  .price-box{background:linear-gradient(150deg,var(--slate) 0%,#233330 100%);color:#ece6d8;border-radius:22px;padding:40px;margin:10px 0 70px;display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
+  @media(max-width:760px){.price-box{grid-template-columns:1fr;padding:28px}}
+  .price-box .eyebrow{color:var(--sand)}
+  .price-box .amount{font-family:var(--font-head);font-size:clamp(2rem,4.5vw,2.8rem);font-weight:600;margin:10px 0 6px;color:#fff}
+  .price-box .amount small{font-family:var(--font-body);font-weight:400;font-size:.9rem;color:#a9a396;text-transform:none}
+  .price-box .cash-note{font-size:.84rem;color:#a9a396;max-width:48ch;margin-top:10px}
+  .price-box .fee-note{margin-top:18px;padding-top:18px;border-top:1px solid rgba(236,230,216,.14);font-size:.82rem;color:#a9a396;max-width:48ch}
+  .price-box .fee-note b{color:#fff}
+  .price-box .side{text-align:left}
+  .price-box .options-title{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.08em;font-size:.76rem;color:var(--sand);margin-bottom:10px}
+  .price-box .options-list{font-size:.86rem;color:#c9c3b4;display:flex;flex-direction:column;gap:6px;margin-bottom:20px}
+
+  footer{background:var(--ink);color:#c9c3b4;padding:70px 0 30px}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;padding-bottom:50px;border-bottom:1px solid rgba(255,255,255,.1)}
+  @media(max-width:768px){.footer-grid{grid-template-columns:1fr;gap:32px}}
+  .footer-brand .brand{color:#fff;margin-bottom:14px;display:inline-block}
+  .footer-brand p{max-width:38ch;font-size:.88rem;color:#8a8577}
+  .footer-col h4{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.1em;font-size:.76rem;color:var(--sand);margin-bottom:16px}
+  .footer-col a{display:block;font-size:.9rem;color:#c9c3b4;text-decoration:none;margin-bottom:10px;transition:color .2s}
+  .footer-col a:hover{color:var(--tan)}
+  .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:26px;font-size:.78rem;color:#6b6759;flex-wrap:wrap;gap:10px}
+
+  .final-row{padding:0 0 90px;text-align:center}
+
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="ic-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12" stroke-width="1.8" stroke-linecap="round"/><polyline points="13 6 19 12 13 18" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+    <symbol id="ic-4x4" viewBox="0 0 24 24"><path d="M4 16h16M6 16v-5l2-3h8l2 3v5" fill="none" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="8" cy="17.4" r="1.6" fill="none" stroke-width="1.5"/><circle cx="16" cy="17.4" r="1.6" fill="none" stroke-width="1.5"/></symbol>
+    <symbol id="ic-mountain" viewBox="0 0 24 24"><path d="M3 18 9 8l4 6 2-3 6 7z" fill="none" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+    <symbol id="ic-yurt" viewBox="0 0 24 24"><path d="M6 20c0-5 2.5-8.5 6-8.5s6 3.5 6 8.5" fill="none" stroke-width="1.6" stroke-linecap="round"/><line x1="12" y1="7.5" x2="12" y2="11.5" stroke-width="1.6" stroke-linecap="round"/><line x1="4" y1="20" x2="20" y2="20" stroke-width="1.6" stroke-linecap="round"/><path d="M10.6 20v-4.2h2.8V20" fill="none" stroke-width="1.5"/></symbol>
+    <symbol id="ic-lake" viewBox="0 0 24 24"><path d="M3 10.5c2-2 4-2 6 0s4 2 6 0 4-2 6 0" fill="none" stroke-width="1.6" stroke-linecap="round"/><path d="M3 15.5c2-2 4-2 6 0s4 2 6 0 4-2 6 0" fill="none" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="ic-check" viewBox="0 0 24 24"><polyline points="5 13 10 18 19 7" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-minus" viewBox="0 0 24 24"><line x1="6" y1="12" x2="18" y2="12" stroke-width="1.8" stroke-linecap="round"/></symbol>
+
+  </defs>
+</svg>
+
+<header class="nav" id="siteNav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">TERRES<b>·</b>NOMADES</a>
+    <nav class="navlinks" aria-label="Navigation principale">
+      <a href="index.html#circuits">Circuits</a>
+      <a href="index.html#options">Options</a>
+      <a href="index.html#carnet">Carnet</a>
+      <a href="index.html#materiel">Matériel</a>
+      <a href="reservation.html" class="btn btn-primary nav-cta">Réserver <svg width="15" height="15"><use href="#ic-arrow"/></svg></a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobilePanel" aria-label="Ouvrir le menu">
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-panel" id="mobilePanel">
+  <a href="index.html#circuits">Circuits</a>
+  <a href="index.html#options">Options</a>
+  <a href="index.html#carnet">Carnet</a>
+  <a href="index.html#materiel">Matériel</a>
+  <a href="reservation.html" class="mobile-cta">Réserver mon expédition →</a>
+</div>
+
+<main id="main-content">
+
+  <section class="hero">
+    <img src="images/circuit-expedition.jpg" alt="Forêt de sapins et rivière de montagne" width="760" height="1013" fetchpriority="high">
+    <div class="container hero-content">
+      <p class="eyebrow">Kirghizstan · Circuit 10 jours</p>
+      <h1>Expédition</h1>
+      <p class="days">Circuit complet, Tash Rabat, Kel-Suu</p>
+    </div>
+  </section>
+
+  <div class="body">
+    <div class="container">
+      <p class="intro">Le circuit complet : jusqu'au caravansérail de Tash Rabat et au lac confidentiel de Kel-Suu, en plus de Jyrgalan et Song-Köl. Le format le plus complet pour explorer le pays en profondeur.</p>
+      <div class="badges-row"><span class="badge">4x4 privé</span><span class="badge">Yourte incluse</span><span class="badge">Nuit chez l'habitant</span></div>
+
+      <h2 class="section-title">Jour par jour</h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-node-col">
+            <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-4x4"/></svg></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-content">
+            <p class="tl-day">Jour 1</p>
+            <h3 class="tl-title">Arrivée à Bichkek</h3>
+            <p class="tl-text">Accueil à l'aéroport, transfert et installation. Briefing du circuit avec votre chauffeur autour d'un thé.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-node-col">
+            <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-mountain"/></svg></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-content">
+            <p class="tl-day">Jour 2</p>
+            <h3 class="tl-title">Gorges d’Ala-Archa</h3>
+            <p class="tl-text">Départ pour le parc national d'Ala-Archa : marche d'acclimatation au pied des glaciers du Tian Shan.</p>
+            <div class="tl-photo"><svg width="20" height="20" fill="none" stroke="currentColor"><use href="#ic-mountain"/></svg><span>Photo à venir</span></div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-node-col">
+            <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-4x4"/></svg></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-content">
+            <p class="tl-day">Jour 3</p>
+            <h3 class="tl-title">Route vers Issyk-Kul</h3>
+            <p class="tl-text">Transfert en 4x4 vers les rives du lac Issyk-Kul, deuxième plus grand lac alpin du monde.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-node-col">
+            <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-mountain"/></svg></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-content">
+            <p class="tl-day">Jour 4</p>
+            <h3 class="tl-title">Canyon de Skazka</h3>
+            <p class="tl-text">Marche dans les formations rocheuses ocres du canyon Skazka (« le conte de fées »).</p>
+            <div class="tl-photo"><svg width="20" height="20" fill="none" stroke="currentColor"><use href="#ic-mountain"/></svg><span>Photo à venir</span></div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-node-col">
+            <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-mountain"/></svg></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-content">
+            <p class="tl-day">Jour 5</p>
+            <h3 class="tl-title">Vallée de Jyrgalan</h3>
+            <p class="tl-text">Route vers Jyrgalan, village de montagne au bout de la vallée, rencontre avec des familles d'éleveurs.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-node-col">
+            <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-lake"/></svg></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-content">
+            <p class="tl-day">Jour 6</p>
+            <h3 class="tl-title">Sources chaudes</h3>
+            <p class="tl-text">Marche en vallée puis détente aux sources chaudes naturelles, au pied des sommets.</p>
+            <div class="tl-photo"><svg width="20" height="20" fill="none" stroke="currentColor"><use href="#ic-lake"/></svg><span>Photo à venir</span></div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-node-col">
+            <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-4x4"/></svg></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-content">
+            <p class="tl-day">Jour 7</p>
+            <h3 class="tl-title">Route vers Tash Rabat</h3>
+            <p class="tl-text">Longue traversée vers Tash Rabat, ancien caravansérail de pierre sur la route de la soie.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-node-col">
+            <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-lake"/></svg></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-content">
+            <p class="tl-day">Jour 8</p>
+            <h3 class="tl-title">Lac de Kel-Suu</h3>
+            <p class="tl-text">Excursion vers Kel-Suu, lac confidentiel proche de la frontière, accès en zone réglementée.</p>
+            <div class="tl-photo"><svg width="20" height="20" fill="none" stroke="currentColor"><use href="#ic-lake"/></svg><span>Photo à venir</span></div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-node-col">
+            <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-yurt"/></svg></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-content">
+            <p class="tl-day">Jour 9</p>
+            <h3 class="tl-title">Lac de Song-Köl</h3>
+            <p class="tl-text">Route vers Song-Köl et nuit en yourte chez une famille d'éleveurs, au bord du lac d'altitude.</p>
+            <div class="tl-photo"><svg width="20" height="20" fill="none" stroke="currentColor"><use href="#ic-yurt"/></svg><span>Photo à venir</span></div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-node-col">
+            <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-4x4"/></svg></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-content">
+            <p class="tl-day">Jour 10</p>
+            <h3 class="tl-title">Retour et départ</h3>
+            <p class="tl-text">Redescente vers Bichkek et transfert vers l'aéroport. Fin du séjour.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="incl-wrap">
+        <div class="incl-grid">
+          <div class="incl-card yes">
+            <h3>Inclus dans le prix du séjour</h3>
+            <ul class="incl-list">
+              <li><svg width="16" height="16" fill="none"><use href="#ic-check"/></svg>4x4 privé avec chauffeur</li>
+              <li><svg width="16" height="16" fill="none"><use href="#ic-check"/></svg>Carburant</li>
+              <li><svg width="16" height="16" fill="none"><use href="#ic-check"/></svg>Hébergement (guesthouses / yourtes)</li>
+              <li><svg width="16" height="16" fill="none"><use href="#ic-check"/></svg>Repas pendant le circuit</li>
+            </ul>
+          </div>
+          <div class="incl-card no">
+            <h3>Non inclus (en option)</h3>
+            <ul class="incl-list">
+              <li><svg width="16" height="16" fill="none"><use href="#ic-minus"/></svg>Vols internationaux</li>
+              <li><svg width="16" height="16" fill="none"><use href="#ic-minus"/></svg>Hôtel à Bichkek (avant/après le circuit)</li>
+              <li><svg width="16" height="16" fill="none"><use href="#ic-minus"/></svg>Transferts aéroport</li>
+              <li><svg width="16" height="16" fill="none"><use href="#ic-minus"/></svg>Guide francophone dédié</li>
+              <li><svg width="16" height="16" fill="none"><use href="#ic-minus"/></svg>Upgrade hébergement</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="price-box">
+        <div>
+          <p class="eyebrow">Séjour 10 jours</p>
+          <p class="amount">À partir de 1 050 € <small>/ personne, base 4 pers.</small></p>
+          <p class="cash-note">Prix de l'opérateur local, réglé en espèces sur place, directement auprès de votre chauffeur. Tarif exact selon la taille du groupe, confirmé avec votre devis.</p>
+          <p class="fee-note"><b>+ 150 €/personne</b> de frais de réservation et d'assistance francophone (fixes, payés en ligne) — le prix du séjour, lui, se règle sur place, en espèces, auprès de votre chauffeur.</p>
+        </div>
+        <div class="side">
+          <p class="options-title">Options à ajouter</p>
+          <div class="options-list">
+            <span>Cheval à Song-Köl — +120 €/pers.</span>
+            <span>Journée pêche — +90 €/pers.</span>
+            <span>Guide francophone — sur devis</span>
+          </div>
+          <a href="reservation.html" class="btn btn-primary">Réserver ce circuit <svg width="15" height="15"><use href="#ic-arrow"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">TERRES<b>·</b>NOMADES</a>
+        <p>Expéditions en 4x4 au Kirghizstan. Petits groupes, organisation 100&nbsp;% francophone, immersion nomade.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Voyager</h4>
+        <a href="index.html#circuits">Circuits</a>
+        <a href="index.html#galerie">Galerie</a>
+        <a href="index.html#pourquoi">Pourquoi nous</a>
+        <a href="index.html#options">Options</a>
+        <a href="index.html#carnet">Le carnet</a>
+        <a href="index.html#materiel">Matériel</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact & légal</h4>
+        <a href="mailto:bonjour@terresnomades.fr">bonjour@terresnomades.fr</a>
+        <a href="reservation.html">Demander un devis</a>
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="cgv.html">CGV</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Terres Nomades — Apporteur d'affaires. Ne vend pas de séjour ; met en relation avec l'opérateur local.</span>
+      <span>Kirghizstan · Saison mai—septembre</span>
+    </div>
+  </div>
+</footer>
+
+<script src="data/pricing.js"></script>
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const mobilePanel = document.getElementById('mobilePanel');
+  menuToggle.addEventListener('click', () => {
+    const open = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', String(!open));
+    menuToggle.setAttribute('aria-label', open ? 'Ouvrir le menu' : 'Fermer le menu');
+    mobilePanel.classList.toggle('open', !open);
+    document.body.style.overflow = open ? '' : 'hidden';
+  });
+  mobilePanel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute('aria-label', 'Ouvrir le menu');
+    mobilePanel.classList.remove('open');
+    document.body.style.overflow = '';
+  }));
+</script>
+</body>
+</html>
