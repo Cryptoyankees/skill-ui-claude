@@ -512,6 +512,13 @@
     document.getElementById('summary').style.opacity='.5';
     window.scrollTo({top:0,behavior:'smooth'});
   }
+  // Pré-sélection du circuit depuis un lien ?circuit=essentiel|grand|nomade|expedition
+  const preselectKey = new URLSearchParams(window.location.search).get('circuit');
+  if (preselectKey) {
+    const match = document.querySelector('#circuits .circ[data-key="' + preselectKey + '"]');
+    if (match) match.click();
+  }
+
   updateSummary();
   validate();
 </script>

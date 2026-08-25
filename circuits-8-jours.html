@@ -3,12 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Circuit Grand tour — 8 jours au Kirghizstan | Terres Nomades</title>
-<meta name="description" content="+ Song-Köl, yourte d'altitude, cols du Tian Shan. Circuit 8 jours en 4x4 privé au Kirghizstan, organisé en français. À partir de 850 €/pers. (base 4 personnes), payable sur place.">
+<title>Kirghizstan en 8 jours en 4x4 — itinéraire jour par jour | Terres Nomades</title>
+<meta name="description" content="Le circuit L'essentiel, prolongé d'une bascule au-dessus de 3 000 m jusqu'au lac de Song-Köl, avec une nuit en yourte chez une famille d'éleveurs. À partir de 850 €/pers. (base 4 personnes, payable sur place). Itinéraire complet, jour par jour.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2314140f'/%3E%3Cpath d='M4 24 12 10l5 8 3-5 8 11z' fill='%23b8824a'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kirghizstan en 8 jours — Grand tour | Terres Nomades">
+<meta property="og:description" content="Le circuit L'essentiel, prolongé d'une bascule au-dessus de 3 000 m jusqu'au lac de Song-Köl, avec une nuit en yourte chez une famille d'éleveurs.">
+<meta property="og:image" content="images/circuit-grand-tour.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TouristTrip",
+  "name": "Kirghizstan en 8 jours — Grand tour",
+  "description": "Le circuit L'essentiel, prolongé d'une bascule au-dessus de 3 000 m jusqu'au lac de Song-Köl, avec une nuit en yourte chez une famille d'éleveurs.",
+  "touristType": "Aventure, 4x4, trek léger",
+  "itinerary": {
+    "@type": "ItemList",
+    "numberOfItems": 8
+  },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "EUR",
+    "price": "850",
+    "description": "Prix à partir de, par personne, base 4 personnes, payable sur place"
+  }
+}
+</script>
 <style>
   :root{
     --ink:#14140f;--ink2:#3a372e;--paper:#f6f2e9;--card:#fffdf8;--stone:#8a8577;
@@ -33,10 +56,9 @@
   .skip-link{position:absolute;left:12px;top:-60px;background:var(--ink);color:#fff;padding:12px 18px;border-radius:8px;z-index:200;transition:top .2s var(--ease);font-family:var(--font-head);text-transform:uppercase;letter-spacing:.08em;font-size:.8rem}
   .skip-link:focus{top:12px}
 
-  /* NAV (identique au site) */
-  .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 0;transition:background .3s var(--ease),padding .3s var(--ease),box-shadow .3s var(--ease);background:rgba(246,242,233,.92);backdrop-filter:blur(10px);box-shadow:0 4px 20px rgba(24,23,18,.06)}
+  .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 0;background:rgba(246,242,233,.92);backdrop-filter:blur(10px);box-shadow:0 4px 20px rgba(24,23,18,.06)}
   .nav-inner{display:flex;align-items:center;justify-content:space-between}
-  .brand{font-family:var(--font-head);font-weight:700;text-transform:uppercase;letter-spacing:.16em;font-size:1.05rem;color:var(--ink);text-decoration:none;transition:color .3s}
+  .brand{font-family:var(--font-head);font-weight:700;text-transform:uppercase;letter-spacing:.16em;font-size:1.05rem;color:var(--ink);text-decoration:none}
   .brand b{color:var(--tan);font-weight:400}
   .navlinks{display:flex;align-items:center;gap:34px}
   .navlinks a{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.08em;font-size:.8rem;font-weight:500;color:var(--ink2);text-decoration:none;transition:color .2s}
@@ -55,39 +77,52 @@
   .mobile-panel a.mobile-cta{color:var(--tan);font-size:1.05rem}
   @media(max-width:860px){.navlinks{display:none}.menu-toggle{display:flex}}
 
-  /* HERO court */
   .hero{position:relative;height:60vh;min-height:380px;overflow:hidden;display:flex;align-items:flex-end}
   .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(15,14,10,.9) 0%,rgba(15,14,10,.25) 55%,rgba(15,14,10,.3) 100%)}
-  .hero-content{position:relative;z-index:2;color:#fff;padding:0 0 60px}
+  .hero-content{position:relative;z-index:2;color:#fff;padding:0 0 56px}
   .hero .eyebrow{color:var(--sand)}
-  .hero h1{font-size:clamp(2.2rem,5.5vw,4rem);font-weight:600;margin:14px 0 10px}
-  .hero .days{font-family:var(--font-head);color:var(--sand);text-transform:uppercase;letter-spacing:.1em;font-size:.9rem}
+  .hero h1{font-size:clamp(2rem,5vw,3.4rem);font-weight:600;margin:14px 0 12px;max-width:20ch}
+  .hero .summary{max-width:60ch;color:rgba(255,255,255,.86);font-size:1rem}
 
-  .body{padding:56px 0 0}
-  .intro{color:var(--ink2);max-width:64ch;font-size:1.04rem;margin-bottom:20px}
-  .badges-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:44px}
+  .infobar{display:flex;flex-wrap:wrap;gap:0;border:1.5px solid var(--line);border-radius:16px;background:var(--card);margin:-34px 0 50px;position:relative;z-index:3;overflow:hidden}
+  .infobar .cell{flex:1;min-width:180px;padding:20px 24px;border-right:1px solid var(--line)}
+  .infobar .cell:last-child{border-right:none}
+  .infobar .cell .lbl{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.1em;font-size:.66rem;color:var(--stone);margin-bottom:6px}
+  .infobar .cell .val{font-family:var(--font-head);font-weight:600;font-size:1.05rem;color:var(--ink)}
+  .infobar .cell .val small{font-family:var(--font-body);font-weight:400;font-size:.76rem;color:var(--stone);text-transform:none}
+  @media(max-width:760px){.infobar{margin-top:20px}.infobar .cell{border-right:none;border-bottom:1px solid var(--line)}}
+
+  .body{padding:10px 0 0}
+  .badges-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:50px}
   .badge{font-size:.72rem;font-weight:600;letter-spacing:.03em;color:var(--ink2);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 13px}
 
   h2.section-title{font-size:clamp(1.6rem,3.4vw,2.2rem);font-weight:600;margin-bottom:36px}
 
   /* TIMELINE */
-  .timeline{padding:20px 0 70px}
-  .tl-item{display:grid;grid-template-columns:52px 1fr;gap:22px}
+  .timeline-wrap{position:relative}
+  .timeline-wrap:before{content:"";position:absolute;inset:-20px -6vw;z-index:0;pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600' viewBox='0 0 600 600'%3E%3Cg fill='none' stroke='%238a8577' stroke-width='1'%3E%3Cpath d='M-20 80 C 120 40, 180 140, 300 90 S 480 20, 620 70'/%3E%3Cpath d='M-20 240 C 110 200, 210 300, 300 250 S 490 180, 620 230'/%3E%3Cpath d='M-20 400 C 120 360, 200 460, 300 410 S 480 340, 620 390'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat:repeat;background-size:600px 600px;opacity:.04}
+  .timeline{position:relative;z-index:1;padding:20px 0 70px}
+  .tl-item{display:grid;grid-template-columns:56px 1fr;gap:22px}
   .tl-node-col{display:flex;flex-direction:column;align-items:center}
-  .tl-node{width:44px;height:44px;border-radius:50%;background:var(--card);border:2px solid var(--tan);display:grid;place-items:center;flex-shrink:0;z-index:2}
+  .tl-node{width:46px;height:46px;border-radius:50%;background:var(--card);border:2px solid var(--tan);display:grid;place-items:center;flex-shrink:0;z-index:2}
   .tl-node svg{stroke:var(--madder)}
   .tl-line{width:2px;flex:1;background:var(--line);margin-top:2px;min-height:24px}
   .tl-item:last-child .tl-line{display:none}
-  .tl-content{padding-bottom:44px}
+  .tl-content{padding-bottom:46px}
   .tl-day{font-family:var(--font-head);color:var(--tan);letter-spacing:.2em;font-size:.68rem;text-transform:uppercase;font-weight:600}
   .tl-title{font-family:var(--font-head);font-weight:600;font-size:1.2rem;margin:5px 0 9px;letter-spacing:.01em}
   .tl-text{color:var(--ink2);max-width:58ch;font-size:.94rem}
-  .tl-photo{margin-top:18px;aspect-ratio:16/9;max-width:460px;border-radius:14px;border:1.5px dashed var(--line);background:var(--card);display:flex;align-items:center;justify-content:center;color:var(--stone);gap:8px}
-  .tl-photo span{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.1em;font-size:.7rem}
+  .tl-activities{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .tl-activities li{font-size:.72rem;color:var(--stone);background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:4px 10px}
+  .tl-overnight{margin-top:12px;font-size:.78rem;color:var(--ink2);display:flex;align-items:center;gap:7px}
+  .tl-overnight b{color:var(--madder);font-weight:600}
+  .tl-photo{margin-top:16px;max-width:520px;border-radius:14px;overflow:hidden}
+  .tl-photo img{width:100%;display:block}
   @media(max-width:560px){.tl-item{grid-template-columns:40px 1fr;gap:14px}.tl-node{width:36px;height:36px}}
 
-  /* INCLUS / NON INCLUS */
   .incl-wrap{padding:10px 0 70px}
   .incl-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
   @media(max-width:700px){.incl-grid{grid-template-columns:1fr}}
@@ -102,18 +137,28 @@
   .incl-card.no svg{stroke:var(--stone)}
   .incl-card.no li{color:var(--stone)}
 
-  /* PRICE + OPTIONS */
-  .price-box{background:linear-gradient(150deg,var(--slate) 0%,#233330 100%);color:#ece6d8;border-radius:22px;padding:40px;margin:10px 0 70px;display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
-  @media(max-width:760px){.price-box{grid-template-columns:1fr;padding:28px}}
+  .opt-reminder{padding:0 0 70px}
+  .opt-reminder .box{background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:26px 30px}
+  .opt-reminder h3{font-size:.95rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px;color:var(--ink)}
+  .opt-reminder ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+  .opt-reminder li{display:flex;justify-content:space-between;gap:16px;font-size:.9rem;color:var(--ink2)}
+  .opt-reminder li span.p{color:var(--madder);font-family:var(--font-head);font-weight:500;font-size:.84rem;white-space:nowrap}
+
+  .price-box{background:linear-gradient(150deg,var(--slate) 0%,#233330 100%);color:#ece6d8;border-radius:22px;padding:40px;margin:10px 0 50px}
+  @media(max-width:760px){.price-box{padding:28px}}
   .price-box .eyebrow{color:var(--sand)}
   .price-box .amount{font-family:var(--font-head);font-size:clamp(2rem,4.5vw,2.8rem);font-weight:600;margin:10px 0 6px;color:#fff}
   .price-box .amount small{font-family:var(--font-body);font-weight:400;font-size:.9rem;color:#a9a396;text-transform:none}
-  .price-box .cash-note{font-size:.84rem;color:#a9a396;max-width:48ch;margin-top:10px}
-  .price-box .fee-note{margin-top:18px;padding-top:18px;border-top:1px solid rgba(236,230,216,.14);font-size:.82rem;color:#a9a396;max-width:48ch}
-  .price-box .fee-note b{color:#fff}
-  .price-box .side{text-align:left}
-  .price-box .options-title{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.08em;font-size:.76rem;color:var(--sand);margin-bottom:10px}
-  .price-box .options-list{font-size:.86rem;color:#c9c3b4;display:flex;flex-direction:column;gap:6px;margin-bottom:20px}
+  .price-box .cash-note{font-size:.84rem;color:#a9a396;max-width:60ch;margin-top:10px}
+  .price-box .fee-note{margin-top:18px;padding-top:18px;border-top:1px solid rgba(236,230,216,.14);font-size:.86rem;color:#ece6d8;max-width:64ch}
+  .price-box .cta-row{margin-top:24px}
+
+  .other-durations{padding:0 0 90px;text-align:center}
+  .other-durations p{color:var(--stone);font-size:.9rem;margin-bottom:16px}
+  .other-durations .links{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+  .other-durations a{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.06em;font-size:.82rem;
+    color:var(--ink2);text-decoration:none;border:1.5px solid var(--line);border-radius:999px;padding:10px 20px;transition:all .2s var(--ease)}
+  .other-durations a:hover{border-color:var(--tan);color:var(--madder)}
 
   footer{background:var(--ink);color:#c9c3b4;padding:70px 0 30px}
   .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;padding-bottom:50px;border-bottom:1px solid rgba(255,255,255,.1)}
@@ -124,8 +169,6 @@
   .footer-col a{display:block;font-size:.9rem;color:#c9c3b4;text-decoration:none;margin-bottom:10px;transition:color .2s}
   .footer-col a:hover{color:var(--tan)}
   .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:26px;font-size:.78rem;color:#6b6759;flex-wrap:wrap;gap:10px}
-
-  .final-row{padding:0 0 90px;text-align:center}
 
   @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{scroll-behavior:auto!important}}
 </style>
@@ -138,10 +181,13 @@
   <defs>
     <symbol id="ic-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12" stroke-width="1.8" stroke-linecap="round"/><polyline points="13 6 19 12 13 18" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 
-    <symbol id="ic-4x4" viewBox="0 0 24 24"><path d="M4 16h16M6 16v-5l2-3h8l2 3v5" fill="none" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="8" cy="17.4" r="1.6" fill="none" stroke-width="1.5"/><circle cx="16" cy="17.4" r="1.6" fill="none" stroke-width="1.5"/></symbol>
+    <symbol id="ic-jeep" viewBox="0 0 24 24"><path d="M4 16h16M6 16v-5l2-3h8l2 3v5" fill="none" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="8" cy="17.4" r="1.6" fill="none" stroke-width="1.5"/><circle cx="16" cy="17.4" r="1.6" fill="none" stroke-width="1.5"/></symbol>
     <symbol id="ic-mountain" viewBox="0 0 24 24"><path d="M3 18 9 8l4 6 2-3 6 7z" fill="none" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/></symbol>
     <symbol id="ic-yurt" viewBox="0 0 24 24"><path d="M6 20c0-5 2.5-8.5 6-8.5s6 3.5 6 8.5" fill="none" stroke-width="1.6" stroke-linecap="round"/><line x1="12" y1="7.5" x2="12" y2="11.5" stroke-width="1.6" stroke-linecap="round"/><line x1="4" y1="20" x2="20" y2="20" stroke-width="1.6" stroke-linecap="round"/><path d="M10.6 20v-4.2h2.8V20" fill="none" stroke-width="1.5"/></symbol>
     <symbol id="ic-lake" viewBox="0 0 24 24"><path d="M3 10.5c2-2 4-2 6 0s4 2 6 0 4-2 6 0" fill="none" stroke-width="1.6" stroke-linecap="round"/><path d="M3 15.5c2-2 4-2 6 0s4 2 6 0 4-2 6 0" fill="none" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="ic-hike" viewBox="0 0 24 24"><circle cx="9.5" cy="5" r="1.7" fill="none" stroke-width="1.5"/><path d="M9.5 7v5l-3 6M9.5 12l4 2 2 5M9.5 12l-4 3" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-culture" viewBox="0 0 24 24"><path d="M5 20h14M6 20V9l6-4 6 4v11" fill="none" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+    <symbol id="ic-springs" viewBox="0 0 24 24"><path d="M3 17c2-1.6 4-1.6 6 0s4 1.6 6 0 4-1.6 6 0" fill="none" stroke-width="1.6" stroke-linecap="round"/><path d="M8 11c-1-1 1-2 0-3M12 11c-1-1 1-2 0-3M16 11c-1-1 1-2 0-3" fill="none" stroke-width="1.4" stroke-linecap="round"/></symbol>
     <symbol id="ic-check" viewBox="0 0 24 24"><polyline points="5 13 10 18 19 7" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="ic-minus" viewBox="0 0 24 24"><line x1="6" y1="12" x2="18" y2="12" stroke-width="1.8" stroke-linecap="round"/></symbol>
 
@@ -178,107 +224,127 @@
     <img src="images/circuit-grand-tour.jpg" alt="Camp de yourtes blanches au bord du lac Song-Köl" width="760" height="1013" fetchpriority="high">
     <div class="container hero-content">
       <p class="eyebrow">Kirghizstan · Circuit 8 jours</p>
-      <h1>Grand tour</h1>
-      <p class="days">+ Song-Köl, yourte d'altitude, cols du Tian Shan</p>
+      <h1>Kirghizstan en 8 jours — Grand tour</h1>
+      <p class="summary">Le circuit L'essentiel, prolongé d'une bascule au-dessus de 3 000 m jusqu'au lac de Song-Köl, avec une nuit en yourte chez une famille d'éleveurs.</p>
     </div>
   </section>
 
+  <div class="container">
+    <div class="infobar">
+      <div class="cell"><div class="lbl">Durée</div><div class="val">8 jours</div></div>
+      <div class="cell"><div class="lbl">Tarif séjour</div><div class="val">À partir de 850 € <small>/pers., base 4 pers., payable sur place</small></div></div>
+      <div class="cell"><div class="lbl">Saison</div><div class="val">Mai — Septembre</div></div>
+    </div>
+  </div>
+
   <div class="body">
     <div class="container">
-      <p class="intro">Le circuit L'essentiel, prolongé d'une bascule au-dessus de 3 000 m jusqu'au lac de Song-Köl : une nuit en yourte chez une famille d'éleveurs, au milieu des alpages.</p>
       <div class="badges-row"><span class="badge">4x4 privé</span><span class="badge">Yourte incluse</span></div>
 
       <h2 class="section-title">Jour par jour</h2>
-      <div class="timeline">
-        <div class="tl-item">
-          <div class="tl-node-col">
-            <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-4x4"/></svg></div>
-            <div class="tl-line"></div>
+      <div class="timeline-wrap">
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-node-col">
+              <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-jeep"/></svg></div>
+              <div class="tl-line"></div>
+            </div>
+            <div class="tl-content">
+              <p class="tl-day">Jour 01</p>
+              <h3 class="tl-title">Arrivée à Bichkek</h3>
+              <p class="tl-text">Accueil à l'aéroport de Manas, transfert et installation. Premier contact avec votre chauffeur autour d'un thé, briefing du circuit.</p>
+            <ul class="tl-activities"><li>Accueil aéroport</li><li>Briefing du circuit</li></ul>
+            <p class="tl-overnight">Nuit à <b>Bichkek</b></p>
+            </div>
           </div>
-          <div class="tl-content">
-            <p class="tl-day">Jour 1</p>
-            <h3 class="tl-title">Arrivée à Bichkek</h3>
-            <p class="tl-text">Accueil à l'aéroport, transfert et installation. Briefing du circuit avec votre chauffeur autour d'un thé.</p>
+          <div class="tl-item">
+            <div class="tl-node-col">
+              <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-hike"/></svg></div>
+              <div class="tl-line"></div>
+            </div>
+            <div class="tl-content">
+              <p class="tl-day">Jour 02</p>
+              <h3 class="tl-title">Bichkek → Ala-Archa → Bichkek</h3>
+              <p class="tl-text">Journée dans le parc national d'Ala-Archa, aux portes de la capitale : marche d'acclimatation au pied des glaciers du Tian Shan.</p>
+            <ul class="tl-activities"><li>Marche en gorge</li><li>Pique-nique en altitude</li></ul>
+            <p class="tl-overnight">Nuit à <b>Bichkek</b></p>
+            </div>
           </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-node-col">
-            <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-mountain"/></svg></div>
-            <div class="tl-line"></div>
+          <div class="tl-item">
+            <div class="tl-node-col">
+              <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-jeep"/></svg></div>
+              <div class="tl-line"></div>
+            </div>
+            <div class="tl-content">
+              <p class="tl-day">Jour 03</p>
+              <h3 class="tl-title">Bichkek → Issyk-Kul</h3>
+              <p class="tl-text">Transfert en 4x4 vers les rives du lac Issyk-Kul, deuxième plus grand lac alpin du monde après le Titicaca.</p>
+            <ul class="tl-activities"><li>Route panoramique</li></ul>
+            <p class="tl-overnight">Nuit à <b>Rives de l'Issyk-Kul</b></p>
+            </div>
           </div>
-          <div class="tl-content">
-            <p class="tl-day">Jour 2</p>
-            <h3 class="tl-title">Gorges d’Ala-Archa</h3>
-            <p class="tl-text">Départ pour le parc national d'Ala-Archa : marche d'acclimatation au pied des glaciers du Tian Shan.</p>
-            <div class="tl-photo"><svg width="20" height="20" fill="none" stroke="currentColor"><use href="#ic-mountain"/></svg><span>Photo à venir</span></div>
+          <div class="tl-item">
+            <div class="tl-node-col">
+              <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-mountain"/></svg></div>
+              <div class="tl-line"></div>
+            </div>
+            <div class="tl-content">
+              <p class="tl-day">Jour 04</p>
+              <h3 class="tl-title">Issyk-Kul → Canyon Skazka</h3>
+              <p class="tl-text">Marche dans les formations rocheuses ocres du canyon Skazka, le « conte de fées », sculpté par l'érosion.</p>
+            <ul class="tl-activities"><li>Marche photo</li><li>Formations rocheuses</li></ul>
+            <p class="tl-overnight">Nuit à <b>Rives de l'Issyk-Kul</b></p>
+            </div>
           </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-node-col">
-            <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-4x4"/></svg></div>
-            <div class="tl-line"></div>
+          <div class="tl-item">
+            <div class="tl-node-col">
+              <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-mountain"/></svg></div>
+              <div class="tl-line"></div>
+            </div>
+            <div class="tl-content">
+              <p class="tl-day">Jour 05</p>
+              <h3 class="tl-title">Issyk-Kul → Cols du Tian Shan</h3>
+              <p class="tl-text">Franchissement des cols d'altitude en direction de Song-Köl, au-dessus de 3 000 m.</p>
+            <ul class="tl-activities"><li>Cols de montagne</li><li>Panoramas d'altitude</li></ul>
+            <p class="tl-overnight">Nuit à <b>En route</b></p>
+            </div>
           </div>
-          <div class="tl-content">
-            <p class="tl-day">Jour 3</p>
-            <h3 class="tl-title">Route vers Issyk-Kul</h3>
-            <p class="tl-text">Transfert en 4x4 vers les rives du lac Issyk-Kul, deuxième plus grand lac alpin du monde.</p>
+          <div class="tl-item">
+            <div class="tl-node-col">
+              <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-yurt"/></svg></div>
+              <div class="tl-line"></div>
+            </div>
+            <div class="tl-content">
+              <p class="tl-day">Jour 06</p>
+              <h3 class="tl-title">Cols → Song-Köl</h3>
+              <p class="tl-text">Arrivée au lac de Song-Köl et nuit en yourte chez une famille d'éleveurs, au milieu des alpages.</p>
+            <ul class="tl-activities"><li>Nuit en yourte</li><li>Troupeaux en liberté</li></ul>
+            <p class="tl-overnight">Nuit à <b>Yourte à Song-Köl</b></p>
+            </div>
           </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-node-col">
-            <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-mountain"/></svg></div>
-            <div class="tl-line"></div>
+          <div class="tl-item">
+            <div class="tl-node-col">
+              <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-jeep"/></svg></div>
+              <div class="tl-line"></div>
+            </div>
+            <div class="tl-content">
+              <p class="tl-day">Jour 07</p>
+              <h3 class="tl-title">Song-Köl → Bichkek</h3>
+              <p class="tl-text">Redescente vers la capitale par les vallées, derniers arrêts photo.</p>
+            <p class="tl-overnight">Nuit à <b>Bichkek</b></p>
+            </div>
           </div>
-          <div class="tl-content">
-            <p class="tl-day">Jour 4</p>
-            <h3 class="tl-title">Canyon de Skazka</h3>
-            <p class="tl-text">Marche dans les formations rocheuses ocres du canyon Skazka (« le conte de fées »).</p>
-            <div class="tl-photo"><svg width="20" height="20" fill="none" stroke="currentColor"><use href="#ic-mountain"/></svg><span>Photo à venir</span></div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-node-col">
-            <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-mountain"/></svg></div>
-            <div class="tl-line"></div>
-          </div>
-          <div class="tl-content">
-            <p class="tl-day">Jour 5</p>
-            <h3 class="tl-title">Cols du Tian Shan</h3>
-            <p class="tl-text">Franchissement des cols d'altitude en direction de Song-Köl, au-dessus de 3 000 m.</p>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-node-col">
-            <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-yurt"/></svg></div>
-            <div class="tl-line"></div>
-          </div>
-          <div class="tl-content">
-            <p class="tl-day">Jour 6</p>
-            <h3 class="tl-title">Lac de Song-Köl</h3>
-            <p class="tl-text">Nuit en yourte chez une famille d'éleveurs, au bord du lac d'altitude de Song-Köl.</p>
-            <div class="tl-photo"><svg width="20" height="20" fill="none" stroke="currentColor"><use href="#ic-yurt"/></svg><span>Photo à venir</span></div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-node-col">
-            <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-4x4"/></svg></div>
-            <div class="tl-line"></div>
-          </div>
-          <div class="tl-content">
-            <p class="tl-day">Jour 7</p>
-            <h3 class="tl-title">Retour vers Bichkek</h3>
-            <p class="tl-text">Redescente vers la capitale par les vallées, derniers arrêts photo.</p>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-node-col">
-            <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-4x4"/></svg></div>
-            <div class="tl-line"></div>
-          </div>
-          <div class="tl-content">
-            <p class="tl-day">Jour 8</p>
-            <h3 class="tl-title">Départ</h3>
-            <p class="tl-text">Transfert vers l'aéroport de Bichkek. Fin du séjour.</p>
+          <div class="tl-item">
+            <div class="tl-node-col">
+              <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-jeep"/></svg></div>
+              <div class="tl-line"></div>
+            </div>
+            <div class="tl-content">
+              <p class="tl-day">Jour 08</p>
+              <h3 class="tl-title">Bichkek → Départ</h3>
+              <p class="tl-text">Transfert vers l'aéroport de Bichkek. Fin du séjour.</p>
+            <p class="tl-overnight"><b>Fin du circuit</b></p>
+            </div>
           </div>
         </div>
       </div>
@@ -307,21 +373,34 @@
         </div>
       </div>
 
-      <div class="price-box">
-        <div>
-          <p class="eyebrow">Séjour 8 jours</p>
-          <p class="amount">À partir de 850 € <small>/ personne, base 4 pers.</small></p>
-          <p class="cash-note">Prix de l'opérateur local, réglé en espèces sur place, directement auprès de votre chauffeur. Tarif exact selon la taille du groupe, confirmé avec votre devis.</p>
-          <p class="fee-note"><b>+ 150 €/personne</b> de frais de réservation et d'assistance francophone (fixes, payés en ligne) — le prix du séjour, lui, se règle sur place, en espèces, auprès de votre chauffeur.</p>
+      <div class="opt-reminder">
+        <div class="box">
+          <h3>Options à ajouter</h3>
+          <ul>
+            <li>Cheval à Song-Köl <span class="p">+120 €/pers.</span></li>
+            <li>Journée pêche <span class="p">+90 €/pers.</span></li>
+            <li>Guide francophone <span class="p">Sur devis</span></li>
+            <li>Transfert aéroport A/R + SIM locale <span class="p">Sur devis</span></li>
+          </ul>
         </div>
-        <div class="side">
-          <p class="options-title">Options à ajouter</p>
-          <div class="options-list">
-            <span>Cheval à Song-Köl — +120 €/pers.</span>
-            <span>Journée pêche — +90 €/pers.</span>
-            <span>Guide francophone — sur devis</span>
-          </div>
-          <a href="reservation.html" class="btn btn-primary">Réserver ce circuit <svg width="15" height="15"><use href="#ic-arrow"/></svg></a>
+      </div>
+
+      <div class="price-box">
+        <p class="eyebrow">Séjour 8 jours</p>
+        <p class="amount">À partir de 850 € <small>/ personne, base 4 pers.</small></p>
+        <p class="cash-note">Prix de l'opérateur local, réglé en espèces sur place, directement auprès de votre chauffeur. Tarif exact selon la taille du groupe, confirmé avec votre devis.</p>
+        <p class="fee-note">Frais de réservation et d'assistance francophone : <b>150&nbsp;€/personne</b>, payés en ligne. Le prix du séjour se règle sur place, en espèces, auprès de votre chauffeur.</p>
+        <div class="cta-row">
+          <a href="reservation.html?circuit=grand" class="btn btn-primary">Réserver ce circuit <svg width="15" height="15"><use href="#ic-arrow"/></svg></a>
+        </div>
+      </div>
+
+      <div class="other-durations">
+        <p>Aussi disponible en</p>
+        <div class="links">
+          <a href="circuits-7-jours.html">7 jours</a>
+          <a href="circuits-9-jours.html">9 jours</a>
+          <a href="circuits-10-jours.html">10 jours</a>
         </div>
       </div>
     </div>
