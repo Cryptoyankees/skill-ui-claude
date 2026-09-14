@@ -37,8 +37,13 @@
   .brand b{color:var(--tan);font-weight:400}
   .backlink{font-size:.78rem;color:#fff;text-decoration:none;padding:9px 16px;border-radius:999px;
     background:rgba(255,255,255,.1);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.25);
-    transition:background .2s var(--ease),transform .2s var(--ease)}
+    transition:background .2s var(--ease),transform .2s var(--ease);white-space:nowrap;flex-shrink:0}
   .backlink:hover{background:rgba(255,255,255,.2);transform:translateY(-1px)}
+  @media(max-width:480px){
+    .topbar{padding:16px 18px}
+    .brand{font-size:.8rem;letter-spacing:.1em}
+    .backlink{font-size:.68rem;padding:7px 11px}
+  }
 
   .body{padding:36px 30px 0}
   .intro{color:var(--ink2);max-width:58ch;margin-bottom:24px;font-size:1rem}
@@ -70,7 +75,7 @@
   @media(max-width:520px){.step-item{width:auto}.step-label{display:none}}
 
   .grid{display:grid;grid-template-columns:1fr 330px;gap:32px;align-items:start}
-  @media(max-width:860px){.grid{grid-template-columns:1fr}.summary{position:static!important;order:-1}}
+  @media(max-width:860px){.grid{grid-template-columns:1fr}.summary{position:static!important}}
 
   .page{display:none;animation:fade .45s var(--ease)}
   .page.on{display:block}
@@ -214,7 +219,7 @@
     <img src="images/hero-vallee.jpg" alt="Col de montagne au Kirghizstan" width="1500" height="2000">
     <div class="topbar">
       <div class="brand">JOLTOO<b>·</b>AVENTURES</div>
-      <a href="index.html" class="backlink">← Retour au site</a>
+      <a href="index.html" class="backlink">← Retour</a>
     </div>
     <div class="htext">
       <div class="ey">Demande de réservation · Sans engagement</div>
