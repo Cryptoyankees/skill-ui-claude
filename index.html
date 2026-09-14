@@ -138,6 +138,11 @@
 
   /* ===== SECTION HEADERS ===== */
   .section-head{max-width:640px;margin-bottom:52px}
+  .section-link{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-family:var(--font-head);
+    text-transform:uppercase;letter-spacing:.08em;font-size:.8rem;font-weight:600;color:var(--madder);
+    text-decoration:none;transition:gap .2s var(--ease)}
+  .section-link:hover{gap:12px}
+  .section-link-dark{color:var(--tan)}
   .section-head h2{font-size:clamp(2rem,4.2vw,3rem);font-weight:600;color:var(--ink);margin:12px 0 14px}
   .section-head p{color:var(--stone);font-size:1.02rem}
   .section-head.center{margin-left:auto;margin-right:auto;text-align:center}
@@ -317,8 +322,8 @@
     <nav class="navlinks" aria-label="Navigation principale">
       <a href="#circuits">Circuits</a>
       <a href="#options">Options</a>
-      <a href="#carnet">Carnet</a>
-      <a href="#materiel">Matériel</a>
+      <a href="carnet.html">Carnet</a>
+      <a href="materiel.html">Matériel</a>
       <a href="reservation.html" class="btn btn-primary nav-cta">Réserver <svg width="15" height="15"><use href="#ic-arrow"/></svg></a>
     </nav>
     <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobilePanel" aria-label="Ouvrir le menu">
@@ -330,8 +335,8 @@
 <div class="mobile-panel" id="mobilePanel">
   <a href="#circuits">Circuits</a>
   <a href="#options">Options</a>
-  <a href="#carnet">Carnet</a>
-  <a href="#materiel">Matériel</a>
+  <a href="carnet.html">Carnet</a>
+  <a href="materiel.html">Matériel</a>
   <a href="reservation.html" class="mobile-cta">Réserver mon expédition →</a>
 </div>
 
@@ -587,6 +592,7 @@
         <p class="eyebrow">Le carnet</p>
         <h2>Préparer son départ</h2>
         <p>Budget, saison, matériel, itinéraires — nos guides pratiques arrivent progressivement.</p>
+        <a href="carnet.html" class="section-link">Voir tous les articles <svg width="14" height="14"><use href="#ic-arrow"/></svg></a>
       </div>
       <div class="carnet-grid reveal-stagger">
         <article class="carnet-card reveal" style="--i:0">
@@ -620,6 +626,7 @@
           <h2>Bien équipé avant de partir</h2>
           <p>Quelques repères pratiques — chaussures, sac, doudoune, gourde filtrante — et une assurance voyage adaptée à l'altitude et au 4x4, pour partir sereinement.</p>
           <p class="materiel-note">Certains liens pourront être affiliés, sans surcoût pour vous — ce n'est pas notre activité principale, juste un coup de main pratique.</p>
+          <a href="materiel.html" class="section-link section-link-dark">Voir le matériel <svg width="14" height="14"><use href="#ic-arrow"/></svg></a>
         </div>
         <div class="materiel-tags">
           <span>Chaussures</span><span>Sac de trek</span><span>Doudoune</span>
@@ -655,8 +662,8 @@
         <a href="#galerie">Galerie</a>
         <a href="#pourquoi">Pourquoi nous</a>
         <a href="#options">Options</a>
-        <a href="#carnet">Le carnet</a>
-        <a href="#materiel">Matériel</a>
+        <a href="carnet.html">Le carnet</a>
+        <a href="materiel.html">Matériel</a>
       </div>
       <div class="footer-col">
         <h4>Contact & légal</h4>
