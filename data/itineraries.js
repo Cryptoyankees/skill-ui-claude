@@ -1,5 +1,5 @@
 /*
- * Terres Nomades — contenu des 4 circuits (source de vérité pour les pages
+ * Joltoo Aventures — contenu des 4 circuits (source de vérité pour les pages
  * /circuits/*). Édite ce fichier uniquement — le design n'en dépend pas.
  *
  * Ce contenu a été rédigé à partir des étapes déjà connues du site

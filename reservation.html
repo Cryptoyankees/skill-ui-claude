@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Réserver — Terres Nomades</title>
+<title>Réserver — Joltoo Aventures</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -213,7 +213,7 @@
   <div class="hero">
     <img src="images/hero-vallee.jpg" alt="Col de montagne au Kirghizstan" width="1500" height="2000">
     <div class="topbar">
-      <div class="brand">TERRES<b>·</b>NOMADES</div>
+      <div class="brand">JOLTOO<b>·</b>AVENTURES</div>
       <a href="index.html" class="backlink">← Retour au site</a>
     </div>
     <div class="htext">
@@ -229,7 +229,7 @@
       <div class="ep-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="12" r="8.4"/><path d="M15 9l-2 5-5 2 2-5z" stroke-linejoin="round"/></svg></div>
       <div>
         <p class="ep-eyebrow">Sur mesure, avec vous</p>
-        <h2 class="ep-title">Composez votre expédition avec <span id="epName">Terres&nbsp;Nomades</span></h2>
+        <h2 class="ep-title">Composez votre expédition avec <span id="epName">Joltoo&nbsp;Aventures</span></h2>
       </div>
     </div>
 
@@ -383,10 +383,6 @@
           Séjour : <b id="s-est">—</b><br>
           <span style="font-size:.72rem">Prix opérateur, réglé sur place en espèces. Tarif exact selon la taille du groupe.</span>
         </div>
-        <div class="stotal" style="margin-top:12px;padding-top:12px;border-top:1px solid rgba(236,230,216,.1)">
-          Frais de réservation : <b id="s-fee">—</b><br>
-          <span style="font-size:.72rem">Frais de réservation et d'assistance francophone — le prix du séjour se règle sur place, en espèces, auprès de votre chauffeur.</span>
-        </div>
         <div class="snote">Vous réservez une <b style="color:var(--sand)">demande</b>, pas un paiement.</div>
       </aside>
     </div>
@@ -431,7 +427,7 @@
   const epName=document.getElementById('epName');
   document.getElementById('fname').addEventListener('input',e=>{
     const v=e.target.value.trim();
-    epName.textContent=v?v:'Terres Nomades';
+    epName.textContent=v?v:'Joltoo Aventures';
   });
 
   function updateSummary(){
@@ -444,8 +440,6 @@
     const est=document.getElementById('s-est');
     const price=(state.duration&&SEJOUR_PRICING[state.duration])?SEJOUR_PRICING[state.duration][4]:null;
     est.textContent=price?('à partir de '+price.toLocaleString('fr-FR')+' €/pers. (base 4 pers.)'):'sur devis';
-    const fee=document.getElementById('s-fee');
-    fee.textContent=(state.pax*BOOKING_FEE_PER_PERSON).toLocaleString('fr-FR')+' € ('+state.pax+' × 150 €)';
   }
 
   // CALENDAR
@@ -502,8 +496,7 @@
       '<div class="sline"><span class="k">Circuit</span><span class="v">'+(state.circ||'Sur mesure')+'</span></div>'+
       '<div class="sline"><span class="k">Voyageurs</span><span class="v">'+state.pax+'</span></div>'+
       '<div class="sline"><span class="k">Options</span><span class="v">'+opts+'</span></div>'+
-      '<div class="sline"><span class="k">Départ</span><span class="v">'+dstr+'</span></div>'+
-      '<div class="sline"><span class="k">Frais de réservation</span><span class="v">'+(state.pax*BOOKING_FEE_PER_PERSON).toLocaleString('fr-FR')+' €</span></div>';
+      '<div class="sline"><span class="k">Départ</span><span class="v">'+dstr+'</span></div>';
     pages.forEach(p=>document.getElementById(p).classList.remove('on'));
     document.getElementById('pdone').classList.add('on');
     document.getElementById('navbtns').style.display='none';
