@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kirghizstan en 10 jours en 4x4 — itinéraire jour par jour | Joltoo Aventures</title>
-<meta name="description" content="Le circuit complet : jusqu'au caravansérail de Tash Rabat et au lac confidentiel de Kel-Suu, en plus de Jyrgalan et Song-Köl. À partir de 1 050 €/pers. (base 4 personnes, payable sur place). Itinéraire complet, jour par jour.">
+<meta name="description" content="Dix jours d'immersion totale : une nuit en pleine montagne à Altyn-Arashan, deux nuits en yourte à Song-Köl et le caravansérail de Tash-Rabat. Itinéraire complet, jour par jour.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2314140f'/%3E%3Cpath d='M4 24 12 10l5 8 3-5 8 11z' fill='%23b8824a'/%3E%3C/svg%3E">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Kirghizstan en 10 jours — Expédition | Joltoo Aventures">
-<meta property="og:description" content="Le circuit complet : jusqu'au caravansérail de Tash Rabat et au lac confidentiel de Kel-Suu, en plus de Jyrgalan et Song-Köl.">
+<meta property="og:title" content="Kirghizstan en 10 jours — Expédition Complète | Joltoo Aventures">
+<meta property="og:description" content="Dix jours d'immersion totale : une nuit en pleine montagne à Altyn-Arashan, deux nuits en yourte à Song-Köl et le caravansérail de Tash-Rabat.">
 <meta property="og:image" content="images/circuit-expedition.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,18 +17,12 @@
 {
   "@context": "https://schema.org",
   "@type": "TouristTrip",
-  "name": "Kirghizstan en 10 jours — Expédition",
-  "description": "Le circuit complet : jusqu'au caravansérail de Tash Rabat et au lac confidentiel de Kel-Suu, en plus de Jyrgalan et Song-Köl.",
+  "name": "Kirghizstan en 10 jours — Expédition Complète",
+  "description": "Dix jours d'immersion totale : une nuit en pleine montagne à Altyn-Arashan, deux nuits en yourte à Song-Köl et le caravansérail de Tash-Rabat.",
   "touristType": "Aventure, 4x4, trek léger",
   "itinerary": {
     "@type": "ItemList",
     "numberOfItems": 10
-  },
-  "offers": {
-    "@type": "Offer",
-    "priceCurrency": "EUR",
-    "price": "1 050",
-    "description": "Prix à partir de, par personne, base 4 personnes, payable sur place"
   }
 }
 </script>
@@ -82,15 +76,18 @@
   .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(15,14,10,.9) 0%,rgba(15,14,10,.25) 55%,rgba(15,14,10,.3) 100%)}
   .hero-content{position:relative;z-index:2;color:#fff;padding:0 0 56px}
   .hero .eyebrow{color:var(--sand)}
-  .hero h1{font-size:clamp(2rem,5vw,3.4rem);font-weight:600;margin:14px 0 12px;max-width:20ch}
-  .hero .summary{max-width:60ch;color:rgba(255,255,255,.86);font-size:1rem}
+  .hero h1{font-size:clamp(2rem,5vw,3.4rem);font-weight:600;margin:14px 0 10px;max-width:20ch}
+  .hero-stars{display:flex;gap:5px;margin-bottom:14px}
+  .hero-stars svg{width:19px;height:19px}
+  .hero-stars svg.filled{fill:var(--tan);stroke:var(--tan)}
+  .hero-stars svg.muted{fill:none;stroke:rgba(255,255,255,.45)}
+  .hero .summary{max-width:60ch;color:rgba(255,255,255,.86);font-size:1rem;margin-bottom:26px}
 
   .infobar{display:flex;flex-wrap:wrap;gap:0;border:1.5px solid var(--line);border-radius:16px;background:var(--card);margin:-34px 0 50px;position:relative;z-index:3;overflow:hidden}
   .infobar .cell{flex:1;min-width:180px;padding:20px 24px;border-right:1px solid var(--line)}
   .infobar .cell:last-child{border-right:none}
   .infobar .cell .lbl{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.1em;font-size:.66rem;color:var(--stone);margin-bottom:6px}
   .infobar .cell .val{font-family:var(--font-head);font-weight:600;font-size:1.05rem;color:var(--ink)}
-  .infobar .cell .val small{font-family:var(--font-body);font-weight:400;font-size:.76rem;color:var(--stone);text-transform:none}
   @media(max-width:760px){.infobar{margin-top:20px}.infobar .cell{border-right:none;border-bottom:1px solid var(--line)}}
 
   .body{padding:10px 0 0}
@@ -113,12 +110,13 @@
   .tl-item:last-child .tl-line{display:none}
   .tl-content{padding-bottom:46px}
   .tl-day{font-family:var(--font-head);color:var(--tan);letter-spacing:.2em;font-size:.68rem;text-transform:uppercase;font-weight:600}
-  .tl-title{font-family:var(--font-head);font-weight:600;font-size:1.2rem;margin:5px 0 9px;letter-spacing:.01em}
-  .tl-text{color:var(--ink2);max-width:58ch;font-size:.94rem}
-  .tl-activities{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-  .tl-activities li{font-size:.72rem;color:var(--stone);background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:4px 10px}
-  .tl-overnight{margin-top:12px;font-size:.78rem;color:var(--ink2);display:flex;align-items:center;gap:7px}
-  .tl-overnight b{color:var(--madder);font-weight:600}
+  .tl-title{font-family:var(--font-head);font-weight:600;font-size:1.2rem;margin:5px 0 12px;letter-spacing:.01em}
+  .tl-activities-list{list-style:none;display:flex;flex-direction:column;gap:8px}
+  .tl-activities-list li{position:relative;padding-left:18px;font-size:.92rem;color:var(--ink2)}
+  .tl-activities-list li:before{content:"";position:absolute;left:0;top:.55em;width:6px;height:6px;border-radius:50%;background:var(--tan)}
+  .tl-yurt{margin-top:14px;font-size:.82rem;color:var(--ink2);display:flex;align-items:center;gap:8px}
+  .tl-yurt svg{stroke:var(--madder);flex-shrink:0}
+  .tl-yurt b{color:var(--madder);font-weight:600}
   .tl-photo{margin-top:16px;max-width:520px;border-radius:14px;overflow:hidden}
   .tl-photo img{width:100%;display:block}
   @media(max-width:560px){.tl-item{grid-template-columns:40px 1fr;gap:14px}.tl-node{width:36px;height:36px}}
@@ -137,6 +135,10 @@
   .incl-card.no svg{stroke:var(--stone)}
   .incl-card.no li{color:var(--stone)}
 
+  .payment-note{padding:0 0 50px}
+  .payment-note .box{background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:26px 30px}
+  .payment-note p{font-size:.94rem;color:var(--ink2)}
+
   .opt-reminder{padding:0 0 70px}
   .opt-reminder .box{background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:26px 30px}
   .opt-reminder h3{font-size:.95rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px;color:var(--ink)}
@@ -144,13 +146,11 @@
   .opt-reminder li{display:flex;justify-content:space-between;gap:16px;font-size:.9rem;color:var(--ink2)}
   .opt-reminder li span.p{color:var(--madder);font-family:var(--font-head);font-weight:500;font-size:.84rem;white-space:nowrap}
 
-  .price-box{background:linear-gradient(150deg,var(--slate) 0%,#233330 100%);color:#ece6d8;border-radius:22px;padding:40px;margin:10px 0 50px}
-  @media(max-width:760px){.price-box{padding:28px}}
-  .price-box .eyebrow{color:var(--sand)}
-  .price-box .amount{font-family:var(--font-head);font-size:clamp(2rem,4.5vw,2.8rem);font-weight:600;margin:10px 0 6px;color:#fff}
-  .price-box .amount small{font-family:var(--font-body);font-weight:400;font-size:.9rem;color:#a9a396;text-transform:none}
-  .price-box .cash-note{font-size:.84rem;color:#a9a396;max-width:60ch;margin-top:10px}
-  .price-box .cta-row{margin-top:24px}
+  .final-cta{background:linear-gradient(150deg,var(--slate) 0%,#233330 100%);color:#ece6d8;border-radius:22px;padding:40px;margin:10px 0 50px;text-align:center}
+  @media(max-width:760px){.final-cta{padding:28px}}
+  .final-cta .eyebrow{color:var(--sand)}
+  .final-cta h3{color:#fff;font-size:clamp(1.3rem,3vw,1.7rem);font-weight:600;margin:10px 0 20px}
+  .final-cta p{color:#a9a396;font-size:.88rem;max-width:56ch;margin:0 auto 22px}
 
   .other-durations{padding:0 0 90px;text-align:center}
   .other-durations p{color:var(--stone);font-size:.9rem;margin-bottom:16px}
@@ -187,6 +187,9 @@
     <symbol id="ic-hike" viewBox="0 0 24 24"><circle cx="9.5" cy="5" r="1.7" fill="none" stroke-width="1.5"/><path d="M9.5 7v5l-3 6M9.5 12l4 2 2 5M9.5 12l-4 3" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="ic-culture" viewBox="0 0 24 24"><path d="M5 20h14M6 20V9l6-4 6 4v11" fill="none" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></symbol>
     <symbol id="ic-springs" viewBox="0 0 24 24"><path d="M3 17c2-1.6 4-1.6 6 0s4 1.6 6 0 4-1.6 6 0" fill="none" stroke-width="1.6" stroke-linecap="round"/><path d="M8 11c-1-1 1-2 0-3M12 11c-1-1 1-2 0-3M16 11c-1-1 1-2 0-3" fill="none" stroke-width="1.4" stroke-linecap="round"/></symbol>
+    <symbol id="ic-eagle" viewBox="0 0 24 24"><path d="M2 13c4-3 7-3 10 0 3-3 6-3 10 0-4 1-7 3-10 6-3-3-6-5-10-6z" fill="none" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+    <symbol id="ic-horse" viewBox="0 0 24 24"><path d="M6 20v-6c0-4 2-7 5-8 1.5-.5 3 0 3 1.5 0 1-.5 1.5-1.5 2l2 1 2-1 1 1.5-2 1-2.5-.5c-1 .5-1.5 1.5-1.5 3v6" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="13" cy="7.5" r=".6" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="ic-star" viewBox="0 0 24 24"><path d="M12 3.5l2.47 5.18 5.72.62-4.24 3.94 1.14 5.66L12 16.9l-5.09 2.99 1.14-5.66-4.24-3.94 5.72-.62z" stroke-width="1.3" stroke-linejoin="round"/></symbol>
     <symbol id="ic-check" viewBox="0 0 24 24"><polyline points="5 13 10 18 19 7" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="ic-minus" viewBox="0 0 24 24"><line x1="6" y1="12" x2="18" y2="12" stroke-width="1.8" stroke-linecap="round"/></symbol>
 
@@ -223,120 +226,41 @@
     <img src="images/circuit-expedition.jpg" alt="Forêt de sapins et rivière de montagne" width="760" height="1013" fetchpriority="high">
     <div class="container hero-content">
       <p class="eyebrow">Kirghizstan · Circuit 10 jours</p>
-      <h1>Kirghizstan en 10 jours — Expédition</h1>
-      <p class="summary">Le circuit complet : jusqu'au caravansérail de Tash Rabat et au lac confidentiel de Kel-Suu, en plus de Jyrgalan et Song-Köl.</p>
+      <h1>Kirghizstan en 10 jours — Expédition Complète</h1>
+      <div class="hero-stars" role="img" aria-label="5 étoiles sur 5">
+        <svg class="filled"><use href="#ic-star"/></svg><svg class="filled"><use href="#ic-star"/></svg><svg class="filled"><use href="#ic-star"/></svg><svg class="filled"><use href="#ic-star"/></svg><svg class="filled"><use href="#ic-star"/></svg>
+      </div>
+      <p class="summary">Dix jours d'immersion totale : une nuit en pleine montagne à Altyn-Arashan, deux nuits en yourte à Song-Köl et le caravansérail de Tash-Rabat.</p>
+      <a href="reservation.html" class="btn btn-primary">Réserver ce circuit <svg width="15" height="15"><use href="#ic-arrow"/></svg></a>
     </div>
   </section>
 
   <div class="container">
     <div class="infobar">
       <div class="cell"><div class="lbl">Durée</div><div class="val">10 jours</div></div>
-      <div class="cell"><div class="lbl">Tarif séjour</div><div class="val">À partir de 1 050 € <small>/pers., base 4 pers., payable sur place</small></div></div>
       <div class="cell"><div class="lbl">Saison</div><div class="val">Mai — Septembre</div></div>
     </div>
   </div>
 
   <div class="body">
     <div class="container">
-      <div class="badges-row"><span class="badge">4x4 privé</span><span class="badge">Yourte incluse</span><span class="badge">Nuit chez l'habitant</span></div>
+      <div class="badges-row"><span class="badge">4x4 privé</span></div>
 
       <h2 class="section-title">Jour par jour</h2>
       <div class="timeline-wrap">
         <div class="timeline">
           <div class="tl-item">
             <div class="tl-node-col">
-              <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-jeep"/></svg></div>
-              <div class="tl-line"></div>
-            </div>
-            <div class="tl-content">
-              <p class="tl-day">Jour 01</p>
-              <h3 class="tl-title">Arrivée à Bichkek</h3>
-              <p class="tl-text">Accueil à l'aéroport de Manas, transfert et installation. Premier contact avec votre chauffeur autour d'un thé, briefing du circuit.</p>
-            <ul class="tl-activities"><li>Accueil aéroport</li><li>Briefing du circuit</li></ul>
-            <p class="tl-overnight">Nuit à <b>Bichkek</b></p>
-            <div class="tl-photo"><img src="images/bichkek-tour-horloge-centre-ville.jpg" alt="Bichkek, la capitale du Kirghizstan, au pied du Tian Shan" loading="lazy"></div>
-            </div>
-          </div>
-          <div class="tl-item">
-            <div class="tl-node-col">
               <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-hike"/></svg></div>
               <div class="tl-line"></div>
             </div>
             <div class="tl-content">
-              <p class="tl-day">Jour 02</p>
-              <h3 class="tl-title">Bichkek → Ala-Archa → Bichkek</h3>
-              <p class="tl-text">Journée dans le parc national d'Ala-Archa, aux portes de la capitale : marche d'acclimatation au pied des glaciers du Tian Shan.</p>
-            <ul class="tl-activities"><li>Marche en gorge</li><li>Pique-nique en altitude</li></ul>
-            <p class="tl-overnight">Nuit à <b>Bichkek</b></p>
-            <div class="tl-photo"><img src="images/vallee-ala-archa-riviere-kirghizstan.jpg" alt="Rivière serpentant dans la vallée d'Ala-Archa, au pied du Tian Shan" loading="lazy"></div>
-            </div>
-          </div>
-          <div class="tl-item">
-            <div class="tl-node-col">
-              <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-jeep"/></svg></div>
-              <div class="tl-line"></div>
-            </div>
-            <div class="tl-content">
-              <p class="tl-day">Jour 03</p>
-              <h3 class="tl-title">Bichkek → Issyk-Kul</h3>
-              <p class="tl-text">Transfert en 4x4 vers les rives du lac Issyk-Kul, deuxième plus grand lac alpin du monde après le Titicaca.</p>
-            <ul class="tl-activities"><li>Route panoramique</li></ul>
-            <p class="tl-overnight">Nuit à <b>Rives de l'Issyk-Kul</b></p>
-            <div class="tl-photo"><img src="images/baie-issyk-kul-elevage-poissons-kirghizstan.jpg" alt="Baie turquoise du lac Issyk-Kul" loading="lazy"></div>
-            </div>
-          </div>
-          <div class="tl-item">
-            <div class="tl-node-col">
-              <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-mountain"/></svg></div>
-              <div class="tl-line"></div>
-            </div>
-            <div class="tl-content">
-              <p class="tl-day">Jour 04</p>
-              <h3 class="tl-title">Issyk-Kul → Canyon Skazka</h3>
-              <p class="tl-text">Marche dans les formations rocheuses ocres du canyon Skazka, le « conte de fées », sculpté par l'érosion.</p>
-            <ul class="tl-activities"><li>Marche photo</li><li>Formations rocheuses</li></ul>
-            <p class="tl-overnight">Nuit à <b>Rives de l'Issyk-Kul</b></p>
-            <div class="tl-photo"><img src="images/canyon-skazka-formations-rocheuses-kirghizstan.jpg" alt="Formations rocheuses ocres du canyon Skazka" loading="lazy"></div>
-            </div>
-          </div>
-          <div class="tl-item">
-            <div class="tl-node-col">
-              <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-jeep"/></svg></div>
-              <div class="tl-line"></div>
-            </div>
-            <div class="tl-content">
-              <p class="tl-day">Jour 05</p>
-              <h3 class="tl-title">Issyk-Kul → Jyrgalan</h3>
-              <p class="tl-text">Route vers Jyrgalan, village de montagne au bout de la vallée, rencontre avec des familles d'éleveurs.</p>
-            <ul class="tl-activities"><li>Rencontre éleveurs</li></ul>
-            <p class="tl-overnight">Nuit à <b>Jyrgalan</b></p>
-            <div class="tl-photo"><img src="images/cavaliers-galop-steppe-kirghizstan.jpg" alt="Cavaliers kirghizes au galop, rencontre avec des familles d'éleveurs" loading="lazy"></div>
-            </div>
-          </div>
-          <div class="tl-item">
-            <div class="tl-node-col">
-              <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-springs"/></svg></div>
-              <div class="tl-line"></div>
-            </div>
-            <div class="tl-content">
-              <p class="tl-day">Jour 06</p>
-              <h3 class="tl-title">Jyrgalan → Sources chaudes</h3>
-              <p class="tl-text">Marche en vallée puis détente aux sources chaudes naturelles, au pied des sommets.</p>
-            <ul class="tl-activities"><li>Randonnée</li><li>Bain thermal</li></ul>
-            <p class="tl-overnight">Nuit à <b>Jyrgalan</b></p>
-            </div>
-          </div>
-          <div class="tl-item">
-            <div class="tl-node-col">
-              <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-culture"/></svg></div>
-              <div class="tl-line"></div>
-            </div>
-            <div class="tl-content">
-              <p class="tl-day">Jour 07</p>
-              <h3 class="tl-title">Jyrgalan → Tash Rabat</h3>
-              <p class="tl-text">Longue traversée vers Tash Rabat : visite de l'ancien caravansérail de pierre sur la route de la soie.</p>
-            <ul class="tl-activities"><li>Route de la soie</li><li>Caravansérail</li></ul>
-            <p class="tl-overnight">Nuit à <b>Tash Rabat</b></p>
+              <p class="tl-day">Jour 01</p>
+              <h3 class="tl-title">Bichkek → Tour de Burana → Canyon de Konorchek → Chon-Kemin</h3>
+              <ul class="tl-activities-list">
+                <li>Randonnée au canyon de Konorchek (2 à 3 heures)</li>
+              </ul>
+              <div class="tl-photo"><img src="images/bichkek-tour-horloge-centre-ville.jpg" alt="Bichkek, la capitale du Kirghizstan, au pied du Tian Shan" loading="lazy"></div>
             </div>
           </div>
           <div class="tl-item">
@@ -345,11 +269,72 @@
               <div class="tl-line"></div>
             </div>
             <div class="tl-content">
-              <p class="tl-day">Jour 08</p>
-              <h3 class="tl-title">Tash Rabat → Kel-Suu → Tash Rabat</h3>
-              <p class="tl-text">Excursion vers Kel-Suu, lac confidentiel proche de la frontière, accès en zone réglementée.</p>
-            <ul class="tl-activities"><li>Zone réglementée</li><li>Lac secret</li></ul>
-            <p class="tl-overnight">Nuit à <b>Tash Rabat</b></p>
+              <p class="tl-day">Jour 02</p>
+              <h3 class="tl-title">Chon-Kemin → Issyk-Kul → Karakol</h3>
+              <ul class="tl-activities-list">
+                <li>Route panoramique le long du lac Issyk-Kul</li>
+              </ul>
+              <div class="tl-photo"><img src="images/vallee-ala-archa-riviere-kirghizstan.jpg" alt="Rivière serpentant dans la vallée d'Ala-Archa, au pied du Tian Shan" loading="lazy"></div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-node-col">
+              <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-springs"/></svg></div>
+              <div class="tl-line"></div>
+            </div>
+            <div class="tl-content">
+              <p class="tl-day">Jour 03</p>
+              <h3 class="tl-title">Karakol → Altyn-Arashan</h3>
+              <ul class="tl-activities-list">
+                <li>Excursion 4x4 en montagne</li>
+                <li>Randonnée et exploration de la vallée</li>
+                <li>Sources chaudes en option</li>
+              </ul>
+              <div class="tl-photo"><img src="images/baie-issyk-kul-elevage-poissons-kirghizstan.jpg" alt="Baie turquoise du lac Issyk-Kul" loading="lazy"></div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-node-col">
+              <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-hike"/></svg></div>
+              <div class="tl-line"></div>
+            </div>
+            <div class="tl-content">
+              <p class="tl-day">Jour 04</p>
+              <h3 class="tl-title">Altyn-Arashan → Karakol</h3>
+              <ul class="tl-activities-list">
+                <li>Randonnée matinale à Altyn-Arashan</li>
+                <li>Retour à Karakol</li>
+              </ul>
+              <div class="tl-photo"><img src="images/canyon-skazka-formations-rocheuses-kirghizstan.jpg" alt="Formations rocheuses ocres du canyon Skazka" loading="lazy"></div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-node-col">
+              <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-hike"/></svg></div>
+              <div class="tl-line"></div>
+            </div>
+            <div class="tl-content">
+              <p class="tl-day">Jour 05</p>
+              <h3 class="tl-title">Karakol → Jeti-Oguz → Kok-Jaiyk</h3>
+              <ul class="tl-activities-list">
+                <li>Randonnée à Jeti-Oguz et dans la vallée de Kok-Jaiyk</li>
+              </ul>
+              <div class="tl-photo"><img src="images/cavaliers-galop-steppe-kirghizstan.jpg" alt="Cavaliers kirghizes au galop, rencontre avec des familles d'éleveurs" loading="lazy"></div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-node-col">
+              <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-eagle"/></svg></div>
+              <div class="tl-line"></div>
+            </div>
+            <div class="tl-content">
+              <p class="tl-day">Jour 06</p>
+              <h3 class="tl-title">Kok-Jaiyk → Cascades de Barskoon → Canyon de Skazka → Bokonbaevo</h3>
+              <ul class="tl-activities-list">
+                <li>Randonnée aux cascades de Barskoon</li>
+                <li>Visite du canyon de Skazka</li>
+                <li>Spectacle d'aigle</li>
+              </ul>
             </div>
           </div>
           <div class="tl-item">
@@ -358,12 +343,43 @@
               <div class="tl-line"></div>
             </div>
             <div class="tl-content">
+              <p class="tl-day">Jour 07</p>
+              <h3 class="tl-title">Bokonbaevo → Song-Köl</h3>
+              <ul class="tl-activities-list">
+                <li>Route panoramique vers Song-Köl</li>
+                <li>Balade à cheval en option</li>
+              </ul>
+              <p class="tl-yurt"><svg width="16" height="16" fill="none"><use href="#ic-yurt"/></svg><b>Nuit en yourte</b></p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-node-col">
+              <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-mountain"/></svg></div>
+              <div class="tl-line"></div>
+            </div>
+            <div class="tl-content">
+              <p class="tl-day">Jour 08</p>
+              <h3 class="tl-title">Song-Köl, journée complète</h3>
+              <ul class="tl-activities-list">
+                <li>Randonnée et marche autour du lac</li>
+                <li>Balade à cheval en option</li>
+              </ul>
+              <p class="tl-yurt"><svg width="16" height="16" fill="none"><use href="#ic-yurt"/></svg><b>Deuxième nuit à Song-Köl</b></p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-node-col">
+              <div class="tl-node"><svg width="18" height="18" fill="none"><use href="#ic-culture"/></svg></div>
+              <div class="tl-line"></div>
+            </div>
+            <div class="tl-content">
               <p class="tl-day">Jour 09</p>
-              <h3 class="tl-title">Tash Rabat → Song-Köl</h3>
-              <p class="tl-text">Route vers Song-Köl et nuit en yourte chez une famille d'éleveurs, au bord du lac d'altitude.</p>
-            <ul class="tl-activities"><li>Nuit en yourte</li></ul>
-            <p class="tl-overnight">Nuit à <b>Yourte à Song-Köl</b></p>
-            <div class="tl-photo"><img src="images/jeune-berger-cheval-steppe-kirghizstan.jpg" alt="Jeune berger kirghize à cheval, troupeaux en liberté" loading="lazy"></div>
+              <h3 class="tl-title">Song-Köl → Tash-Rabat</h3>
+              <ul class="tl-activities-list">
+                <li>Route de montagne panoramique</li>
+                <li>Visite du caravansérail de Tash-Rabat</li>
+              </ul>
+              <div class="tl-photo"><img src="images/jeune-berger-cheval-steppe-kirghizstan.jpg" alt="Jeune berger kirghize à cheval, troupeaux en liberté" loading="lazy"></div>
             </div>
           </div>
           <div class="tl-item">
@@ -373,10 +389,12 @@
             </div>
             <div class="tl-content">
               <p class="tl-day">Jour 10</p>
-              <h3 class="tl-title">Song-Köl → Bichkek → Départ</h3>
-              <p class="tl-text">Redescente vers Bichkek et transfert vers l'aéroport. Fin du séjour.</p>
-            <p class="tl-overnight"><b>Fin du circuit</b></p>
-            <div class="tl-photo"><img src="images/bichkek-place-ala-too-manas.jpg" alt="Place Ala-Too et statue de Manas, Bichkek" loading="lazy"></div>
+              <h3 class="tl-title">Tash-Rabat → Bichkek</h3>
+              <ul class="tl-activities-list">
+                <li>Retour à Bichkek</li>
+                <li>Fin du circuit</li>
+              </ul>
+              <div class="tl-photo"><img src="images/bichkek-place-ala-too-manas.jpg" alt="Place Ala-Too et statue de Manas, Bichkek" loading="lazy"></div>
             </div>
           </div>
         </div>
@@ -406,11 +424,17 @@
         </div>
       </div>
 
+      <div class="payment-note">
+        <div class="box">
+          <p>Le prix du séjour se règle sur place, en espèces, auprès de votre chauffeur.</p>
+        </div>
+      </div>
+
       <div class="opt-reminder">
         <div class="box">
           <h3>Options à ajouter</h3>
           <ul>
-            <li>Cheval à Song-Köl <span class="p">+120 €/pers.</span></li>
+            <li>Balade à cheval à Song-Köl <span class="p">+120 €/pers.</span></li>
             <li>Journée pêche <span class="p">+90 €/pers.</span></li>
             <li>Guide francophone <span class="p">Sur devis</span></li>
             <li>Transfert aéroport A/R + SIM locale <span class="p">Sur devis</span></li>
@@ -418,18 +442,17 @@
         </div>
       </div>
 
-      <div class="price-box">
-        <p class="eyebrow">Séjour 10 jours</p>
-        <p class="amount">À partir de 1 050 € <small>/&nbsp;personne, base 4 pers.</small></p>
-        <p class="cash-note">Prix de l'opérateur local, réglé en espèces sur place, directement auprès de votre chauffeur. Tarif exact selon la taille du groupe, confirmé avec votre devis.</p>
-        <div class="cta-row">
-          <a href="reservation.html?circuit=expedition" class="btn btn-primary">Réserver ce circuit <svg width="15" height="15"><use href="#ic-arrow"/></svg></a>
-        </div>
+      <div class="final-cta">
+        <p class="eyebrow">Circuit 10 jours — Expédition Complète</p>
+        <h3>Prêt à partir ?</h3>
+        <p>On échange sur vos dates et votre groupe, puis on vous transmet un devis détaillé avec l'opérateur local.</p>
+        <a href="reservation.html" class="btn btn-primary">Réserver ce circuit <svg width="15" height="15"><use href="#ic-arrow"/></svg></a>
       </div>
 
       <div class="other-durations">
         <p>Aussi disponible en</p>
         <div class="links">
+          <a href="circuits-6-jours.html">6 jours</a>
           <a href="circuits-7-jours.html">7 jours</a>
           <a href="circuits-8-jours.html">8 jours</a>
           <a href="circuits-9-jours.html">9 jours</a>
