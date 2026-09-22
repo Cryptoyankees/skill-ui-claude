@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Régler mes frais de réservation — Joltoo Aventures</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14140f;--ink2:#3a372e;--paper:#f6f2e9;--card:#fffdf8;--stone:#8a8577;
+    --line:#e2daca;--tan:#b8824a;--sand:#e8e0d0;--lake:#6f9b93;--madder:#a8402c;--madder-dk:#8f3421;
+    --slate:#1e2a2c;--ok:#4a6a52;
+    --font-head:'Oswald',sans-serif;--font-body:'Inter',sans-serif;
+    --ease:cubic-bezier(.22,.61,.36,1);
+    --r-sm:10px;--r-md:14px;--r-lg:20px;
+    --shadow-md:0 10px 24px rgba(24,23,18,.1);--shadow-lg:0 20px 40px rgba(24,23,18,.14);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--paper);color:var(--ink);font-family:var(--font-body);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .shell{max-width:640px;margin:0 auto;padding:0 0 90px}
+  a{color:inherit}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--tan);outline-offset:2px}
+
+  .hero{position:relative;height:220px;overflow:hidden;display:flex;align-items:flex-end}
+  .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(15,14,10,.92) 0%,rgba(15,14,10,.3) 55%,rgba(15,14,10,.35) 100%)}
+  .hero .htext{position:relative;z-index:2;padding:0 30px 24px;color:#fff}
+  .hero .ey{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.3em;font-size:.66rem;color:var(--sand);font-weight:600}
+  .hero h1{font-family:var(--font-head);text-transform:uppercase;font-weight:600;font-size:clamp(1.5rem,4.2vw,2rem);line-height:1.05;margin-top:8px}
+  .topbar{position:absolute;top:0;left:0;right:0;z-index:3;display:flex;justify-content:space-between;
+    align-items:center;padding:20px 30px}
+  .brand{font-family:var(--font-head);font-weight:700;text-transform:uppercase;letter-spacing:.16em;font-size:1rem;color:#fff}
+  .brand b{color:var(--tan);font-weight:400}
+  @media(max-width:480px){.topbar{padding:16px 18px}.brand{font-size:.8rem;letter-spacing:.1em}}
+
+  .body{padding:32px 30px 0}
+  .intro{color:var(--ink2);max-width:60ch;margin-bottom:22px;font-size:.98rem}
+
+  .notice{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1.5px solid var(--line);
+    border-radius:var(--r-md);padding:16px 18px;margin-bottom:28px;font-size:.86rem;color:var(--ink2)}
+  .notice svg{flex-shrink:0;stroke:var(--tan);margin-top:2px}
+  .notice b{color:var(--ink)}
+
+  .recap{background:linear-gradient(150deg,var(--slate) 0%,#233330 100%);color:#ece6d8;
+    border-radius:var(--r-lg);padding:26px;border:1px solid #2c3c37;box-shadow:var(--shadow-md);margin-bottom:26px}
+  .recap h3{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;color:var(--sand);font-weight:600;margin-bottom:16px}
+  .rline{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid rgba(236,230,216,.1);font-size:.9rem}
+  .rline .k{color:#a9a396}
+  .rline .v{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.03em;text-align:right}
+  .rtotal{display:flex;justify-content:space-between;align-items:baseline;margin-top:16px;padding-top:16px;border-top:1px solid rgba(236,230,216,.18)}
+  .rtotal .k{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.08em;font-size:.8rem;color:var(--sand)}
+  .rtotal .v{font-family:var(--font-head);font-size:1.7rem;font-weight:600;color:#fff}
+
+  .btn{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.12em;font-size:.86rem;font-weight:600;
+    padding:16px 28px;border:none;border-radius:var(--r-sm);cursor:pointer;transition:all .22s var(--ease);
+    display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;width:100%}
+  .btn-primary{background:var(--madder);color:#fff}
+  .btn-primary:hover{background:var(--madder-dk);transform:translateY(-2px);box-shadow:0 10px 22px rgba(168,64,44,.28)}
+
+  .paynote{display:flex;align-items:center;gap:8px;justify-content:center;font-size:.76rem;color:var(--stone);margin-top:14px}
+  .paynote svg{stroke:var(--stone)}
+
+  .sep-note{background:var(--card);border:1.5px solid var(--line);border-radius:var(--r-md);padding:18px 20px;
+    margin-top:26px;font-size:.85rem;color:var(--ink2)}
+  .sep-note b{color:var(--ink)}
+
+  .legal{margin-top:34px;padding-top:20px;border-top:1px solid var(--line);font-size:.78rem;color:var(--stone);
+    display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:space-between}
+  .legal a{text-decoration:underline;text-underline-offset:2px}
+  .legal a:hover{color:var(--madder)}
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <div class="hero">
+    <img src="images/hero-vallee.jpg" alt="Col de montagne au Kirghizstan">
+    <div class="topbar">
+      <div class="brand">JOLTOO<b>·</b>AVENTURES</div>
+    </div>
+    <div class="htext">
+      <div class="ey">Étape finale · Après acceptation du devis</div>
+      <h1>Régler mes frais de réservation</h1>
+    </div>
+  </div>
+
+  <div class="body">
+    <p class="intro">Vous avez reçu et accepté votre devis personnalisé par e-mail : il ne reste que les frais de mise en relation Joltoo Aventures à régler pour confirmer votre place.</p>
+
+    <div class="notice">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="12" r="8.4"/><line x1="12" y1="8" x2="12" y2="13" stroke-linecap="round"/><circle cx="12" cy="16.2" r=".9" fill="currentColor" stroke="none"/></svg>
+      <div><b>Cette page n'est pas destinée à une visite directe.</b> Elle vous a été transmise par e-mail après validation de votre devis. Si vous n'avez pas encore reçu de devis, <a href="reservation.html" style="text-decoration:underline">faites votre demande ici</a>.</div>
+    </div>
+
+    <div class="recap">
+      <h3>Récapitulatif</h3>
+      <div class="rline"><span class="k">Circuit</span><span class="v" id="r-circuit">Votre expédition</span></div>
+      <div class="rline"><span class="k">Voyageurs</span><span class="v" id="r-pax">1 personne</span></div>
+      <div class="rline"><span class="k">Frais par personne</span><span class="v" id="r-unit">150 €</span></div>
+      <div class="rtotal"><span class="k">Total à régler</span><span class="v" id="r-total">150 €</span></div>
+    </div>
+
+    <a href="#" id="payBtn" class="btn btn-primary" target="_blank" rel="noopener">
+      Payer maintenant
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="5" y1="12" x2="19" y2="12" stroke-linecap="round"/><polyline points="13 6 19 12 13 18" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <p class="paynote">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="4" y="9" width="16" height="11" rx="2"/><path d="M8 9V6.5a4 4 0 0 1 8 0V9" stroke-linecap="round"/></svg>
+      Paiement sécurisé par carte bancaire
+    </p>
+
+    <div class="sep-note">
+      <b>Le prix du séjour reste séparé.</b> Il se règle en espèces sur place, directement auprès de votre chauffeur — comme indiqué dans votre devis. Les frais réglés ici couvrent uniquement la mise en relation avec l'opérateur local.
+    </div>
+
+    <div class="legal">
+      <span>Une question ? <a href="mailto:bonjour@joltooaventures.com">bonjour@joltooaventures.com</a></span>
+      <span><a href="cgv.html">CGV</a> · <a href="mentions-legales.html">Mentions légales</a></span>
+    </div>
+  </div>
+</div>
+
+<script src="data/pricing.js"></script>
+<script>
+  // Configuration à compléter : lien de paiement Stripe (Payment Link avec
+  // quantité ajustable, prix unitaire = RESERVATION_FEE_PER_PERSON).
+  // Voir data/pricing.js pour le montant unitaire.
+  const STRIPE_PAYMENT_LINK = 'https://buy.stripe.com/REMPLACER_PAR_TON_LIEN';
+
+  const CIRCUIT_NAMES = {
+    '6-jours': 'Aventure & Nature — 6 jours',
+    '7-jours': 'Grand Tour — 7 jours',
+    '8-jours': 'Grande Traversée — 8 jours',
+    '9-jours': 'Route de la Soie — 9 jours',
+    '10-jours': 'Expédition Complète — 10 jours',
+  };
+
+  const params = new URLSearchParams(window.location.search);
+  const circuitSlug = params.get('circuit');
+  const pax = Math.max(1, parseInt(params.get('pers'), 10) || 1);
+  const ref = params.get('ref');
+
+  if (circuitSlug && CIRCUIT_NAMES[circuitSlug]) {
+    document.getElementById('r-circuit').textContent = CIRCUIT_NAMES[circuitSlug];
+  }
+  document.getElementById('r-pax').textContent = pax + (pax > 1 ? ' personnes' : ' personne');
+  document.getElementById('r-unit').textContent = RESERVATION_FEE_PER_PERSON.toLocaleString('fr-FR') + ' €';
+  const total = RESERVATION_FEE_PER_PERSON * pax;
+  document.getElementById('r-total').textContent = total.toLocaleString('fr-FR') + ' €';
+
+  const payBtn = document.getElementById('payBtn');
+  let payUrl = STRIPE_PAYMENT_LINK + '?quantity=' + pax;
+  if (ref) payUrl += '&client_reference_id=' + encodeURIComponent(ref);
+  payBtn.href = payUrl;
+</script>
+</body>
+</html>
