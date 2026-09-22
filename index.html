@@ -186,6 +186,11 @@
   .circ-card:hover .circ-link{background:var(--madder);border-color:var(--madder);transform:translateX(2px)}
   .circ-card:hover .circ-link svg{stroke:#fff}
   .circ-link svg{stroke:var(--ink);transition:stroke .2s}
+  a.circ-card{text-decoration:none;color:inherit;cursor:pointer}
+  .circ-stars{display:flex;gap:3px;margin-top:auto;padding-top:6px}
+  .circ-stars svg{width:15px;height:15px}
+  .circ-stars svg.filled{fill:var(--tan);stroke:var(--tan)}
+  .circ-stars svg.muted{fill:none;stroke:var(--line)}
 
   /* ===== GALLERY / CHAPTERS ===== */
   .gallery{padding:40px 0 100px}
@@ -312,6 +317,9 @@
     <symbol id="ic-chat" viewBox="0 0 24 24"><path d="M4 5.5h16v11H9l-4 3.5v-3.5H4z" fill="none" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></symbol>
     <symbol id="ic-badge-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.4" fill="none" stroke-width="1.6"/><polyline points="8.3 12.3 10.8 14.8 15.7 9.3" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="ic-calendar" viewBox="0 0 24 24"><rect x="4" y="5.5" width="16" height="14" rx="2" fill="none" stroke-width="1.6"/><line x1="4" y1="9.8" x2="20" y2="9.8" stroke-width="1.6"/><line x1="8" y1="3.5" x2="8" y2="7" stroke-width="1.6" stroke-linecap="round"/><line x1="16" y1="3.5" x2="16" y2="7" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="ic-star" viewBox="0 0 24 24"><path d="M12 3.5l2.47 5.18 5.72.62-4.24 3.94 1.14 5.66L12 16.9l-5.09 2.99 1.14-5.66-4.24-3.94 5.72-.62z" stroke-width="1.3" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-eagle" viewBox="0 0 24 24"><path d="M2 13c4-3 7-3 10 0 3-3 6-3 10 0-4 1-7 3-10 6-3-3-6-5-10-6z" fill="none" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+    <symbol id="ic-horse" viewBox="0 0 24 24"><path d="M6 20v-6c0-4 2-7 5-8 1.5-.5 3 0 3 1.5 0 1-.5 1.5-1.5 2l2 1 2-1 1 1.5-2 1-2.5-.5c-1 .5-1.5 1.5-1.5 3v6" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="13" cy="7.5" r=".6" fill="currentColor" stroke="none"/></symbol>
   </defs>
 </svg>
 
@@ -412,7 +420,20 @@
         <p>Quatre bases de départ. Itinéraire jour par jour et tarifs sur chaque page circuit — on les précise ensemble avant de confirmer.</p>
       </div>
       <div class="circ-grid reveal-stagger">
-        <article class="circ-card reveal" style="--i:0">
+        <a href="circuits-6-jours.html" class="circ-card reveal" style="--i:0" aria-label="Voir le circuit Aventure et Nature, 6 jours">
+          <div class="circ-ph">
+            <img src="images/canyon-skazka-formations-rocheuses-kirghizstan.jpg" alt="Formations rocheuses ocres du canyon de Skazka" width="760" height="1013" loading="lazy">
+            <span class="circ-days">6 jours</span>
+          </div>
+          <div class="circ-info">
+            <h3>Aventure &amp; Nature</h3>
+            <p class="d">Canyon de Konorchek, Issyk-Kul, chasse à l'aigle, nuit en yourte</p>
+            <div class="circ-stars" role="img" aria-label="4 étoiles sur 5">
+              <svg class="filled"><use href="#ic-star"/></svg><svg class="filled"><use href="#ic-star"/></svg><svg class="filled"><use href="#ic-star"/></svg><svg class="filled"><use href="#ic-star"/></svg><svg class="muted"><use href="#ic-star"/></svg>
+            </div>
+          </div>
+        </a>
+        <article class="circ-card reveal" style="--i:1">
           <div class="circ-ph">
             <img src="images/circuit-essentiel.jpg" alt="Canyon Skazka aux formations rocheuses ocres" width="760" height="1013" loading="lazy">
             <span class="circ-days">7 jours</span>
