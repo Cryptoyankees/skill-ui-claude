@@ -102,14 +102,10 @@
   .circ .info{padding:15px 17px 17px;display:flex;flex-direction:column;gap:7px}
   .circ h3{font-family:var(--font-head);text-transform:uppercase;font-weight:600;font-size:1.05rem;letter-spacing:.02em}
   .circ .d{font-size:.79rem;color:var(--stone)}
-  .circ-badges{display:flex;flex-wrap:wrap;gap:6px}
-  .circ-badge{font-size:.64rem;font-weight:600;letter-spacing:.03em;color:var(--ink2);background:var(--paper);
-    border:1px solid var(--line);border-radius:999px;padding:4px 9px}
-  .circ-diff{display:flex;align-items:center;gap:8px}
-  .circ-diff .lbl{font-size:.66rem;color:var(--stone);text-transform:uppercase;letter-spacing:.06em;font-family:var(--font-head)}
-  .circ-diff .dots{display:flex;gap:3px}
-  .circ-diff .dots span{width:7px;height:7px;border-radius:50%;background:var(--line)}
-  .circ-diff .dots span.on{background:var(--tan)}
+  .circ-stars{display:flex;gap:3px}
+  .circ-stars svg{width:15px;height:15px}
+  .circ-stars svg.filled{fill:var(--tan);stroke:var(--tan)}
+  .circ-stars svg.muted{fill:none;stroke:var(--line)}
   .circ-sur-mesure{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
     padding:30px 18px;gap:8px;min-height:140px}
   .circ-sur-mesure .sm-icon{width:44px;height:44px;border-radius:50%;background:var(--paper);display:grid;place-items:center}
@@ -213,6 +209,13 @@
 </style>
 </head>
 <body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="ic-star" viewBox="0 0 24 24"><path d="M12 3.5l2.47 5.18 5.72.62-4.24 3.94 1.14 5.66L12 16.9l-5.09 2.99 1.14-5.66-4.24-3.94 5.72-.62z" stroke-width="1.3" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
 <div class="shell">
 
   <div class="hero">
@@ -255,40 +258,54 @@
           <h2>Votre circuit</h2>
           <p class="hint">Choisissez une base — on l'adapte ensuite avec vous. Tarifs à partir de, par personne.</p>
           <div class="circ-grid" id="circuits">
-            <div class="circ" data-circ="L'essentiel — 7 jours" data-key="essentiel" data-duration="7">
-              <div class="ph"><img src="images/circuit-essentiel.jpg" alt="Canyon Skazka aux couleurs ocres" width="760" height="1013" loading="lazy"><span class="days">7 jours</span><span class="chk"></span></div>
+            <div class="circ" data-circ="Aventure &amp; Nature — 6 jours" data-key="6-jours" data-duration="6">
+              <div class="ph"><img src="images/canyon-skazka-formations-rocheuses-kirghizstan.jpg" alt="Formations rocheuses ocres du canyon de Skazka" width="760" height="1013" loading="lazy"><span class="days">6 jours</span><span class="chk"></span></div>
               <div class="info">
-                <h3>L'essentiel</h3>
-                <div class="d">Ala-Archa, Issyk-Kul, canyon Skazka</div>
-                <div class="circ-badges"><span class="circ-badge">4x4 privé</span></div>
-                <div class="circ-diff"><span class="lbl">Difficulté</span><span class="dots" role="img" aria-label="Difficulté 2 sur 5"><span class="on"></span><span class="on"></span><span></span><span></span><span></span></span></div>
+                <h3>Aventure &amp; Nature</h3>
+                <div class="d">Canyon de Konorchek, Issyk-Kul, chasse à l'aigle, nuit en yourte</div>
+                <div class="circ-stars" role="img" aria-label="4 étoiles sur 5">
+                  <svg class="filled"><use href="#ic-star"/></svg><svg class="filled"><use href="#ic-star"/></svg><svg class="filled"><use href="#ic-star"/></svg><svg class="filled"><use href="#ic-star"/></svg><svg class="muted"><use href="#ic-star"/></svg>
+                </div>
               </div>
             </div>
-            <div class="circ" data-circ="Grand tour — 8 jours" data-key="grand" data-duration="8">
-              <div class="ph"><img src="images/circuit-grand-tour.jpg" alt="Camp de yourtes à Song-Köl" width="760" height="1013" loading="lazy"><span class="days">8 jours</span><span class="chk"></span></div>
+            <div class="circ" data-circ="Grand Tour — 7 jours" data-key="7-jours" data-duration="7">
+              <div class="ph"><img src="images/circuit-essentiel.jpg" alt="Canyon Skazka aux formations rocheuses ocres" width="760" height="1013" loading="lazy"><span class="days">7 jours</span><span class="chk"></span></div>
               <div class="info">
-                <h3>Grand tour</h3>
-                <div class="d">+ Song-Köl, yourte d'altitude, cols du Tian Shan</div>
-                <div class="circ-badges"><span class="circ-badge">4x4 privé</span><span class="circ-badge">Yourte incluse</span></div>
-                <div class="circ-diff"><span class="lbl">Difficulté</span><span class="dots" role="img" aria-label="Difficulté 3 sur 5"><span class="on"></span><span class="on"></span><span class="on"></span><span></span><span></span></span></div>
+                <h3>Grand Tour</h3>
+                <div class="d">Issyk-Kul, sources chaudes d'Altyn-Arashan, nuit en yourte à Song-Köl</div>
+                <div class="circ-stars" role="img" aria-label="4 étoiles sur 5">
+                  <svg class="filled"><use href="#ic-star"/></svg><svg class="filled"><use href="#ic-star"/></svg><svg class="filled"><use href="#ic-star"/></svg><svg class="filled"><use href="#ic-star"/></svg><svg class="muted"><use href="#ic-star"/></svg>
+                </div>
               </div>
             </div>
-            <div class="circ" data-circ="Nomade — 9 jours" data-key="nomade" data-duration="9">
+            <div class="circ" data-circ="Grande Traversée — 8 jours" data-key="8-jours" data-duration="8">
+              <div class="ph"><img src="images/circuit-grand-tour.jpg" alt="Camp de yourtes blanches au bord du lac Song-Köl" width="760" height="1013" loading="lazy"><span class="days">8 jours</span><span class="chk"></span></div>
+              <div class="info">
+                <h3>Grande Traversée</h3>
+                <div class="d">Montagnes, journée complète et deux nuits en yourte à Song-Köl</div>
+                <div class="circ-stars" role="img" aria-label="4 étoiles sur 5">
+                  <svg class="filled"><use href="#ic-star"/></svg><svg class="filled"><use href="#ic-star"/></svg><svg class="filled"><use href="#ic-star"/></svg><svg class="filled"><use href="#ic-star"/></svg><svg class="muted"><use href="#ic-star"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="circ" data-circ="Route de la Soie — 9 jours" data-key="9-jours" data-duration="9">
               <div class="ph"><img src="images/circuit-nomade.jpg" alt="Campement de montagne près de Jyrgalan" width="760" height="1013" loading="lazy"><span class="days">9 jours</span><span class="chk"></span></div>
               <div class="info">
-                <h3>Nomade</h3>
-                <div class="d">+ Jyrgalan, villages d'éleveurs, sources chaudes</div>
-                <div class="circ-badges"><span class="circ-badge">4x4 privé</span><span class="circ-badge">Yourte incluse</span><span class="circ-badge">Nuit chez l'habitant</span></div>
-                <div class="circ-diff"><span class="lbl">Difficulté</span><span class="dots" role="img" aria-label="Difficulté 4 sur 5"><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span></span></span></div>
+                <h3>Route de la Soie</h3>
+                <div class="d">Caravansérail de Tash-Rabat, route de la Soie, deux nuits en yourte</div>
+                <div class="circ-stars" role="img" aria-label="5 étoiles sur 5">
+                  <svg class="filled"><use href="#ic-star"/></svg><svg class="filled"><use href="#ic-star"/></svg><svg class="filled"><use href="#ic-star"/></svg><svg class="filled"><use href="#ic-star"/></svg><svg class="filled"><use href="#ic-star"/></svg>
+                </div>
               </div>
             </div>
-            <div class="circ" data-circ="Expédition — 10 jours" data-key="expedition" data-duration="10">
-              <div class="ph"><img src="images/circuit-expedition.jpg" alt="Forêt et rivière de montagne au Kirghizstan" width="760" height="1013" loading="lazy"><span class="days">10 jours</span><span class="chk"></span></div>
+            <div class="circ" data-circ="Expédition Complète — 10 jours" data-key="10-jours" data-duration="10">
+              <div class="ph"><img src="images/circuit-expedition.jpg" alt="Forêt de sapins et rivière de montagne" width="760" height="1013" loading="lazy"><span class="days">10 jours</span><span class="chk"></span></div>
               <div class="info">
-                <h3>Expédition</h3>
-                <div class="d">Circuit complet, Tash Rabat, Kel-Suu</div>
-                <div class="circ-badges"><span class="circ-badge">4x4 privé</span><span class="circ-badge">Yourte incluse</span><span class="circ-badge">Nuit chez l'habitant</span></div>
-                <div class="circ-diff"><span class="lbl">Difficulté</span><span class="dots" role="img" aria-label="Difficulté 5 sur 5"><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span></span></div>
+                <h3>Expédition Complète</h3>
+                <div class="d">Altyn-Arashan, deux nuits en yourte à Song-Köl, Tash-Rabat</div>
+                <div class="circ-stars" role="img" aria-label="5 étoiles sur 5">
+                  <svg class="filled"><use href="#ic-star"/></svg><svg class="filled"><use href="#ic-star"/></svg><svg class="filled"><use href="#ic-star"/></svg><svg class="filled"><use href="#ic-star"/></svg><svg class="filled"><use href="#ic-star"/></svg>
+                </div>
               </div>
             </div>
             <div class="circ circ-sur-mesure" data-circ="Sur mesure" data-key="sur-mesure">
@@ -510,7 +527,7 @@
     document.getElementById('summary').style.opacity='.5';
     window.scrollTo({top:0,behavior:'smooth'});
   }
-  // Pré-sélection du circuit depuis un lien ?circuit=essentiel|grand|nomade|expedition
+  // Pré-sélection du circuit depuis un lien ?circuit=6-jours|7-jours|8-jours|9-jours|10-jours
   const preselectKey = new URLSearchParams(window.location.search).get('circuit');
   if (preselectKey) {
     const match = document.querySelector('#circuits .circ[data-key="' + preselectKey + '"]');
