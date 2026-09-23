@@ -537,9 +537,12 @@
     nextBtn.textContent='Envoi en cours…';
 
     const fd=new FormData();
+    fd.append('access_key', '1d833707-2abd-4b02-b765-cbe2740789f9');
+    fd.append('subject', 'Nouvelle demande de devis — Joltoo Aventures');
+    fd.append('from_name', (fn+' '+ln).trim() || 'Site Joltoo Aventures');
     fd.append('Prénom', fn);
     fd.append('Nom', ln);
-    fd.append('E-mail', email);
+    fd.append('email', email);
     fd.append('Téléphone', phone);
     fd.append('Pays', country);
     fd.append('Circuit', state.circ||'Sur mesure');
@@ -547,16 +550,13 @@
     fd.append('Options', opts);
     fd.append('Départ souhaité', dstr);
     fd.append('Message', msg || '—');
-    fd.append('_subject', 'Nouvelle demande de devis — Joltoo Aventures');
-    fd.append('_template', 'table');
-    fd.append('_captcha', 'false');
 
-    fetch('https://formsubmit.co/ajax/contact@joltooaventures.com', {
+    fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       headers: { 'Accept': 'application/json' },
       body: fd
-    }).then(r => {
-      if (!r.ok) throw new Error('send failed');
+    }).then(r => r.json()).then(data => {
+      if (!data.success) throw new Error('send failed');
       document.getElementById('dname').textContent=fn?fn+' !':'!';
       document.getElementById('drecap').innerHTML=
         '<div class="sline"><span class="k">Circuit</span><span class="v">'+(state.circ||'Sur mesure')+'</span></div>'+
