@@ -392,6 +392,12 @@
           <button class="btn btn-ghost" id="prev" onclick="go(-1)" style="visibility:hidden">← Retour</button>
           <button class="btn btn-primary" id="next" onclick="go(1)">Continuer →</button>
         </div>
+        <p id="sendError" style="display:none;color:var(--madder);font-size:.85rem;margin-top:14px;text-align:center">
+          L'envoi a échoué. Vérifiez votre connexion et réessayez, ou écrivez-nous directement à <a href="mailto:contact@joltooaventures.com" style="text-decoration:underline">contact@joltooaventures.com</a>.
+        </p>
+        <p id="emailMissing" style="display:none;color:var(--madder);font-size:.85rem;margin-top:14px;text-align:center">
+          Merci d'indiquer votre e-mail pour qu'on puisse vous répondre.
+        </p>
       </div>
 
       <!-- SUMMARY -->
@@ -509,23 +515,66 @@
     validate();window.scrollTo({top:0,behavior:'smooth'});
   }
   function submit(){
-    const fn=document.getElementById('fname').value||'';
-    document.getElementById('dname').textContent=fn?fn+' !':'!';
+    const fn=document.getElementById('fname').value.trim();
+    const ln=document.getElementById('lname').value.trim();
+    const email=document.getElementById('email').value.trim();
+    const phone=document.getElementById('phone').value.trim();
+    const country=document.getElementById('country').value.trim();
+    const msg=document.getElementById('msg').value.trim();
     const opts=state.opts.length?state.opts.join(', '):'Aucune';
     let dstr='À définir';
     if(state.date)dstr=state.date.getDate()+' '+MONTHS[state.date.getMonth()]+(state.flex?' (flex.)':'');
-    document.getElementById('drecap').innerHTML=
-      '<div class="sline"><span class="k">Circuit</span><span class="v">'+(state.circ||'Sur mesure')+'</span></div>'+
-      '<div class="sline"><span class="k">Voyageurs</span><span class="v">'+state.pax+'</span></div>'+
-      '<div class="sline"><span class="k">Options</span><span class="v">'+opts+'</span></div>'+
-      '<div class="sline"><span class="k">Départ</span><span class="v">'+dstr+'</span></div>';
-    pages.forEach(p=>document.getElementById(p).classList.remove('on'));
-    document.getElementById('pdone').classList.add('on');
-    document.getElementById('navbtns').style.display='none';
-    document.querySelectorAll('.step-item').forEach(s=>{s.classList.add('done');s.classList.remove('active');s.querySelector('.step-circle').textContent='✓';});
-    document.querySelectorAll('.step-line').forEach(l=>l.classList.add('done'));
-    document.getElementById('summary').style.opacity='.5';
-    window.scrollTo({top:0,behavior:'smooth'});
+
+    document.getElementById('emailMissing').style.display='none';
+    document.getElementById('sendError').style.display='none';
+    if(!email){
+      document.getElementById('emailMissing').style.display='block';
+      return;
+    }
+
+    const nextBtn=document.getElementById('next');
+    nextBtn.disabled=true;
+    nextBtn.textContent='Envoi en cours…';
+
+    const fd=new FormData();
+    fd.append('Prénom', fn);
+    fd.append('Nom', ln);
+    fd.append('E-mail', email);
+    fd.append('Téléphone', phone);
+    fd.append('Pays', country);
+    fd.append('Circuit', state.circ||'Sur mesure');
+    fd.append('Voyageurs', state.pax);
+    fd.append('Options', opts);
+    fd.append('Départ souhaité', dstr);
+    fd.append('Message', msg || '—');
+    fd.append('_subject', 'Nouvelle demande de devis — Joltoo Aventures');
+    fd.append('_template', 'table');
+    fd.append('_captcha', 'false');
+
+    fetch('https://formsubmit.co/ajax/contact@joltooaventures.com', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: fd
+    }).then(r => {
+      if (!r.ok) throw new Error('send failed');
+      document.getElementById('dname').textContent=fn?fn+' !':'!';
+      document.getElementById('drecap').innerHTML=
+        '<div class="sline"><span class="k">Circuit</span><span class="v">'+(state.circ||'Sur mesure')+'</span></div>'+
+        '<div class="sline"><span class="k">Voyageurs</span><span class="v">'+state.pax+'</span></div>'+
+        '<div class="sline"><span class="k">Options</span><span class="v">'+opts+'</span></div>'+
+        '<div class="sline"><span class="k">Départ</span><span class="v">'+dstr+'</span></div>';
+      pages.forEach(p=>document.getElementById(p).classList.remove('on'));
+      document.getElementById('pdone').classList.add('on');
+      document.getElementById('navbtns').style.display='none';
+      document.querySelectorAll('.step-item').forEach(s=>{s.classList.add('done');s.classList.remove('active');s.querySelector('.step-circle').textContent='✓';});
+      document.querySelectorAll('.step-line').forEach(l=>l.classList.add('done'));
+      document.getElementById('summary').style.opacity='.5';
+      window.scrollTo({top:0,behavior:'smooth'});
+    }).catch(() => {
+      nextBtn.disabled=false;
+      nextBtn.textContent='Réessayer →';
+      document.getElementById('sendError').style.display='block';
+    });
   }
   // Pré-sélection du circuit depuis un lien ?circuit=6-jours|7-jours|8-jours|9-jours|10-jours
   const preselectKey = new URLSearchParams(window.location.search).get('circuit');
