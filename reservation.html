@@ -466,7 +466,7 @@
     else{so.classList.add('empty');so.querySelector('.v').textContent='Aucune';}
     const est=document.getElementById('s-est');
     const price=(state.duration&&SEJOUR_PRICING[state.duration])?SEJOUR_PRICING[state.duration][4]:null;
-    est.textContent=price?('à partir de '+price.toLocaleString('fr-FR')+' €/pers. selon notre barème*'):'sur devis';
+    est.textContent=price?('à partir de '+price.toLocaleString('fr-FR')+' €/pers.*'):'sur devis';
   }
 
   // CALENDAR — saison mai à septembre, chaque année de SEASON_MIN_YEAR à SEASON_MAX_YEAR
