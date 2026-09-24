@@ -408,10 +408,9 @@
         <div class="sline empty" id="s-opt"><span class="k">Options</span><span class="v">Aucune</span></div>
         <div class="sline empty" id="s-date"><span class="k">Départ</span><span class="v">À définir</span></div>
         <div class="stotal">
-          Séjour : <b id="s-est">—</b><br>
-          <span style="font-size:.72rem">Prix opérateur, réglé sur place en espèces. Tarif exact selon la taille du groupe.</span>
+          Séjour : <b id="s-est">—</b>
         </div>
-        <div class="snote">Vous réservez une <b style="color:var(--sand)">demande</b>, pas un paiement.</div>
+        <div class="snote">* Voir conditions selon dates, options et nombre de voyageurs.</div>
       </aside>
     </div>
   </div>
@@ -467,7 +466,7 @@
     else{so.classList.add('empty');so.querySelector('.v').textContent='Aucune';}
     const est=document.getElementById('s-est');
     const price=(state.duration&&SEJOUR_PRICING[state.duration])?SEJOUR_PRICING[state.duration][4]:null;
-    est.textContent=price?('à partir de '+price.toLocaleString('fr-FR')+' €/pers. (base 4 pers.)'):'sur devis';
+    est.textContent=price?('à partir de '+price.toLocaleString('fr-FR')+' €/pers. selon notre barème*'):'sur devis';
   }
 
   // CALENDAR — saison mai à septembre, chaque année de SEASON_MIN_YEAR à SEASON_MAX_YEAR
