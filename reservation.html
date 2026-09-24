@@ -348,7 +348,7 @@
         <!-- STEP 3 : CALENDAR -->
         <div class="page" id="p3">
           <h2>Vos dates</h2>
-          <p class="hint">Choisissez votre date de départ souhaitée. Saison mai → septembre 2026.</p>
+          <p class="hint">Choisissez votre date de départ souhaitée. Saison mai → septembre, jusqu'en 2028.</p>
           <div class="cal">
             <div class="cal-head">
               <button class="cal-nav" id="prevM" onclick="navM(-1)">‹</button>
@@ -470,13 +470,25 @@
     est.textContent=price?('à partir de '+price.toLocaleString('fr-FR')+' €/pers. (base 4 pers.)'):'sur devis';
   }
 
-  // CALENDAR
-  let calYear=2026, calMonth=4; // May (0-indexed)
-  const MIN=new Date(2026,4,1), MAX=new Date(2026,8,30);
+  // CALENDAR — saison mai à septembre, chaque année de SEASON_MIN_YEAR à SEASON_MAX_YEAR
+  const SEASON_START_MONTH=4, SEASON_END_MONTH=8; // mai .. septembre (0-indexed)
+  const SEASON_MIN_YEAR=2026, SEASON_MAX_YEAR=2028;
+  const today=new Date(); today.setHours(0,0,0,0);
+
+  function initialCalPosition(){
+    let y=today.getFullYear(), m=today.getMonth();
+    if(y<SEASON_MIN_YEAR){y=SEASON_MIN_YEAR;m=SEASON_START_MONTH;}
+    else if(y>SEASON_MAX_YEAR){y=SEASON_MAX_YEAR;m=SEASON_END_MONTH;}
+    else if(m<SEASON_START_MONTH){m=SEASON_START_MONTH;}
+    else if(m>SEASON_END_MONTH){y=Math.min(y+1,SEASON_MAX_YEAR);m=SEASON_START_MONTH;}
+    return {y,m};
+  }
+  let {y:calYear, m:calMonth}=initialCalPosition();
+
   function renderCal(){
     document.getElementById('calM').textContent=MONTHS[calMonth]+' '+calYear;
-    document.getElementById('prevM').disabled=(calYear===2026&&calMonth<=4);
-    document.getElementById('nextM').disabled=(calYear===2026&&calMonth>=8);
+    document.getElementById('prevM').disabled=(calYear===SEASON_MIN_YEAR&&calMonth<=SEASON_START_MONTH);
+    document.getElementById('nextM').disabled=(calYear===SEASON_MAX_YEAR&&calMonth>=SEASON_END_MONTH);
     const first=new Date(calYear,calMonth,1);
     let start=(first.getDay()+6)%7; // Monday=0
     const dim=new Date(calYear,calMonth+1,0).getDate();
@@ -485,7 +497,7 @@
     for(let d=1;d<=dim;d++){
       const cell=document.createElement('div');cell.className='cal-day';cell.textContent=d;
       const dt=new Date(calYear,calMonth,d);
-      if(dt<MIN||dt>MAX){cell.classList.add('disabled');}
+      if(dt<today){cell.classList.add('disabled');}
       else{
         if(state.date&&state.date.getTime()===dt.getTime())cell.classList.add('sel');
         cell.onclick=()=>{state.date=dt;renderCal();
@@ -495,7 +507,14 @@
       wrap.appendChild(cell);
     }
   }
-  function navM(dir){calMonth+=dir;if(calMonth<0){calMonth=11;calYear--}if(calMonth>11){calMonth=0;calYear++}renderCal();}
+  function navM(dir){
+    calMonth+=dir;
+    if(calMonth>SEASON_END_MONTH){calMonth=SEASON_START_MONTH;calYear++;}
+    else if(calMonth<SEASON_START_MONTH){calMonth=SEASON_END_MONTH;calYear--;}
+    if(calYear<SEASON_MIN_YEAR){calYear=SEASON_MIN_YEAR;calMonth=SEASON_START_MONTH;}
+    if(calYear>SEASON_MAX_YEAR){calYear=SEASON_MAX_YEAR;calMonth=SEASON_END_MONTH;}
+    renderCal();
+  }
   document.addEventListener('change',e=>{if(e.target.id==='flexDates')state.flex=e.target.checked;});
 
   function validate(){document.getElementById('next').disabled=(state.step===1&&!state.circ);}
