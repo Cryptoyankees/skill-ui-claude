@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/carnet/:slug", "destination": "/carnet/:slug.html" }
+  ]
+}
