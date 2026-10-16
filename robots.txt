@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /paiement.html
+
+Sitemap: https://joltooaventures.com/sitemap.xml
