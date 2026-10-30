@@ -83,6 +83,8 @@
   .gear-card p{font-size:.86rem;color:var(--stone);flex-grow:1}
   .priority-tag{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.08em;font-size:.62rem;
     color:var(--tan);font-weight:600}
+  .gear-cta{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;font-weight:600;color:var(--madder);margin-top:auto}
+  a.gear-card{text-decoration:none;color:inherit;cursor:pointer}
   .soon-pill{align-self:flex-start;font-family:var(--font-head);text-transform:uppercase;letter-spacing:.06em;
     font-size:.66rem;font-weight:600;color:var(--stone);background:var(--paper);border:1px solid var(--line);
     border-radius:999px;padding:6px 13px}
@@ -119,6 +121,9 @@
     <symbol id="ic-jacket" viewBox="0 0 24 24"><path d="M9 4 12 6l3-2 4 3-2 4-2-1v10H9V10l-2 1-2-4z" fill="none" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/></symbol>
     <symbol id="ic-battery" viewBox="0 0 24 24"><rect x="2.5" y="8" width="16" height="8" rx="2" fill="none" stroke-width="1.5"/><path d="M19.5 10.5v3" stroke-width="2" stroke-linecap="round"/><path d="M11.5 10l-2.2 3h3l-2.2 3" fill="none" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="ic-droplet" viewBox="0 0 24 24"><path d="M12 3c4 5 6 8 6 11a6 6 0 0 1-12 0c0-3 2-6 6-11z" fill="none" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-drap" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="10" rx="5" fill="none" stroke-width="1.5"/><path d="M4 15v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" fill="none" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="ic-binoculars" viewBox="0 0 24 24"><circle cx="7.5" cy="16" r="3.2" fill="none" stroke-width="1.5"/><circle cx="16.5" cy="16" r="3.2" fill="none" stroke-width="1.5"/><path d="M9 7h2.5l1 3M15 7h-2.5l-1 3M10 10v3M14 10v3" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-drone" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.3" fill="none" stroke-width="1.5"/><path d="M9.5 9.5 5 5M14.5 9.5 19 5M9.5 14.5 5 19M14.5 14.5 19 19" stroke-width="1.5" stroke-linecap="round"/><circle cx="5" cy="5" r="2" fill="none" stroke-width="1.4"/><circle cx="19" cy="5" r="2" fill="none" stroke-width="1.4"/><circle cx="5" cy="19" r="2" fill="none" stroke-width="1.4"/><circle cx="19" cy="19" r="2" fill="none" stroke-width="1.4"/></symbol>
   </defs>
 </svg>
 
@@ -161,54 +166,84 @@
     <div class="container">
       <div class="gear-grid">
 
-        <div class="gear-card priority">
+        <a href="/materiel/gourde" class="gear-card">
+          <div class="gear-icon"><svg width="24" height="24" fill="none" stroke-width="1.6"><use href="#ic-droplet"/></svg></div>
+          
+          <h3>Gourde</h3>
+          <p>Au Kirghizstan, l'eau du robinet n'est pas potable et tu passeras tes journées près de rivières et de sources de montagne.</p>
+          <span class="gear-cta">Comparatif complet →</span>
+        </a>
+
+        <a href="/materiel/drap-de-sac" class="gear-card">
+          <div class="gear-icon"><svg width="24" height="24" fill="none" stroke-width="1.6"><use href="#ic-drap"/></svg></div>
+          
+          <h3>Drap de sac</h3>
+          <p>En yourte comme en guesthouse simple, un drap de sac (ou « sac à viande ») est l'accessoire malin : une barrière d'hygiène et quelques degrés de chaleur en plus, pour un poids négligeable dans le sac.</p>
+          <span class="gear-cta">Comparatif complet →</span>
+        </a>
+
+        <a href="/materiel/sac-de-trek" class="gear-card">
+          <div class="gear-icon"><svg width="24" height="24" fill="none" stroke-width="1.6"><use href="#ic-backpack"/></svg></div>
+          
+          <h3>Sac de trek</h3>
+          <p>Entre les transferts en 4x4, les nuits en yourte et les excursions à pied, il te faut un sac robuste et bien porté.</p>
+          <span class="gear-cta">Comparatif complet →</span>
+        </a>
+
+        <a href="/materiel/powerbank" class="gear-card">
+          <div class="gear-icon"><svg width="24" height="24" fill="none" stroke-width="1.6"><use href="#ic-battery"/></svg></div>
+          
+          <h3>Batterie externe</h3>
+          <p>En yourte et sur les alpages, tu peux passer plusieurs jours sans prise électrique.</p>
+          <span class="gear-cta">Comparatif complet →</span>
+        </a>
+
+        <a href="/materiel/doudoune" class="gear-card">
+          <div class="gear-icon"><svg width="24" height="24" fill="none" stroke-width="1.6"><use href="#ic-jacket"/></svg></div>
+          
+          <h3>Doudoune</h3>
+          <p>Les nuits en yourte et en altitude descendent vite en température, même en plein été.</p>
+          <span class="gear-cta">Comparatif complet →</span>
+        </a>
+
+        <a href="/materiel/chaussures-randonnee" class="gear-card">
+          <div class="gear-icon"><svg width="24" height="24" fill="none" stroke-width="1.6"><use href="#ic-boot"/></svg></div>
+          
+          <h3>Chaussures de rando</h3>
+          <p>Sur les sentiers d'Altyn-Arashan, de Jeti-Oguz ou autour de Song-Köl, de bonnes chaussures imperméables et déjà faites à tes pieds font toute la différence.</p>
+          <span class="gear-cta">Comparatif complet →</span>
+        </a>
+
+        <a href="/materiel/jumelles" class="gear-card">
+          <div class="gear-icon"><svg width="24" height="24" fill="none" stroke-width="1.6"><use href="#ic-binoculars"/></svg></div>
+          
+          <h3>Jumelles</h3>
+          <p>Entre les rapaces en vol, les troupeaux sur les alpages et les panoramas de montagne, une paire de jumelles légère transforme l'observation.</p>
+          <span class="gear-cta">Voir la reco →</span>
+        </a>
+
+        <a href="/materiel/drone" class="gear-card">
+          <div class="gear-icon"><svg width="24" height="24" fill="none" stroke-width="1.6"><use href="#ic-drone"/></svg></div>
+          
+          <h3>Drone</h3>
+          <p>Les paysages kirghizes se prêtent magnifiquement aux prises de vue aériennes.</p>
+          <span class="gear-cta">Comparatif complet →</span>
+        </a>
+
+        <a href="/materiel/assurance-voyage-kirghizstan" class="gear-card priority">
           <div class="gear-icon"><svg width="24" height="24" fill="none" stroke-width="1.6"><use href="#ic-shield"/></svg></div>
           <span class="priority-tag">Priorité</span>
           <h3>Assurance voyage</h3>
-          <p>Rapatriement, activités en altitude, 4x4 sur piste : une couverture adaptée au terrain, pas une assurance générique.</p>
-          <span class="soon-pill">Sélection à venir</span>
-        </div>
-
-        <div class="gear-card">
-          <div class="gear-icon"><svg width="24" height="24" fill="none" stroke-width="1.6"><use href="#ic-boot"/></svg></div>
-          <h3>Chaussures de randonnée</h3>
-          <p>Tige montante, semelle crantée : pour les sentiers de Kok-Jaiyk et d'Altyn-Arashan.</p>
-          <span class="soon-pill">Sélection à venir</span>
-        </div>
-
-        <div class="gear-card">
-          <div class="gear-icon"><svg width="24" height="24" fill="none" stroke-width="1.6"><use href="#ic-backpack"/></svg></div>
-          <h3>Sac de trek</h3>
-          <p>30 à 40 L, pour les journées de marche et les excursions à la journée.</p>
-          <span class="soon-pill">Sélection à venir</span>
-        </div>
-
-        <div class="gear-card">
-          <div class="gear-icon"><svg width="24" height="24" fill="none" stroke-width="1.6"><use href="#ic-jacket"/></svg></div>
-          <h3>Doudoune</h3>
-          <p>Les nuits en yourte et en altitude descendent vite en température, même en été.</p>
-          <span class="soon-pill">Sélection à venir</span>
-        </div>
-
-        <div class="gear-card">
-          <div class="gear-icon"><svg width="24" height="24" fill="none" stroke-width="1.6"><use href="#ic-battery"/></svg></div>
-          <h3>Powerbank</h3>
-          <p>Pour tenir plusieurs jours entre deux prises, loin des villages.</p>
-          <span class="soon-pill">Sélection à venir</span>
-        </div>
-
-        <div class="gear-card">
-          <div class="gear-icon"><svg width="24" height="24" fill="none" stroke-width="1.6"><use href="#ic-droplet"/></svg></div>
-          <h3>Gourde filtrante</h3>
-          <p>Boire l'eau des sources et rivières en toute confiance, sans multiplier les bouteilles.</p>
-          <span class="soon-pill">Sélection à venir</span>
-        </div>
+          <p>Beaucoup d'étapes se font entre 2 500 et 3 500 m, loin de tout.</p>
+          <span class="gear-cta">Voir la reco →</span>
+        </a>
 
       </div>
     </div>
   </section>
 
   <div class="container">
+    <p class="disclosure" style="max-width:72ch;margin:0 auto 40px;font-size:.78rem;color:var(--stone);line-height:1.6;padding:18px 22px;background:var(--card);border:1px solid var(--line);border-radius:12px">Cette page contient des liens affiliés&nbsp;: si tu achètes via ces liens, nous touchons une commission sans surcoût pour toi. En tant que Partenaire Amazon, nous réalisons un bénéfice sur les achats remplissant les conditions requises.</p>
     <div class="final-cta">
       <p class="eyebrow">Envie de partir ?</p>
       <h2>Composez votre expédition</h2>
@@ -236,7 +271,7 @@
       </div>
       <div class="footer-col">
         <h4>Contact & légal</h4>
-        <a href="mailto:bonjour@joltooaventures.com">bonjour@joltooaventures.com</a>
+        <a href="mailto:contact@joltooaventures.com">contact@joltooaventures.com</a>
         <a href="reservation.html">Demander un devis</a>
         <a href="mentions-legales.html">Mentions légales</a>
         <a href="cgv.html">CGV</a>
