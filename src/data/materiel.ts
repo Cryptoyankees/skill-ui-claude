@@ -242,7 +242,7 @@ export const categories: Categorie[] = [
         points_faibles: ["Puissance de charge standard"],
         prix: "~30 €",
         plateforme: "Amazon",
-        affiliateUrl: "",
+        affiliateUrl: "https://link.amazon/B073uRAg9",
         image: "",
       },
       {
@@ -473,7 +473,7 @@ export const categories: Categorie[] = [
         points_faibles: ["Moins robuste au vent que les gros modèles"],
         prix: "~439 €",
         plateforme: "Amazon",
-        affiliateUrl: "",
+        affiliateUrl: "https://link.amazon/B006QgXeY",
         image: "",
         recommande: true,
       },
