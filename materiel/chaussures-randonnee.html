@@ -117,6 +117,15 @@
   .produits-list{display:grid;gap:22px;margin-bottom:50px}
   .produit-card{position:relative;background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:26px 26px 24px}
   .produit-card.recommande{border-color:var(--tan)}
+  .produit-card.has-media{display:flex;padding:0}
+  @media(max-width:640px){.produit-card.has-media{flex-direction:column}}
+  .produit-card.has-media .produit-content{flex:1;min-width:0;padding:26px 26px 24px}
+  @media(max-width:640px){.produit-card.has-media .produit-content{padding:20px 22px 22px}}
+  .produit-media{flex-shrink:0;width:210px;overflow:hidden;background:var(--paper);border-radius:16px 0 0 16px}
+  @media(max-width:640px){.produit-media{width:100%;height:220px;border-radius:16px 16px 0 0}}
+  .produit-media img{width:100%;height:100%;object-fit:cover;display:block}
+  .top-item .produit-media{width:110px;height:110px;border-radius:12px;flex-shrink:0}
+  @media(max-width:600px){.top-item .produit-media{width:100%;height:180px;border-radius:12px}}
   .badge-reco{position:absolute;top:-11px;left:24px;font-family:var(--font-head);text-transform:uppercase;letter-spacing:.08em;
     font-size:.64rem;font-weight:600;color:#fff;background:var(--tan);padding:5px 12px;border-radius:999px}
   .produit-card h3{font-size:1.1rem;font-weight:600;text-transform:none;letter-spacing:.01em;color:var(--ink);margin-bottom:4px}
@@ -133,7 +142,7 @@
 
   /* TOP LIST */
   .top-list{display:flex;flex-direction:column;gap:22px;margin-bottom:50px}
-  .top-item{display:flex;gap:18px;background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:24px}
+  .top-item{display:flex;align-items:flex-start;gap:18px;background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:24px}
   .top-item.recommande{border-color:var(--tan)}
   @media(max-width:600px){.top-item{flex-direction:column;gap:14px}}
   .top-rank{font-family:var(--font-head);font-size:1.8rem;font-weight:700;color:var(--line);flex-shrink:0;line-height:1}
@@ -205,7 +214,8 @@
     <div class="top-list">
       <div class="top-item recommande">
         <span class="top-rank">1</span>
-        <div>
+        
+        <div class="produit-content">
           <span class="badge-reco" style="position:static;display:inline-block;margin-bottom:10px">Notre choix</span>
           <h3>Salomon X Ultra Gore-Tex (homme)</h3>
           <p class="pour-qui">Le choix premium</p>
@@ -228,7 +238,8 @@
       </div>
       <div class="top-item">
         <span class="top-rank">2</span>
-        <div>
+        
+        <div class="produit-content">
           
           <h3>Salomon Saliba (homme, 40-46)</h3>
           <p class="pour-qui">Le confort polyvalent</p>
@@ -251,7 +262,8 @@
       </div>
       <div class="top-item">
         <span class="top-rank">3</span>
-        <div>
+        
+        <div class="produit-content">
           
           <h3>Salomon Saliba (femme, 37-42)</h3>
           <p class="pour-qui">Le confort polyvalent (coupe femme)</p>
@@ -274,7 +286,8 @@
       </div>
       <div class="top-item recommande">
         <span class="top-rank">4</span>
-        <div>
+        
+        <div class="produit-content">
           <span class="badge-reco" style="position:static;display:inline-block;margin-bottom:10px">Notre choix</span>
           <h3>Quechua MH500 (homme)</h3>
           <p class="pour-qui">La valeur sûre à petit prix</p>
@@ -297,7 +310,8 @@
       </div>
       <div class="top-item">
         <span class="top-rank">5</span>
-        <div>
+        
+        <div class="produit-content">
           
           <h3>Quechua MH500 (femme)</h3>
           <p class="pour-qui">La valeur sûre à petit prix (coupe femme)</p>

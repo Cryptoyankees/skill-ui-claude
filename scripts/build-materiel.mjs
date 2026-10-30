@@ -273,9 +273,16 @@ ${mainHtml}
 }
 
 // ---------------------------------------------------------------- PRODUCT CARD (shared)
+function productImage(p) {
+  if (!p.image) return '';
+  return `<div class="produit-media"><img src="${esc(p.image)}" alt="${esc(p.nom)}" loading="lazy"></div>`;
+}
+
 function productCard(p, { compact = false } = {}) {
-  return `<div class="produit-card${p.recommande ? ' recommande' : ''}">
+  return `<div class="produit-card${p.recommande ? ' recommande' : ''}${p.image ? ' has-media' : ''}">
               ${p.recommande ? '<span class="badge-reco">Notre choix</span>' : ''}
+              ${productImage(p)}
+              <div class="produit-content">
               <h3>${esc(p.nom)}</h3>
               <p class="pour-qui">${esc(p.pourQui)}</p>
               <p class="produit-desc">${esc(p.description)}</p>
@@ -290,6 +297,7 @@ function productCard(p, { compact = false } = {}) {
               <div class="produit-footer">
                 <span class="produit-prix">${esc(p.prix)}</span>
                 ${affiliateButton(p)}
+              </div>
               </div>
             </div>`;
 }
@@ -314,6 +322,15 @@ const SHARED_PAGE_STYLE = `
   .produits-list{display:grid;gap:22px;margin-bottom:50px}
   .produit-card{position:relative;background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:26px 26px 24px}
   .produit-card.recommande{border-color:var(--tan)}
+  .produit-card.has-media{display:flex;padding:0}
+  @media(max-width:640px){.produit-card.has-media{flex-direction:column}}
+  .produit-card.has-media .produit-content{flex:1;min-width:0;padding:26px 26px 24px}
+  @media(max-width:640px){.produit-card.has-media .produit-content{padding:20px 22px 22px}}
+  .produit-media{flex-shrink:0;width:210px;overflow:hidden;background:var(--paper);border-radius:16px 0 0 16px}
+  @media(max-width:640px){.produit-media{width:100%;height:220px;border-radius:16px 16px 0 0}}
+  .produit-media img{width:100%;height:100%;object-fit:cover;display:block}
+  .top-item .produit-media{width:110px;height:110px;border-radius:12px;flex-shrink:0}
+  @media(max-width:600px){.top-item .produit-media{width:100%;height:180px;border-radius:12px}}
   .badge-reco{position:absolute;top:-11px;left:24px;font-family:var(--font-head);text-transform:uppercase;letter-spacing:.08em;
     font-size:.64rem;font-weight:600;color:#fff;background:var(--tan);padding:5px 12px;border-radius:999px}
   .produit-card h3{font-size:1.1rem;font-weight:600;text-transform:none;letter-spacing:.01em;color:var(--ink);margin-bottom:4px}
@@ -330,7 +347,7 @@ const SHARED_PAGE_STYLE = `
 
   /* TOP LIST */
   .top-list{display:flex;flex-direction:column;gap:22px;margin-bottom:50px}
-  .top-item{display:flex;gap:18px;background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:24px}
+  .top-item{display:flex;align-items:flex-start;gap:18px;background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:24px}
   .top-item.recommande{border-color:var(--tan)}
   @media(max-width:600px){.top-item{flex-direction:column;gap:14px}}
   .top-rank{font-family:var(--font-head);font-size:1.8rem;font-weight:700;color:var(--line);flex-shrink:0;line-height:1}
@@ -423,7 +440,8 @@ ${disclosureBlock()}
 function buildTopPage(cat) {
   const items = cat.produits.map((p, i) => `      <div class="top-item${p.recommande ? ' recommande' : ''}">
         <span class="top-rank">${i + 1}</span>
-        <div>
+        ${productImage(p)}
+        <div class="produit-content">
           ${p.recommande ? '<span class="badge-reco" style="position:static;display:inline-block;margin-bottom:10px">Notre choix</span>' : ''}
           <h3>${esc(p.nom)}</h3>
           <p class="pour-qui">${esc(p.pourQui)}</p>

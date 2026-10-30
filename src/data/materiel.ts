@@ -1,7 +1,8 @@
 // src/data/materiel.ts
 // Source unique de vérité pour les pages affiliation (pilier /materiel + pages dédiées).
-// À COMPLÉTER PLUS TARD : le champ `affiliateUrl` de chaque produit (laissé "" pour l'instant).
+// À COMPLÉTER PLUS TARD : les champs `affiliateUrl` et `image` de chaque produit (laissés "" pour l'instant).
 // Tant que `affiliateUrl` est vide, le bouton affiche "Bientôt disponible" (cf. BRIEF).
+// Tant que `image` est vide, la fiche produit s'affiche sans photo (pas d'image cassée).
 
 export interface Produit {
   id: string;
@@ -14,6 +15,7 @@ export interface Produit {
   prix: string;            // affichage, jamais figé exactement
   plateforme: "Amazon" | "Decathlon" | "Chapka";
   affiliateUrl: string;    // "" tant que le lien n'est pas prêt
+  image: string;           // URL de la photo produit, "" tant qu'elle n'est pas prête
   recommande?: boolean;
 }
 
@@ -58,6 +60,7 @@ export const categories: Categorie[] = [
         prix: "~51 €",
         plateforme: "Amazon",
         affiliateUrl: "",
+        image: "",
         recommande: true,
       },
       {
@@ -72,6 +75,7 @@ export const categories: Categorie[] = [
         prix: "~69 €",
         plateforme: "Amazon",
         affiliateUrl: "",
+        image: "",
       },
       {
         id: "gourde-inox-1l",
@@ -85,6 +89,7 @@ export const categories: Categorie[] = [
         prix: "~31 €",
         plateforme: "Amazon",
         affiliateUrl: "",
+        image: "",
       },
       {
         id: "gourde-decathlon-1-2l",
@@ -98,6 +103,7 @@ export const categories: Categorie[] = [
         prix: "~8,99 €",
         plateforme: "Decathlon",
         affiliateUrl: "",
+        image: "",
       },
     ],
   },
@@ -129,6 +135,7 @@ export const categories: Categorie[] = [
         prix: "~25-30 €",
         plateforme: "Amazon",
         affiliateUrl: "",
+        image: "",
       },
       {
         id: "drap-sac-decathlon-confort",
@@ -142,6 +149,7 @@ export const categories: Categorie[] = [
         prix: "~17,99 €",
         plateforme: "Decathlon",
         affiliateUrl: "",
+        image: "",
         recommande: true,
       },
     ],
@@ -174,6 +182,7 @@ export const categories: Categorie[] = [
         prix: "~149,99 €",
         plateforme: "Decathlon",
         affiliateUrl: "",
+        image: "",
       },
       {
         id: "simond-mt100-easyfit",
@@ -187,6 +196,7 @@ export const categories: Categorie[] = [
         prix: "~69,99 €",
         plateforme: "Decathlon",
         affiliateUrl: "",
+        image: "",
         recommande: true,
       },
       {
@@ -201,6 +211,7 @@ export const categories: Categorie[] = [
         prix: "~179,90 €",
         plateforme: "Amazon",
         affiliateUrl: "",
+        image: "",
       },
     ],
   },
@@ -232,6 +243,7 @@ export const categories: Categorie[] = [
         prix: "~30 €",
         plateforme: "Amazon",
         affiliateUrl: "",
+        image: "",
       },
       {
         id: "anker-20k-87w",
@@ -245,6 +257,7 @@ export const categories: Categorie[] = [
         prix: "~42,99 €",
         plateforme: "Amazon",
         affiliateUrl: "",
+        image: "",
         recommande: true,
       },
     ],
@@ -277,6 +290,7 @@ export const categories: Categorie[] = [
         prix: "~64,99 €",
         plateforme: "Decathlon",
         affiliateUrl: "",
+        image: "",
         recommande: true,
       },
       {
@@ -291,6 +305,7 @@ export const categories: Categorie[] = [
         prix: "~64,99 €",
         plateforme: "Decathlon",
         affiliateUrl: "",
+        image: "",
       },
     ],
   },
@@ -322,6 +337,7 @@ export const categories: Categorie[] = [
         prix: "~139,99 €",
         plateforme: "Decathlon",
         affiliateUrl: "",
+        image: "",
         recommande: true,
       },
       {
@@ -336,6 +352,7 @@ export const categories: Categorie[] = [
         prix: "~109,99 €",
         plateforme: "Decathlon",
         affiliateUrl: "",
+        image: "",
       },
       {
         id: "salomon-saliba-femme",
@@ -349,6 +366,7 @@ export const categories: Categorie[] = [
         prix: "~109,99 €",
         plateforme: "Decathlon",
         affiliateUrl: "",
+        image: "",
       },
       {
         id: "quechua-mh500-homme",
@@ -362,6 +380,7 @@ export const categories: Categorie[] = [
         prix: "~59,99 €",
         plateforme: "Decathlon",
         affiliateUrl: "",
+        image: "",
         recommande: true,
       },
       {
@@ -376,6 +395,7 @@ export const categories: Categorie[] = [
         prix: "~59,99 €",
         plateforme: "Decathlon",
         affiliateUrl: "",
+        image: "",
       },
     ],
   },
@@ -407,6 +427,7 @@ export const categories: Categorie[] = [
         prix: "~44,99 €",
         plateforme: "Decathlon",
         affiliateUrl: "",
+        image: "",
         recommande: true,
       },
     ],
@@ -439,6 +460,7 @@ export const categories: Categorie[] = [
         prix: "~1 269 €",
         plateforme: "Amazon",
         affiliateUrl: "",
+        image: "",
       },
       {
         id: "dji-mini-3",
@@ -452,6 +474,7 @@ export const categories: Categorie[] = [
         prix: "~439 €",
         plateforme: "Amazon",
         affiliateUrl: "",
+        image: "",
         recommande: true,
       },
     ],
@@ -484,6 +507,7 @@ export const categories: Categorie[] = [
         prix: "Selon durée et profil",
         plateforme: "Chapka",
         affiliateUrl: "",
+        image: "",
         recommande: true,
       },
     ],
