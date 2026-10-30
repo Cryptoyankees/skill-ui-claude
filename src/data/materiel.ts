@@ -352,7 +352,7 @@ export const categories: Categorie[] = [
         prix: "~109,99 €",
         plateforme: "Decathlon",
         affiliateUrl: "https://click.linksynergy.com/link?id=s%2ajrViienhs&offerid=2079203.44806325847122210599967&type=2&murl=https%3a%2f%2fwww.decathlon.fr%2fp%2fchaussures-impermeables-de-randonnee-montagne-salomon-saliba-homme%2f360171%2fm9012752",
-        image: "",
+        image: "https://contents.mediadecathlon.com/p3020220/k$ba0741cf1eb7245674b3a632bf0fc358/picture.jpg",
       },
       {
         id: "salomon-saliba-femme",
@@ -366,7 +366,7 @@ export const categories: Categorie[] = [
         prix: "~109,99 €",
         plateforme: "Decathlon",
         affiliateUrl: "https://click.linksynergy.com/link?id=s%2ajrViienhs&offerid=2079203.448068468430068559801481&type=2&murl=https%3a%2f%2fwww.decathlon.fr%2fp%2fchaussures-de-randonnee-montagne-femme-salomon-saliba-grise%2f366888%2fc3c252m8950046",
-        image: "",
+        image: "https://contents.mediadecathlon.com/p2895852/k$e1df70058eaf85e0260e6bf874e4296c/picture.jpg",
       },
       {
         id: "quechua-nh500-homme",
@@ -380,7 +380,7 @@ export const categories: Categorie[] = [
         prix: "~59,99 €",
         plateforme: "Decathlon",
         affiliateUrl: "https://click.linksynergy.com/link?id=s%2ajrViienhs&offerid=2079203.4480616350034661188489149&type=2&murl=https%3a%2f%2fwww.decathlon.fr%2fp%2fchaussures-de-randonnee-impermeables-homme-nh500-basses-wp-noir-fume%2f361242%2fc382m8930404",
-        image: "",
+        image: "https://contents.mediadecathlon.com/p3079097/k$9b7bfa06fb0cdea0f3deb133eb1e58ae/picture.jpg",
         recommande: true,
       },
       {
@@ -395,7 +395,7 @@ export const categories: Categorie[] = [
         prix: "~59,99 €",
         plateforme: "Decathlon",
         affiliateUrl: "https://click.linksynergy.com/link?id=s%2ajrViienhs&offerid=2079203.448064483566137100021702&type=2&murl=https%3a%2f%2fwww.decathlon.fr%2fp%2fchaussure-de-randonnee-impermeable-femme-mh500-light-marron%2f351471%2fc222c391m8853686",
-        image: "",
+        image: "https://contents.mediadecathlon.com/p2861673/k$2b5b4afe7c52f0c232c62f46035ba103/picture.jpg",
       },
     ],
   },
