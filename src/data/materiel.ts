@@ -60,7 +60,7 @@ export const categories: Categorie[] = [
         prix: "~51 €",
         plateforme: "Amazon",
         affiliateUrl: "https://link.amazon/B0hlpccpf",
-        image: "",
+        image: "/images/materiel/lifestraw-go.jpg",
         recommande: true,
       },
       {
@@ -75,7 +75,7 @@ export const categories: Categorie[] = [
         prix: "~69 €",
         plateforme: "Amazon",
         affiliateUrl: "https://link.amazon/B02zlUdJN",
-        image: "",
+        image: "/images/materiel/oko.jpg",
       },
       {
         id: "gourde-inox-1l",
@@ -89,7 +89,7 @@ export const categories: Categorie[] = [
         prix: "~31 €",
         plateforme: "Amazon",
         affiliateUrl: "https://link.amazon/B02p2e7VW",
-        image: "",
+        image: "/images/materiel/gourde-inox-1l.jpg",
       },
       {
         id: "gourde-decathlon-1-2l",
@@ -135,7 +135,7 @@ export const categories: Categorie[] = [
         prix: "~25-30 €",
         plateforme: "Amazon",
         affiliateUrl: "https://link.amazon/B001qHKiv",
-        image: "",
+        image: "/images/materiel/drap-sac-coton.jpg",
       },
       {
         id: "drap-sac-decathlon-confort",
