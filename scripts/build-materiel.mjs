@@ -61,7 +61,7 @@ function esc(s) {
 function affiliateButton(produit, size = 'normal') {
   const cls = size === 'small' ? 'aff-btn aff-btn-sm' : 'aff-btn';
   if (produit.affiliateUrl) {
-    return `<a href="${esc(produit.affiliateUrl)}" class="${cls} aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir sur ${esc(produit.plateforme)} <svg width="13" height="13"><use href="#ic-arrow"/></svg></a>`;
+    return `<a href="${esc(produit.affiliateUrl)}" class="${cls} aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir sur ${esc(produit.plateforme)}</a>`;
   }
   return `<span class="${cls} aff-btn-soon" aria-disabled="true">Bientôt disponible</span>`;
 }
