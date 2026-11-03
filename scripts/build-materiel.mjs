@@ -200,7 +200,7 @@ ${bodyExtraStyle || ''}</style>
       <a href="/index.html#options">Options</a>
       <a href="/carnet.html">Carnet</a>
       <a href="/materiel.html">Matériel</a>
-      <a href="/reservation.html" class="btn btn-primary nav-cta">Réserver <svg width="15" height="15"><use href="#ic-arrow"/></svg></a>
+      <a href="/reservation.html" class="btn btn-primary nav-cta">Réserver</a>
     </nav>
     <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobilePanel" aria-label="Ouvrir le menu">
       <span></span>
@@ -382,7 +382,7 @@ function ctaBlock() {
       <div class="cta-links">
         <a href="/materiel.html" class="btn btn-secondary">← Tout le matériel</a>
         <a href="/index.html#circuits" class="btn btn-secondary">Voir les circuits</a>
-        <a href="/reservation.html" class="btn btn-primary">Réserver mon expédition <svg width="15" height="15"><use href="#ic-arrow"/></svg></a>
+        <a href="/reservation.html" class="btn btn-primary">Réserver mon expédition</a>
       </div>
     </div>`;
 }
