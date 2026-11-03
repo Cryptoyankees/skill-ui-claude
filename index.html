@@ -250,8 +250,10 @@
   .carnet-card{background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:26px;
     display:flex;flex-direction:column;gap:10px;transition:transform .25s var(--ease),border-color .25s}
   .carnet-card:hover{transform:translateY(-4px);border-color:var(--tan)}
+  a.carnet-card{text-decoration:none;color:inherit;cursor:pointer}
   .carnet-tag{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.1em;font-size:.64rem;
     color:var(--tan);font-weight:600}
+  .carnet-tag.live{color:var(--madder)}
   .carnet-card h3{font-size:1rem;font-weight:600;text-transform:none;letter-spacing:.01em;color:var(--ink)}
   .carnet-card p{font-size:.86rem;color:var(--stone)}
 
@@ -622,28 +624,28 @@
       <div class="section-head reveal">
         <p class="eyebrow">Le carnet</p>
         <h2>Préparer son départ</h2>
-        <p>Budget, saison, matériel, itinéraires — nos guides pratiques arrivent progressivement.</p>
+        <p>Budget, saison, matériel, itinéraires — nos guides pratiques pour préparer votre expédition au Kirghizstan.</p>
         <a href="carnet.html" class="section-link">Voir tous les articles <svg width="14" height="14"><use href="#ic-arrow"/></svg></a>
       </div>
       <div class="carnet-grid reveal-stagger">
-        <article class="carnet-card reveal" style="--i:0">
+        <a href="/carnet/budget-voyage-kirghizstan" class="carnet-card reveal" style="--i:0">
           <div class="opt-thumb"><img src="images/yourte-coucher-soleil-issyk-kul.jpg" alt="Camp de yourtes au coucher du soleil au Kirghizstan" width="76" height="76" loading="lazy"></div>
-          <span class="carnet-tag">Bientôt · Budget</span>
+          <span class="carnet-tag live">Budget</span>
           <h3>Voyage au Kirghizstan : le budget complet</h3>
           <p>Transport, hébergement, options — poste par poste, sans surprise.</p>
-        </article>
-        <article class="carnet-card reveal" style="--i:1">
+        </a>
+        <a href="/carnet/quand-partir-kirghizstan" class="carnet-card reveal" style="--i:1">
           <div class="opt-thumb"><img src="images/yourtes-vallee-verte-kirghizstan.jpg" alt="Camp de yourtes en vallée verte au Kirghizstan" width="76" height="76" loading="lazy"></div>
-          <span class="carnet-tag">Bientôt · Saison</span>
+          <span class="carnet-tag live">Saison</span>
           <h3>Quand partir au Kirghizstan ? Mois par mois</h3>
           <p>Météo, cols ouverts, affluence : le bon créneau pour votre profil.</p>
-        </article>
-        <article class="carnet-card reveal" style="--i:2">
+        </a>
+        <a href="/carnet/checklist-materiel-kirghizstan" class="carnet-card reveal" style="--i:2">
           <div class="opt-thumb"><img src="images/camping-ala-archa-trek-kirghizstan.jpg" alt="Tente de trek installée dans la vallée d'Ala-Archa" width="76" height="76" loading="lazy"></div>
-          <span class="carnet-tag">Bientôt · Matériel</span>
+          <span class="carnet-tag live">Matériel</span>
           <h3>La checklist matériel Kirghizstan</h3>
           <p>Ce qu'on emporte vraiment, testé sur nos propres circuits.</p>
-        </article>
+        </a>
       </div>
     </div>
   </section>
