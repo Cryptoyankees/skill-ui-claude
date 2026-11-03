@@ -61,7 +61,7 @@ function esc(s) {
 function affiliateButton(produit, size = 'normal') {
   const cls = size === 'small' ? 'aff-btn aff-btn-sm' : 'aff-btn';
   if (produit.affiliateUrl) {
-    return `<a href="${esc(produit.affiliateUrl)}" class="${cls} aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir l'offre</a>`;
+    return `<a href="${esc(produit.affiliateUrl)}" class="${cls} aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir le produit</a>`;
   }
   return `<span class="${cls} aff-btn-soon" aria-disabled="true">Bientôt disponible</span>`;
 }
@@ -276,7 +276,11 @@ ${mainHtml}
 // ---------------------------------------------------------------- PRODUCT CARD (shared)
 function productImage(p) {
   if (!p.image) return '';
-  return `<div class="produit-media"><img src="${esc(p.image)}" alt="${esc(p.nom)}" loading="lazy"></div>`;
+  const img = `<img src="${esc(p.image)}" alt="${esc(p.nom)}" loading="lazy">`;
+  if (p.affiliateUrl) {
+    return `<a href="${esc(p.affiliateUrl)}" class="produit-media" target="_blank" rel="sponsored nofollow noopener" aria-label="Voir le produit ${esc(p.nom)}">${img}</a>`;
+  }
+  return `<div class="produit-media">${img}</div>`;
 }
 
 function productCard(p, { compact = false } = {}) {
@@ -327,7 +331,9 @@ const SHARED_PAGE_STYLE = `
   @media(max-width:640px){.produit-card.has-media{flex-direction:column;align-items:stretch}}
   .produit-card.has-media .produit-content{flex:1;min-width:0;padding:0 0 0 26px}
   @media(max-width:640px){.produit-card.has-media .produit-content{padding:20px 0 0}}
-  .produit-media{flex-shrink:0;width:170px;height:170px;overflow:hidden;background:var(--paper);border-radius:14px}
+  .produit-media{display:block;flex-shrink:0;width:170px;height:170px;overflow:hidden;background:var(--paper);border-radius:14px;transition:transform .25s var(--ease)}
+  a.produit-media{cursor:pointer}
+  a.produit-media:hover{transform:translateY(-2px)}
   @media(max-width:640px){.produit-media{width:100%;max-width:220px;height:220px;margin:0 auto}}
   .produit-media img{width:100%;height:100%;object-fit:contain;display:block}
   .top-item .produit-media{width:110px;height:110px;border-radius:12px;flex-shrink:0}

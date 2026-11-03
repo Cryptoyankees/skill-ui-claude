@@ -122,7 +122,9 @@
   @media(max-width:640px){.produit-card.has-media{flex-direction:column;align-items:stretch}}
   .produit-card.has-media .produit-content{flex:1;min-width:0;padding:0 0 0 26px}
   @media(max-width:640px){.produit-card.has-media .produit-content{padding:20px 0 0}}
-  .produit-media{flex-shrink:0;width:170px;height:170px;overflow:hidden;background:var(--paper);border-radius:14px}
+  .produit-media{display:block;flex-shrink:0;width:170px;height:170px;overflow:hidden;background:var(--paper);border-radius:14px;transition:transform .25s var(--ease)}
+  a.produit-media{cursor:pointer}
+  a.produit-media:hover{transform:translateY(-2px)}
   @media(max-width:640px){.produit-media{width:100%;max-width:220px;height:220px;margin:0 auto}}
   .produit-media img{width:100%;height:100%;object-fit:contain;display:block}
   .top-item .produit-media{width:110px;height:110px;border-radius:12px;flex-shrink:0}
@@ -240,8 +242,8 @@
         </tr>
         <tr>
           <td class="row-label"></td>
-          <td><a href="https://link.amazon/B073uRAg9" class="aff-btn aff-btn-sm aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir l'offre</a></td>
-            <td><a href="https://link.amazon/B0bsmp3xt" class="aff-btn aff-btn-sm aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir l'offre</a></td>
+          <td><a href="https://link.amazon/B073uRAg9" class="aff-btn aff-btn-sm aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir le produit</a></td>
+            <td><a href="https://link.amazon/B0bsmp3xt" class="aff-btn aff-btn-sm aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir le produit</a></td>
         </tr>
       </tbody>
     </table>
@@ -249,7 +251,7 @@
     <div class="produits-list">
       <div class="produit-card has-media">
               
-              <div class="produit-media"><img src="/images/materiel/anker-solo-20k.jpg" alt="Anker Solo 20 000 mAh" loading="lazy"></div>
+              <a href="https://link.amazon/B073uRAg9" class="produit-media" target="_blank" rel="sponsored nofollow noopener" aria-label="Voir le produit Anker Solo 20 000 mAh"><img src="/images/materiel/anker-solo-20k.jpg" alt="Anker Solo 20 000 mAh" loading="lazy"></a>
               <div class="produit-content">
               <h3>Anker Solo 20 000 mAh</h3>
               <p class="pour-qui">Le dépannage essentiel</p>
@@ -266,13 +268,13 @@
               </div>
               <div class="produit-footer">
                 <span class="produit-prix">~30 €</span>
-                <a href="https://link.amazon/B073uRAg9" class="aff-btn aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir l'offre</a>
+                <a href="https://link.amazon/B073uRAg9" class="aff-btn aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir le produit</a>
               </div>
               </div>
             </div>
       <div class="produit-card recommande has-media">
               <span class="badge-reco">Notre choix</span>
-              <div class="produit-media"><img src="/images/materiel/anker-20k-87w.jpg" alt="Anker 20 000 mAh 87 W (câble USB-C intégré)" loading="lazy"></div>
+              <a href="https://link.amazon/B0bsmp3xt" class="produit-media" target="_blank" rel="sponsored nofollow noopener" aria-label="Voir le produit Anker 20 000 mAh 87 W (câble USB-C intégré)"><img src="/images/materiel/anker-20k-87w.jpg" alt="Anker 20 000 mAh 87 W (câble USB-C intégré)" loading="lazy"></a>
               <div class="produit-content">
               <h3>Anker 20 000 mAh 87 W (câble USB-C intégré)</h3>
               <p class="pour-qui">Le voyageur bien équipé</p>
@@ -289,7 +291,7 @@
               </div>
               <div class="produit-footer">
                 <span class="produit-prix">~42,99 €</span>
-                <a href="https://link.amazon/B0bsmp3xt" class="aff-btn aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir l'offre</a>
+                <a href="https://link.amazon/B0bsmp3xt" class="aff-btn aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir le produit</a>
               </div>
               </div>
             </div>

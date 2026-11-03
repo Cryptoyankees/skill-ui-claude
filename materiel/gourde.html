@@ -122,7 +122,9 @@
   @media(max-width:640px){.produit-card.has-media{flex-direction:column;align-items:stretch}}
   .produit-card.has-media .produit-content{flex:1;min-width:0;padding:0 0 0 26px}
   @media(max-width:640px){.produit-card.has-media .produit-content{padding:20px 0 0}}
-  .produit-media{flex-shrink:0;width:170px;height:170px;overflow:hidden;background:var(--paper);border-radius:14px}
+  .produit-media{display:block;flex-shrink:0;width:170px;height:170px;overflow:hidden;background:var(--paper);border-radius:14px;transition:transform .25s var(--ease)}
+  a.produit-media{cursor:pointer}
+  a.produit-media:hover{transform:translateY(-2px)}
   @media(max-width:640px){.produit-media{width:100%;max-width:220px;height:220px;margin:0 auto}}
   .produit-media img{width:100%;height:100%;object-fit:contain;display:block}
   .top-item .produit-media{width:110px;height:110px;border-radius:12px;flex-shrink:0}
@@ -248,10 +250,10 @@
         </tr>
         <tr>
           <td class="row-label"></td>
-          <td><a href="https://link.amazon/B0hlpccpf" class="aff-btn aff-btn-sm aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir l'offre</a></td>
-            <td><a href="https://link.amazon/B02zlUdJN" class="aff-btn aff-btn-sm aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir l'offre</a></td>
-            <td><a href="https://link.amazon/B02p2e7VW" class="aff-btn aff-btn-sm aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir l'offre</a></td>
-            <td><a href="https://click.linksynergy.com/link?id=s%2ajrViienhs&amp;offerid=2079203.448064147811188181455690&amp;type=2&amp;murl=https%3a%2f%2fwww.decathlon.fr%2fp%2fgourde-rando-mh500-bouchon-ouverture-rapide-1-2-litre-plastique-ecozen-bleu%2f345418%2fm8798181" class="aff-btn aff-btn-sm aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir l'offre</a></td>
+          <td><a href="https://link.amazon/B0hlpccpf" class="aff-btn aff-btn-sm aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir le produit</a></td>
+            <td><a href="https://link.amazon/B02zlUdJN" class="aff-btn aff-btn-sm aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir le produit</a></td>
+            <td><a href="https://link.amazon/B02p2e7VW" class="aff-btn aff-btn-sm aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir le produit</a></td>
+            <td><a href="https://click.linksynergy.com/link?id=s%2ajrViienhs&amp;offerid=2079203.448064147811188181455690&amp;type=2&amp;murl=https%3a%2f%2fwww.decathlon.fr%2fp%2fgourde-rando-mh500-bouchon-ouverture-rapide-1-2-litre-plastique-ecozen-bleu%2f345418%2fm8798181" class="aff-btn aff-btn-sm aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir le produit</a></td>
         </tr>
       </tbody>
     </table>
@@ -259,7 +261,7 @@
     <div class="produits-list">
       <div class="produit-card recommande has-media">
               <span class="badge-reco">Notre choix</span>
-              <div class="produit-media"><img src="/images/materiel/lifestraw-go.jpg" alt="LifeStraw (gourde filtrante)" loading="lazy"></div>
+              <a href="https://link.amazon/B0hlpccpf" class="produit-media" target="_blank" rel="sponsored nofollow noopener" aria-label="Voir le produit LifeStraw (gourde filtrante)"><img src="/images/materiel/lifestraw-go.jpg" alt="LifeStraw (gourde filtrante)" loading="lazy"></a>
               <div class="produit-content">
               <h3>LifeStraw (gourde filtrante)</h3>
               <p class="pour-qui">Boire l'eau des sources en sécurité</p>
@@ -276,13 +278,13 @@
               </div>
               <div class="produit-footer">
                 <span class="produit-prix">~51 €</span>
-                <a href="https://link.amazon/B0hlpccpf" class="aff-btn aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir l'offre</a>
+                <a href="https://link.amazon/B0hlpccpf" class="aff-btn aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir le produit</a>
               </div>
               </div>
             </div>
       <div class="produit-card has-media">
               
-              <div class="produit-media"><img src="/images/materiel/oko.jpg" alt="OKO (gourde filtrante)" loading="lazy"></div>
+              <a href="https://link.amazon/B02zlUdJN" class="produit-media" target="_blank" rel="sponsored nofollow noopener" aria-label="Voir le produit OKO (gourde filtrante)"><img src="/images/materiel/oko.jpg" alt="OKO (gourde filtrante)" loading="lazy"></a>
               <div class="produit-content">
               <h3>OKO (gourde filtrante)</h3>
               <p class="pour-qui">La filtration renforcée</p>
@@ -298,13 +300,13 @@
               </div>
               <div class="produit-footer">
                 <span class="produit-prix">~69 €</span>
-                <a href="https://link.amazon/B02zlUdJN" class="aff-btn aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir l'offre</a>
+                <a href="https://link.amazon/B02zlUdJN" class="aff-btn aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir le produit</a>
               </div>
               </div>
             </div>
       <div class="produit-card has-media">
               
-              <div class="produit-media"><img src="/images/materiel/gourde-inox-1l.jpg" alt="Gourde isotherme inox 1 L" loading="lazy"></div>
+              <a href="https://link.amazon/B02p2e7VW" class="produit-media" target="_blank" rel="sponsored nofollow noopener" aria-label="Voir le produit Gourde isotherme inox 1 L"><img src="/images/materiel/gourde-inox-1l.jpg" alt="Gourde isotherme inox 1 L" loading="lazy"></a>
               <div class="produit-content">
               <h3>Gourde isotherme inox 1 L</h3>
               <p class="pour-qui">Garder la température toute la journée</p>
@@ -322,13 +324,13 @@
               </div>
               <div class="produit-footer">
                 <span class="produit-prix">~31 €</span>
-                <a href="https://link.amazon/B02p2e7VW" class="aff-btn aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir l'offre</a>
+                <a href="https://link.amazon/B02p2e7VW" class="aff-btn aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir le produit</a>
               </div>
               </div>
             </div>
       <div class="produit-card has-media">
               
-              <div class="produit-media"><img src="https://contents.mediadecathlon.com/p2579629/k$3355f726e334b1250ee450975961371e/picture.jpg" alt="Gourde réutilisable 1,2 L" loading="lazy"></div>
+              <a href="https://click.linksynergy.com/link?id=s%2ajrViienhs&amp;offerid=2079203.448064147811188181455690&amp;type=2&amp;murl=https%3a%2f%2fwww.decathlon.fr%2fp%2fgourde-rando-mh500-bouchon-ouverture-rapide-1-2-litre-plastique-ecozen-bleu%2f345418%2fm8798181" class="produit-media" target="_blank" rel="sponsored nofollow noopener" aria-label="Voir le produit Gourde réutilisable 1,2 L"><img src="https://contents.mediadecathlon.com/p2579629/k$3355f726e334b1250ee450975961371e/picture.jpg" alt="Gourde réutilisable 1,2 L" loading="lazy"></a>
               <div class="produit-content">
               <h3>Gourde réutilisable 1,2 L</h3>
               <p class="pour-qui">Le petit prix et la légèreté</p>
@@ -346,7 +348,7 @@
               </div>
               <div class="produit-footer">
                 <span class="produit-prix">~8,99 €</span>
-                <a href="https://click.linksynergy.com/link?id=s%2ajrViienhs&amp;offerid=2079203.448064147811188181455690&amp;type=2&amp;murl=https%3a%2f%2fwww.decathlon.fr%2fp%2fgourde-rando-mh500-bouchon-ouverture-rapide-1-2-litre-plastique-ecozen-bleu%2f345418%2fm8798181" class="aff-btn aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir l'offre</a>
+                <a href="https://click.linksynergy.com/link?id=s%2ajrViienhs&amp;offerid=2079203.448064147811188181455690&amp;type=2&amp;murl=https%3a%2f%2fwww.decathlon.fr%2fp%2fgourde-rando-mh500-bouchon-ouverture-rapide-1-2-litre-plastique-ecozen-bleu%2f345418%2fm8798181" class="aff-btn aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir le produit</a>
               </div>
               </div>
             </div>
