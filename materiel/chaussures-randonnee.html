@@ -68,12 +68,13 @@
 
   /* AFFILIATE BUTTON */
   .aff-btn{font-family:var(--font-head);text-transform:uppercase;letter-spacing:.1em;font-size:.76rem;font-weight:600;
-    padding:13px 22px;border-radius:10px;display:inline-flex;align-items:center;gap:8px;text-decoration:none;
+    padding:13px 22px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    text-decoration:none;text-align:center;min-width:172px;
     transition:transform .25s var(--ease),background .25s;touch-action:manipulation}
   .aff-btn-live{background:var(--madder);color:#fff}
   .aff-btn-live:hover{background:var(--madder-dk);transform:translateY(-2px)}
   .aff-btn-soon{background:var(--paper);color:var(--stone);border:1.5px dashed var(--line);cursor:not-allowed}
-  .aff-btn-sm{padding:10px 16px;font-size:.7rem}
+  .aff-btn-sm{padding:10px 16px;font-size:.7rem;min-width:140px}
 
   /* FINAL CTA */
   .final-cta{background:var(--slate);border-radius:26px;padding:56px 40px;text-align:center;margin:60px 0 50px}
@@ -117,15 +118,16 @@
   .produits-list{display:grid;gap:22px;margin-bottom:50px}
   .produit-card{position:relative;background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:26px 26px 24px}
   .produit-card.recommande{border-color:var(--tan)}
-  .produit-card.has-media{display:flex;padding:0}
-  @media(max-width:640px){.produit-card.has-media{flex-direction:column}}
-  .produit-card.has-media .produit-content{flex:1;min-width:0;padding:26px 26px 24px}
-  @media(max-width:640px){.produit-card.has-media .produit-content{padding:20px 22px 22px}}
-  .produit-media{flex-shrink:0;width:210px;overflow:hidden;background:var(--paper);border-radius:16px 0 0 16px}
-  @media(max-width:640px){.produit-media{width:100%;height:220px;border-radius:16px 16px 0 0}}
-  .produit-media img{width:100%;height:100%;object-fit:cover;display:block}
+  .produit-card.has-media{display:flex;align-items:center;padding:26px}
+  @media(max-width:640px){.produit-card.has-media{flex-direction:column;align-items:stretch}}
+  .produit-card.has-media .produit-content{flex:1;min-width:0;padding:0 0 0 26px}
+  @media(max-width:640px){.produit-card.has-media .produit-content{padding:20px 0 0}}
+  .produit-media{flex-shrink:0;width:170px;height:170px;overflow:hidden;background:var(--paper);border-radius:14px}
+  @media(max-width:640px){.produit-media{width:100%;max-width:220px;height:220px;margin:0 auto}}
+  .produit-media img{width:100%;height:100%;object-fit:contain;display:block}
   .top-item .produit-media{width:110px;height:110px;border-radius:12px;flex-shrink:0}
   @media(max-width:600px){.top-item .produit-media{width:100%;height:180px;border-radius:12px}}
+  .top-item .produit-media img{object-fit:contain}
   .badge-reco{position:absolute;top:-11px;left:24px;font-family:var(--font-head);text-transform:uppercase;letter-spacing:.08em;
     font-size:.64rem;font-weight:600;color:#fff;background:var(--tan);padding:5px 12px;border-radius:999px}
   .produit-card h3{font-size:1.1rem;font-weight:600;text-transform:none;letter-spacing:.01em;color:var(--ink);margin-bottom:4px}
@@ -232,7 +234,7 @@
           </div>
           <div class="produit-footer">
             <span class="produit-prix">~139,99 €</span>
-            <a href="https://click.linksynergy.com/link?id=s%2ajrViienhs&amp;offerid=2079203.4480610001418132398336366&amp;type=2&amp;murl=https%3a%2f%2fwww.decathlon.fr%2fp%2fchaussures-impermeables-de-randonnee-gore-tex-salomon-x-ultra-pioneer-2-gtx%2fX8880883%2fm8880883" class="aff-btn aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir sur Decathlon</a>
+            <a href="https://click.linksynergy.com/link?id=s%2ajrViienhs&amp;offerid=2079203.4480610001418132398336366&amp;type=2&amp;murl=https%3a%2f%2fwww.decathlon.fr%2fp%2fchaussures-impermeables-de-randonnee-gore-tex-salomon-x-ultra-pioneer-2-gtx%2fX8880883%2fm8880883" class="aff-btn aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir l'offre</a>
           </div>
         </div>
       </div>
@@ -256,7 +258,7 @@
           </div>
           <div class="produit-footer">
             <span class="produit-prix">~109,99 €</span>
-            <a href="https://click.linksynergy.com/link?id=s%2ajrViienhs&amp;offerid=2079203.44806325847122210599967&amp;type=2&amp;murl=https%3a%2f%2fwww.decathlon.fr%2fp%2fchaussures-impermeables-de-randonnee-montagne-salomon-saliba-homme%2f360171%2fm9012752" class="aff-btn aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir sur Decathlon</a>
+            <a href="https://click.linksynergy.com/link?id=s%2ajrViienhs&amp;offerid=2079203.44806325847122210599967&amp;type=2&amp;murl=https%3a%2f%2fwww.decathlon.fr%2fp%2fchaussures-impermeables-de-randonnee-montagne-salomon-saliba-homme%2f360171%2fm9012752" class="aff-btn aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir l'offre</a>
           </div>
         </div>
       </div>
@@ -280,7 +282,7 @@
           </div>
           <div class="produit-footer">
             <span class="produit-prix">~109,99 €</span>
-            <a href="https://click.linksynergy.com/link?id=s%2ajrViienhs&amp;offerid=2079203.448068468430068559801481&amp;type=2&amp;murl=https%3a%2f%2fwww.decathlon.fr%2fp%2fchaussures-de-randonnee-montagne-femme-salomon-saliba-grise%2f366888%2fc3c252m8950046" class="aff-btn aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir sur Decathlon</a>
+            <a href="https://click.linksynergy.com/link?id=s%2ajrViienhs&amp;offerid=2079203.448068468430068559801481&amp;type=2&amp;murl=https%3a%2f%2fwww.decathlon.fr%2fp%2fchaussures-de-randonnee-montagne-femme-salomon-saliba-grise%2f366888%2fc3c252m8950046" class="aff-btn aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir l'offre</a>
           </div>
         </div>
       </div>
@@ -304,7 +306,7 @@
           </div>
           <div class="produit-footer">
             <span class="produit-prix">~59,99 €</span>
-            <a href="https://click.linksynergy.com/link?id=s%2ajrViienhs&amp;offerid=2079203.4480616350034661188489149&amp;type=2&amp;murl=https%3a%2f%2fwww.decathlon.fr%2fp%2fchaussures-de-randonnee-impermeables-homme-nh500-basses-wp-noir-fume%2f361242%2fc382m8930404" class="aff-btn aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir sur Decathlon</a>
+            <a href="https://click.linksynergy.com/link?id=s%2ajrViienhs&amp;offerid=2079203.4480616350034661188489149&amp;type=2&amp;murl=https%3a%2f%2fwww.decathlon.fr%2fp%2fchaussures-de-randonnee-impermeables-homme-nh500-basses-wp-noir-fume%2f361242%2fc382m8930404" class="aff-btn aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir l'offre</a>
           </div>
         </div>
       </div>
@@ -328,7 +330,7 @@
           </div>
           <div class="produit-footer">
             <span class="produit-prix">~59,99 €</span>
-            <a href="https://click.linksynergy.com/link?id=s%2ajrViienhs&amp;offerid=2079203.448064483566137100021702&amp;type=2&amp;murl=https%3a%2f%2fwww.decathlon.fr%2fp%2fchaussure-de-randonnee-impermeable-femme-mh500-light-marron%2f351471%2fc222c391m8853686" class="aff-btn aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir sur Decathlon</a>
+            <a href="https://click.linksynergy.com/link?id=s%2ajrViienhs&amp;offerid=2079203.448064483566137100021702&amp;type=2&amp;murl=https%3a%2f%2fwww.decathlon.fr%2fp%2fchaussure-de-randonnee-impermeable-femme-mh500-light-marron%2f351471%2fc222c391m8853686" class="aff-btn aff-btn-live" target="_blank" rel="sponsored nofollow noopener">Voir l'offre</a>
           </div>
         </div>
       </div>
